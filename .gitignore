@@ -1,0 +1,5 @@
+# Configuration file (contains team URLs and possibly tokens)
+config.sh
+
+# Test configuration
+test-config.sh

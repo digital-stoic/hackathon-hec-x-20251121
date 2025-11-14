@@ -1,5 +1,9 @@
 # 🏆 Hackathon Aggregation Report
 
+**Navigation:** [Main README](README.md) | [Setup Guide](SETUP.md) | [Submission Guide](SUBMISSION.md) | [Quick Reference](QUICKSTART.md)
+
+---
+
 **Generated:** 2025-11-14T14:48:09+00:00
 **Deadline:** 2025-11-21 18:00:00
 
