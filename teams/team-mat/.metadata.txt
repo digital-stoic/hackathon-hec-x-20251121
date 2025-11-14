@@ -1,6 +1,6 @@
 Team: team-mat
 Repository: https://github.com/digital-stoic/simplificator-manager-page
-Aggregation Time: 2025-11-14T14:17:47+00:00
+Aggregation Time: 2025-11-14T14:18:43+00:00
 Deadline: 2025-11-21 18:00:00
 
 Last Commit Info:
