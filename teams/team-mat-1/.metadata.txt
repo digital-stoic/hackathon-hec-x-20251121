@@ -1,0 +1,10 @@
+Team: team-mat-1
+Repository: https://github.com/digital-stoic/simplificator-manager-page
+Aggregation Time: 2025-11-14T14:15:34+00:00
+Deadline: 2025-11-21 18:00:00
+
+Last Commit Info:
+Hash: c9a0104b940c1d6f7d71fd41abd4252858d14bcb
+Date: 2025-11-12 09:01:17 +0000
+Author: gpt-engineer-app[bot]
+Message: Code edited in Lovable Code Editor
