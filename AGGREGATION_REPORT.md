@@ -1,24 +1,32 @@
-# Hackathon Aggregation Report
+# 🏆 Hackathon Aggregation Report
 
-**Generated:** 2025-11-14T14:25:44+00:00
+**Generated:** 2025-11-14T14:28:14+00:00
 **Deadline:** 2025-11-21 18:00:00
 
-## Summary
+## 📊 Summary
 
-- **Total Teams:** 2
-- **Successful:** 2
-- **Failed:** 0
+| Team Name | Status | Last Commit Time | Repository |
+|-----------|--------|------------------|------------|
+| **team-mat-1** | ✅ Success | `2025-11-14 14:22:55 +0000` | [https://github.com/digital-stoic/simplificator-manager-page](https://github.com/digital-stoic/simplificator-manager-page) |
+| **team-mat-2** | ✅ Success | `2025-11-14 14:22:55 +0000` | [https://github.com/digital-stoic/simplificator-manager-page](https://github.com/digital-stoic/simplificator-manager-page) |
 
 ---
 
+## 📈 Statistics
 
-## Teams Summary
+- **Total Teams:** 2
+- **Successful:** 2 ✅
+- **Failed:** 0 ❌
 
-### ✅ team-mat-1
+## 📋 Detailed Metadata
+
+<details>
+<summary><strong>team-mat-1</strong> - Click to expand</summary>
+
 ```
 Team: team-mat-1
 Repository: https://github.com/digital-stoic/simplificator-manager-page
-Aggregation Time: 2025-11-14T14:25:44+00:00
+Aggregation Time: 2025-11-14T14:28:13+00:00
 Deadline: 2025-11-21 18:00:00
 
 Last Commit Info:
@@ -30,11 +38,15 @@ Message: Code edited in Lovable Code Editor
 
 **Files:** 87
 
-### ✅ team-mat-2
+</details>
+
+<details>
+<summary><strong>team-mat-2</strong> - Click to expand</summary>
+
 ```
 Team: team-mat-2
 Repository: https://github.com/digital-stoic/simplificator-manager-page
-Aggregation Time: 2025-11-14T14:25:44+00:00
+Aggregation Time: 2025-11-14T14:28:14+00:00
 Deadline: 2025-11-21 18:00:00
 
 Last Commit Info:
@@ -45,4 +57,6 @@ Message: Code edited in Lovable Code Editor
 ```
 
 **Files:** 87
+
+</details>
 
