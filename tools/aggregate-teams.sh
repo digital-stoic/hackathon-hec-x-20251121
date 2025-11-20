@@ -37,7 +37,7 @@ GITHUB_ORG="${GITHUB_ORG:-}"
 # TEAMS array should now be populated from config.sh
 
 # Target directory for aggregated teams
-TEAMS_DIR="teams"
+TEAMS_DIR="../teams"
 
 # Deadline (set via config.sh)
 DEADLINE="${DEADLINE:-}"
@@ -165,7 +165,7 @@ Deadline: $DEADLINE"
 
 # Generate aggregation report
 generate_report() {
-    local report_file="AGGREGATION_REPORT.md"
+    local report_file="../AGGREGATION_REPORT.md"
 
     log_step "Generating aggregation report 📊"
 
