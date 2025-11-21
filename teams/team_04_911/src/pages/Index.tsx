@@ -38,61 +38,100 @@ const Index = () => {
         </div>
       </section>
 
-      {/* First Steps Section */}
+      {/* Scenarios Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
-            Les 5 premiers réflexes quand vous recevez une somme importante
+          <h2 className="text-3xl font-bold text-center mb-4 text-foreground">
+            Trois situations, un accompagnement expert
           </h2>
-          <p className="text-center text-muted-foreground mb-16 max-w-3xl mx-auto text-lg">
-            Héritage, vente d'entreprise, exit entrepreneurial ou gain exceptionnel : ces moments nécessitent un accompagnement expert.
+          <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+            Héritage, vente d'entreprise ou gain exceptionnel : découvrez comment nous vous accompagnons.
           </p>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="p-8 rounded-lg bg-card border border-border hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                <Shield className="text-primary" size={28} />
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="group relative overflow-hidden rounded-lg aspect-[4/3] hover:shadow-2xl transition-shadow">
+              <img 
+                src={consultationImage} 
+                alt="Héritage - Conseiller avec client" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20 flex flex-col justify-end p-6">
+                <h3 className="text-2xl font-bold text-primary-foreground mb-2">HÉRITAGE</h3>
+                <p className="text-primary-foreground/90 text-sm mb-4">
+                  Concevez l'évolution de votre patrimoine en toute sérénité et structurez votre succession.
+                </p>
               </div>
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">1. Sécuriser immédiatement</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Placement temporaire sécurisé le temps d'élaborer votre stratégie patrimoniale. Évitez les décisions précipitées.
-              </p>
             </div>
-            
-            <div className="p-8 rounded-lg bg-card border border-border hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                <Users className="text-primary" size={28} />
+
+            <div className="group relative overflow-hidden rounded-lg aspect-[4/3] hover:shadow-2xl transition-shadow">
+              <img 
+                src={heroImage} 
+                alt="Exit - Voile sur l'océan symbolisant la liberté" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20 flex flex-col justify-end p-6">
+                <h3 className="text-2xl font-bold text-primary-foreground mb-2">EXIT</h3>
+                <p className="text-primary-foreground/90 text-sm mb-4">
+                  Vos projets, maintenant possibles : investissez pour faire grandir votre nouveau capital durablement.
+                </p>
               </div>
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">2. Consulter des experts</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Un banquier privé, un fiscaliste et un notaire : l'équipe indispensable pour structurer votre patrimoine dès le départ.
-              </p>
             </div>
-            
-            <div className="p-8 rounded-lg bg-card border border-border hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                <TrendingUp className="text-primary" size={28} />
+
+            <div className="group relative overflow-hidden rounded-lg aspect-[4/3] hover:shadow-2xl transition-shadow">
+              <div 
+                className="w-full h-full bg-cover bg-center"
+                style={{ backgroundImage: `url(${heroImage})` }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20 flex flex-col justify-end p-6">
+                <h3 className="text-2xl font-bold text-primary-foreground mb-2">COMMUNAUTÉ</h3>
+                <p className="text-primary-foreground/90 text-sm mb-4">
+                  Enrichissez votre entourage et vivez des expériences inoubliables en investissant avec sens.
+                </p>
               </div>
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">3. Optimiser la fiscalité</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Anticipez l'impact fiscal de votre nouvelle situation : succession, donation, plus-values... Chaque euro compte.
-              </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-8 rounded-lg bg-card border border-border hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">4. Définir vos objectifs de vie</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Achat immobilier, transmission familiale, projets entrepreneuriaux, philanthropie : clarifiez vos priorités avant d'investir.
+      {/* What to do Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-3 text-foreground">
+            Que faire avec 5 millions ?
+          </h2>
+          <p className="text-center text-muted-foreground max-w-2xl mx-auto">
+            Les bonnes décisions dès aujourd'hui structurent votre liberté de demain.
+          </p>
+        </div>
+      </section>
+
+      {/* Investment Section with Image */}
+      <section className="bg-secondary">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-2">
+            <div className="p-12 md:p-16 flex flex-col justify-center">
+              <span className="text-accent text-sm font-semibold mb-4 uppercase tracking-wider">Investissement</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+                Que faire dans les 30 jours qui suivent l'arrivée d'un gros capital ?
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Les bonnes décisions dès aujourd'hui structurent votre liberté de demain.
               </p>
+              <div className="bg-card p-6 rounded-lg border border-border">
+                <p className="font-semibold text-foreground mb-3">
+                  Exit réussi ? Héritage ? Crypto cash-out ?
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  BNP Paribas Banque Privée vous accompagne pour protéger, organiser et faire fructifier ce nouveau capital — en toute confiance.
+                </p>
+              </div>
             </div>
-            
-            <div className="p-8 rounded-lg bg-card border border-border hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">5. Construire une stratégie long terme</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Diversification, gestion du risque, préservation du capital : bâtissez un patrimoine pérenne sur plusieurs générations.
-              </p>
+            <div className="relative min-h-[500px]">
+              <img 
+                src={consultationImage} 
+                alt="Conseiller BNP Paribas" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -140,65 +179,73 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">
-            Questions fréquentes
-          </h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">
-            Les réponses aux questions que se posent les nouveaux clients fortunés
-          </p>
-          
-          <div className="space-y-6">
-            <div className="p-6 rounded-lg bg-card border border-border">
-              <h3 className="text-xl font-semibold mb-3 text-card-foreground">
-                Que faire quand plusieurs millions arrivent sur mon compte ?
+      {/* FAQ Section - Dark Cards Style */}
+      <section className="py-20 bg-muted/50">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            <div className="p-8 rounded-lg bg-primary text-primary-foreground">
+              <h3 className="text-xl font-bold mb-4">
+                1. Que faire lorsque plusieurs millions arrivent soudainement sur mon compte ?
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Première étape : ne rien faire de précipité. Placez la somme sur un compte rémunéré sécurisé le temps de consulter 
-                un banquier privé. Celui-ci vous aidera à établir une stratégie patrimoniale adaptée à votre situation fiscale et vos objectifs de vie.
-              </p>
-            </div>
-            
-            <div className="p-6 rounded-lg bg-card border border-border">
-              <h3 className="text-xl font-semibold mb-3 text-card-foreground">
-                Comment éviter les erreurs quand on débute dans la gestion de patrimoine ?
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Les erreurs classiques : surinvestir dans un seul actif, négliger la fiscalité, se fier à des conseils non professionnels. 
-                Un accompagnement expert dès le départ vous évite des décisions coûteuses et irréversibles.
+              <p className="leading-relaxed opacity-90">
+                Recevoir un gros capital est une étape importante qui nécessite des décisions efficaces et réfléchies. 
+                Nous vous recommandons dans un premier temps de contacter un conseiller pour vous aider à structurer 
+                ce patrimoine selon vos objectifs et votre horizon de vie.
               </p>
             </div>
 
-            <div className="p-6 rounded-lg bg-card border border-border">
-              <h3 className="text-xl font-semibold mb-3 text-card-foreground">
-                Quelle fiscalité après un héritage important ?
+            <div className="p-8 rounded-lg bg-primary text-primary-foreground">
+              <h3 className="text-xl font-bold mb-4">
+                5. Comment protéger mon argent des arnaques et des mauvais choix ?
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Droits de succession, IFI, fiscalité des revenus du patrimoine : l'impact fiscal peut être considérable. 
-                Une optimisation légale et anticipée permet de préserver votre capital sur le long terme.
+              <p className="leading-relaxed opacity-90">
+                Une stratégie solide de liquidités vous permet d'anticiper les sollicitations douteuses. 
+                Être accompagné par un banquier privé vous permet de bénéficier d'un cadre légal et de solutions 
+                éprouvées pour protéger votre capital.
               </p>
             </div>
 
-            <div className="p-6 rounded-lg bg-card border border-border">
-              <h3 className="text-xl font-semibold mb-3 text-card-foreground">
-                Comment investir après un exit entrepreneurial ?
+            <div className="p-8 rounded-lg bg-primary text-primary-foreground">
+              <h3 className="text-xl font-bold mb-4">
+                6. Comment investir mes revenus de manière fiscale si je perçois de l'argent ?
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Après la vente de votre entreprise, diversification et préservation du capital sont essentielles. 
-                Nous vous aidons à réinvestir intelligemment : immobilier, private equity, marchés financiers, 
-                tout en optimisant votre fiscalité et en préparant votre transmission.
+              <p className="leading-relaxed opacity-90">
+                Un plan progressif et diversifié est souvent la meilleure approche. Nous vous aidons à définir vos objectifs, 
+                votre horizon de placement et votre tolérance au risque, puis à sélectionner les actifs adaptés pour 
+                optimiser la fiscalité dans la durée.
               </p>
             </div>
 
-            <div className="p-6 rounded-lg bg-card border border-border">
-              <h3 className="text-xl font-semibold mb-3 text-card-foreground">
-                Pourquoi choisir BNP Paribas Banque Privée ?
+            <div className="p-8 rounded-lg bg-primary text-primary-foreground">
+              <h3 className="text-xl font-bold mb-4">
+                7. Comment gérer la fiscalité d'un gros capital en France ?
+              </h3>
+              <p className="leading-relaxed opacity-90">
+                Une somme importante implique souvent une fiscalité plus complexe : IFI, droits de succession, 
+                prélèvements forfaitaires. Comprendre le cadre réglementaire sécurise vos décisions et vous permet 
+                d'optimiser légalement votre situation fiscale.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-lg bg-card border border-border">
+              <h3 className="text-xl font-bold mb-4 text-card-foreground">
+                2. À partir de quel montant puis-je accéder à la Banque Privée BNP Paribas ?
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Leader européen avec 150 ans d'expertise, nous combinons solidité financière, présence internationale et 
-                accompagnement personnalisé. Vos intérêts patrimoniaux sont notre priorité absolue.
+                La Banque Privée s'adresse à ses clients disposant d'un patrimoine financier significatif. 
+                Le montant peut varier selon les besoins et de déterminer le meilleur accompagnement pour vous, 
+                quelle que soit votre situation patrimoniale actuelle.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-lg bg-card border border-border">
+              <h3 className="text-xl font-bold mb-4 text-card-foreground">
+                8. Comment intégrer ma famille dans ces décisions ?
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Impliquer vos proches dans votre stratégie patrimoniale est un enjeu essentiel. 
+                BNP Paribas Banque Privée vous accompagne dans la gouvernance familiale et la préparation de la 
+                transmission intergénérationnelle.
               </p>
             </div>
           </div>
