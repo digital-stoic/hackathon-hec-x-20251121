@@ -1,0 +1,10 @@
+Team: team_09_les_skyrocketeurs
+Repository: https://github.com/vinnie777/coin-conqueror-path
+Aggregation Time: 2025-11-21T14:31:45+01:00
+Deadline: 2025-11-21 15:00:00
+
+Last Commit Info:
+Hash: 64a2261aaa81368d3844626645284175482a9cd2
+Date: 2025-11-21 13:29:53 +0000
+Author: gpt-engineer-app[bot]
+Message: Enlever l’encadré Le Monde
