@@ -1,10 +1,10 @@
 Team: team_02_lpb
 Repository: https://github.com/pierre-alexx/geo-insights-hub
-Aggregation Time: 2025-11-21T14:25:34+01:00
+Aggregation Time: 2025-11-21T14:30:46+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 80d88ef0064faa9ef947d0ae55040a56aa263757
-Date: 2025-11-21 13:23:32 +0000
+Hash: b80a1a016290eccbe618bda9e44fe86679457f61
+Date: 2025-11-21 13:28:39 +0000
 Author: gpt-engineer-app[bot]
-Message: Add Rewrites section to Results
+Message: Improve score card UI fit
