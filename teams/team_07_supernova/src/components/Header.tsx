@@ -15,13 +15,19 @@ const Header = () => {
         
         <div className="hidden md:flex items-center gap-8">
           <a href="#about" className="text-foreground/80 hover:text-foreground transition-colors">
-            À propos
+            About us
           </a>
           <a href="#gameplay" className="text-foreground/80 hover:text-foreground transition-colors">
             Gameplay
           </a>
           <a href="#buildings" className="text-foreground/80 hover:text-foreground transition-colors">
-            Bâtiments
+            Buildings
+          </a>
+          <a href="#careers" className="text-foreground/80 hover:text-foreground transition-colors">
+            Careers
+          </a>
+          <a href="#support" className="text-foreground/80 hover:text-foreground transition-colors">
+            Support
           </a>
         </div>
         
