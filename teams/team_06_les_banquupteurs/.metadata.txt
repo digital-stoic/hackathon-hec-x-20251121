@@ -1,0 +1,10 @@
+Team: team_06_les_banquupteurs
+Repository: https://github.com/solene-duv/my-app-creator.git
+Aggregation Time: 2025-11-21T13:40:50+01:00
+Deadline: 2025-11-21 15:00:00
+
+Last Commit Info:
+Hash: 81aca6d529f557f5ab0b051babecfdb098f7235e
+Date: 2025-11-21 12:35:17 +0000
+Author: gpt-engineer-app[bot]
+Message: Adjust public demand formula
