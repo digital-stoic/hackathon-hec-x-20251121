@@ -1,6 +1,6 @@
 Team: team_15_albacore
 Repository: https://github.com/clemdjez-byte/bnp-founders-hub.git
-Aggregation Time: 2025-11-21T14:56:21+01:00
+Aggregation Time: 2025-11-21T15:03:36+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
