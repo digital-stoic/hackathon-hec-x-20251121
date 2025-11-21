@@ -1,10 +1,10 @@
 Team: team_01_enneagramme_team
 Repository: https://github.com/Matekto/geo-quality-score
-Aggregation Time: 2025-11-21T14:47:43+01:00
+Aggregation Time: 2025-11-21T14:52:59+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: c7f75ada2f50a7a09707de4051802f93e24b46e2
-Date: 2025-11-21 14:47:24 +0100
+Hash: 942a0fc76831034decab2dbecc51312297efcbec
+Date: 2025-11-21 14:50:42 +0100
 Author: Amélie Prudhomme
-Message: Add files via upload
+Message: Create test
