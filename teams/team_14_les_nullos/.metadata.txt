@@ -1,10 +1,10 @@
 Team: team_14_les_nullos
 Repository: https://github.com/suzanne-tedeschi/bnp-private-space
-Aggregation Time: 2025-11-21T15:03:25+01:00
+Aggregation Time: 2025-11-21T15:09:26+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: f7218c1925ccb671a249b6a86b7b497a5a324071
-Date: 2025-11-21 14:01:48 +0000
+Hash: 0fbd23fee1d32ca3ea277809313e0fd212b70e57
+Date: 2025-11-21 14:07:25 +0000
 Author: gpt-engineer-app[bot]
-Message: Add dashboard footer
+Message: Reorder header remove pilot
