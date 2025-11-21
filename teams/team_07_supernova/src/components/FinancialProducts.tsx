@@ -1,4 +1,5 @@
-import { PiggyBank, Calendar, Shield, Star } from "lucide-react";
+import { PiggyBank, Calendar, Shield, Star, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const FinancialProducts = () => {
   const products = [
@@ -6,6 +7,7 @@ const FinancialProducts = () => {
       name: "Savings Account",
       icon: PiggyBank,
       description: "Risk-free savings with guaranteed interest",
+      link: "#",
       duration: "Anytime",
       performance: 2,
       risk: 1,
@@ -17,6 +19,7 @@ const FinancialProducts = () => {
       name: "Fixed Deposit",
       icon: Calendar,
       description: "Locked deposit earning higher returns over time",
+      link: "#",
       duration: "3 days",
       performance: 2,
       risk: 2,
@@ -28,6 +31,7 @@ const FinancialProducts = () => {
       name: "Life Insurance",
       icon: Shield,
       description: "Long-term investment with tax benefits",
+      link: "#",
       duration: "8 days",
       performance: 3,
       risk: 2,
@@ -91,9 +95,22 @@ const FinancialProducts = () => {
                 
                 {/* Content */}
                 <div className="p-6 space-y-4">
-                  <p className="text-sm text-muted-foreground text-center min-h-[40px]">
-                    {product.description}
-                  </p>
+                  <div className="space-y-2">
+                    <p className="text-sm text-muted-foreground text-center min-h-[40px]">
+                      {product.description}
+                    </p>
+                    <div className="flex justify-center">
+                      <Button 
+                        variant="link" 
+                        size="sm"
+                        className="text-primary hover:text-primary/80 p-0 h-auto font-semibold group"
+                        onClick={() => window.open(product.link, '_blank')}
+                      >
+                        Learn More
+                        <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    </div>
+                  </div>
                   
                   {/* Stats */}
                   <div className="space-y-3 pt-2">

@@ -1,10 +1,10 @@
 Team: team_07_supernova
 Repository: https://github.com/vinnie777/pixel-perfect
-Aggregation Time: 2025-11-21T14:31:24+01:00
+Aggregation Time: 2025-11-21T14:34:45+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 97939b643c7e844e354fce33e951bfe344f0edfc
-Date: 2025-11-21 13:30:04 +0000
+Hash: bd0e387e01579e1409bd066547b4fb4877ecfb1a
+Date: 2025-11-21 13:32:00 +0000
 Author: gpt-engineer-app[bot]
-Message: Add Crowdfunding asset
+Message: Add learn more buttons
