@@ -1,0 +1,10 @@
+Team: team_05_los_chechos
+Repository: https://github.com/nathalietogni-xhec/react-starter-kit.git
+Aggregation Time: 2025-11-21T14:34:23+01:00
+Deadline: 2025-11-21 15:00:00
+
+Last Commit Info:
+Hash: 3c0fe266fa9d3a65d355826b950ebf95886c2b5a
+Date: 2025-11-21 13:31:44 +0000
+Author: gpt-engineer-app[bot]
+Message: Make advisor CTA permanent
