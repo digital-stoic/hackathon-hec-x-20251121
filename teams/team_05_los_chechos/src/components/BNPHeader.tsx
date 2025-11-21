@@ -135,12 +135,6 @@ const BNPHeader = () => {
               </Button>
             </Link>
           </div>
-
-          <div className="flex items-center">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium">
-              SPEAK TO AN ADVISOR
-            </Button>
-          </div>
         </div>
       </nav>
     </header>

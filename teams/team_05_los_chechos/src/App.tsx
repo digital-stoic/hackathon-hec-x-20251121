@@ -12,6 +12,8 @@ import GuideLargeCapital from "./pages/guides/GuideLargeCapital";
 import GuideStartInvesting from "./pages/guides/GuideStartInvesting";
 import Guide2025 from "./pages/guides/Guide2025";
 import GuideSustainable from "./pages/guides/GuideSustainable";
+import AboutProgram from "./pages/give-back/AboutProgram";
+import ImpactMatching from "./pages/give-back/ImpactMatching";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/guides/start-investing" element={<GuideStartInvesting />} />
           <Route path="/guides/invest-2025" element={<Guide2025 />} />
           <Route path="/guides/sustainable-investment" element={<GuideSustainable />} />
+          <Route path="/give-back/about" element={<AboutProgram />} />
+          <Route path="/give-back/impact-matching" element={<ImpactMatching />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

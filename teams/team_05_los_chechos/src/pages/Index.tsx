@@ -2,6 +2,7 @@ import BNPHeader from "@/components/BNPHeader";
 import BNPHero from "@/components/BNPHero";
 import ProfileSelector from "@/components/ProfileSelector";
 import GuidesCarousel from "@/components/GuidesCarousel";
+import GiveBackProgram from "@/components/GiveBackProgram";
 import PersonaCards from "@/components/PersonaCards";
 import Solutions from "@/components/Solutions";
 import DigitalPlatform from "@/components/DigitalPlatform";
@@ -19,6 +20,7 @@ const Index = () => {
         <BNPHero />
         <ProfileSelector />
         <GuidesCarousel />
+        <GiveBackProgram />
         <PersonaCards />
         <Solutions />
         <DigitalPlatform />

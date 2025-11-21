@@ -31,7 +31,7 @@ const BNPHero = () => {
             <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
               Explore Your Profile
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button size="lg" className="bg-white text-foreground hover:bg-white/90">
               Speak to an Advisor
             </Button>
             <Link to="/simulator">
