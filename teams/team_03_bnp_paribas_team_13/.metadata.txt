@@ -1,10 +1,10 @@
 Team: team_03_bnp_paribas_team_13
 Repository: https://github.com/Guillaumekite/private-banking-vision.git
-Aggregation Time: 2025-11-21T14:30:53+01:00
+Aggregation Time: 2025-11-21T14:34:03+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: b68b511ca13f5e9215723205b2555e2b9d9b881d
-Date: 2025-11-21 13:12:04 +0000
+Hash: adfd0801ec405779538715a177fd5f2ab1cb5d7b
+Date: 2025-11-21 13:33:06 +0000
 Author: gpt-engineer-app[bot]
-Message: Connect Sidebar nav to routes
+Message: Your Appointment page upgrade
