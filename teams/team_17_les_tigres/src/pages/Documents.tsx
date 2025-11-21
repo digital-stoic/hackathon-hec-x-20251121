@@ -6,6 +6,9 @@ import { Badge } from "@/components/ui/badge";
 import { Header } from "@/components/Header";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ProfileCompletionCard from "@/components/ProfileCompletionCard";
+import { RichieAssistant } from "@/components/RichieAssistant";
+import { DynamicNotifications } from "@/components/DynamicNotifications";
+import { CoachIAChat } from "@/components/CoachIAChat";
 import {
   Search,
   FolderOpen,
@@ -151,6 +154,7 @@ const Documents = () => {
   const { t } = useLanguage();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedDossier, setSelectedDossier] = useState<Dossier | null>(null);
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   const filteredDossiers = mockDossiers.filter(
     (dossier) =>
@@ -324,6 +328,10 @@ const Documents = () => {
           </div>
         </div>
       </main>
+
+      <RichieAssistant onOpenChat={() => setIsChatOpen(true)} />
+      <DynamicNotifications />
+      {isChatOpen && <CoachIAChat onClose={() => setIsChatOpen(false)} />}
     </div>
   );
 };

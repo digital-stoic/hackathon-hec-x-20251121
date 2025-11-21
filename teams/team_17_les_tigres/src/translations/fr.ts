@@ -206,4 +206,23 @@ export default {
   'booking.confirmed.desc': 'Vous recevrez un email de confirmation avec tous les détails.',
   'booking.verified': 'Expert vérifié',
   'booking.success': 'Rendez-vous confirmé',
+  
+  // Chat with Richie
+  'chat.title': 'Coach IA',
+  'chat.subtitle': 'Assistant patrimonial intelligent',
+  'chat.placeholder': 'Posez votre question au coach IA...',
+  'chat.hint': 'Appuyez sur Entrée pour envoyer, Shift+Entrée pour un retour à la ligne',
+  'chat.ai.name': 'Coach IA',
+  'chat.ai.response': 'Je prends en compte votre demande. En analysant votre profil et vos objectifs, je vous propose une stratégie personnalisée. Souhaitez-vous que je détaille les options disponibles ?',
+  'chat.ai.action1': 'Oui, détailler',
+  'chat.ai.action2': 'Autre question',
+  
+  // Initial chat messages
+  'chat.initial.msg1': 'Salut Karim ! Ton patrimoine est à 5,23M€ avec +2,3% ce mois-ci. Pas mal ! Je remarque que tu es beaucoup exposé sur la tech (42% de tes actions). Tu veux qu\'on regarde ensemble si c\'est pas un peu risqué ?',
+  'chat.initial.msg1.action1': 'Oui, montre-moi',
+  'chat.initial.msg1.action2': 'Voir les alternatives',
+  'chat.initial.msg2': 'Oui, analyse les corrélations et propose des optimisations',
+  'chat.initial.msg3': 'J\'ai regardé : tes actions tech bougent ensemble 78% du temps (Apple et Microsoft notamment). Si le secteur corrige, ça risque de faire mal.\n\nMon conseil : tu pourrais vendre 15% de tes actions tech (145k€) et les mettre sur de l\'immobilier commercial (SCPI à 5,2%) ou des obligations sûres (3,8%). Ça réduirait ton risque de volatilité de -18% à -12%.',
+  'chat.initial.msg3.action1': 'Simuler ce scénario',
+  'chat.initial.msg3.action2': 'Voir d\'autres options',
 };

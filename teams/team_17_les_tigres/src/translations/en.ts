@@ -206,4 +206,23 @@ export default {
   'booking.confirmed.desc': 'You will receive a confirmation email with all the details.',
   'booking.verified': 'Verified expert',
   'booking.success': 'Appointment confirmed',
+  
+  // Chat with Richie
+  'chat.title': 'AI Coach',
+  'chat.subtitle': 'Smart wealth assistant',
+  'chat.placeholder': 'Ask your question to the AI coach...',
+  'chat.hint': 'Press Enter to send, Shift+Enter for line break',
+  'chat.ai.name': 'AI Coach',
+  'chat.ai.response': 'I\'m taking your request into account. By analyzing your profile and objectives, I propose a personalized strategy. Would you like me to detail the available options?',
+  'chat.ai.action1': 'Yes, detail',
+  'chat.ai.action2': 'Another question',
+  
+  // Initial chat messages
+  'chat.initial.msg1': 'Hey Karim! Your wealth is at 5.23M€ with +2.3% this month. Not bad! I notice you\'re heavily exposed to tech (42% of your stocks). Want to check if that\'s not a bit risky?',
+  'chat.initial.msg1.action1': 'Yes, show me',
+  'chat.initial.msg1.action2': 'See alternatives',
+  'chat.initial.msg2': 'Yes, analyze correlations and suggest optimizations',
+  'chat.initial.msg3': 'I checked: your tech stocks move together 78% of the time (Apple and Microsoft notably). If the sector corrects, it could hurt.\n\nMy advice: you could sell 15% of your tech stocks (145k€) and put them in commercial real estate (SCPI at 5.2%) or safe bonds (3.8%). This would reduce your volatility risk from -18% to -12%.',
+  'chat.initial.msg3.action1': 'Simulate this scenario',
+  'chat.initial.msg3.action2': 'See other options',
 };

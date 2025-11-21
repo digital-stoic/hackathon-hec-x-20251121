@@ -11,6 +11,9 @@ import { investorQuestions, calculateProfile } from "@/data/investorQuestions";
 import { Answer } from "@/types/investorProfile";
 import { InvestorProfileResults } from "@/components/InvestorProfileResults";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { RichieAssistant } from "@/components/RichieAssistant";
+import { DynamicNotifications } from "@/components/DynamicNotifications";
+import { CoachIAChat } from "@/components/CoachIAChat";
 
 const InvestorProfile = () => {
   const { t } = useLanguage();
@@ -19,6 +22,7 @@ const InvestorProfile = () => {
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [currentAnswer, setCurrentAnswer] = useState<string | string[] | number>([]);
   const [showResults, setShowResults] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   const currentQuestion = investorQuestions[currentStep];
   const progress = ((currentStep + 1) / investorQuestions.length) * 100;
@@ -223,6 +227,10 @@ const InvestorProfile = () => {
           )}
         </div>
       </main>
+
+      <RichieAssistant onOpenChat={() => setIsChatOpen(true)} />
+      <DynamicNotifications />
+      {isChatOpen && <CoachIAChat onClose={() => setIsChatOpen(false)} />}
     </div>
   );
 };

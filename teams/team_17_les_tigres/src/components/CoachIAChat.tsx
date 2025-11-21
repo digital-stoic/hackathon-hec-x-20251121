@@ -1,14 +1,46 @@
 import { useState, useRef, useEffect } from "react";
 import { X, Send, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { coachMessages as initialMessages, CoachMessage } from "@/data/mockData";
+import { CoachMessage } from "@/data/mockData";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface CoachIAChatProps {
   onClose: () => void;
 }
 
 export const CoachIAChat = ({ onClose }: CoachIAChatProps) => {
-  const [messages, setMessages] = useState<CoachMessage[]>(initialMessages);
+  const { t } = useLanguage();
+  
+  const getInitialMessages = (): CoachMessage[] => [
+    {
+      id: "1",
+      role: "assistant",
+      content: t('chat.initial.msg1'),
+      timestamp: new Date(Date.now() - 7200000).toISOString(),
+      actions: [
+        { label: t('chat.initial.msg1.action1'), type: "primary" },
+        { label: t('chat.initial.msg1.action2'), type: "secondary" },
+      ],
+    },
+    {
+      id: "2",
+      role: "user",
+      content: t('chat.initial.msg2'),
+      timestamp: new Date(Date.now() - 7000000).toISOString(),
+    },
+    {
+      id: "3",
+      role: "assistant",
+      content: t('chat.initial.msg3'),
+      timestamp: new Date(Date.now() - 6800000).toISOString(),
+      actions: [
+        { label: t('chat.initial.msg3.action1'), type: "primary" },
+        { label: t('chat.initial.msg3.action2'), type: "secondary" },
+      ],
+    },
+  ];
+  
+  const [messages, setMessages] = useState<CoachMessage[]>(getInitialMessages());
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -41,12 +73,11 @@ export const CoachIAChat = ({ onClose }: CoachIAChatProps) => {
       const aiMessage: CoachMessage = {
         id: (Date.now() + 1).toString(),
         role: "assistant",
-        content:
-          "Je prends en compte votre demande. En analysant votre profil et vos objectifs, je vous propose une stratégie personnalisée. Souhaitez-vous que je détaille les options disponibles ?",
+        content: t('chat.ai.response'),
         timestamp: new Date().toISOString(),
         actions: [
-          { label: "Oui, détailler", type: "primary" },
-          { label: "Autre question", type: "secondary" },
+          { label: t('chat.ai.action1'), type: "primary" },
+          { label: t('chat.ai.action2'), type: "secondary" },
         ],
       };
       setMessages((prev) => [...prev, aiMessage]);
@@ -71,9 +102,9 @@ export const CoachIAChat = ({ onClose }: CoachIAChatProps) => {
               <Sparkles className="w-5 h-5 text-champagne" />
             </div>
             <div>
-              <h2 className="text-xl font-serif text-foreground">Coach IA</h2>
+              <h2 className="text-xl font-serif text-foreground">{t('chat.title')}</h2>
               <p className="text-xs text-muted-foreground">
-                Assistant patrimonial intelligent
+                {t('chat.subtitle')}
               </p>
             </div>
           </div>
@@ -104,7 +135,7 @@ export const CoachIAChat = ({ onClose }: CoachIAChatProps) => {
                 {message.role === "assistant" && (
                   <div className="flex items-center gap-2 mb-2">
                     <Sparkles className="w-4 h-4 text-champagne" />
-                    <span className="text-xs text-champagne">Coach IA</span>
+                    <span className="text-xs text-champagne">{t('chat.ai.name')}</span>
                     <span className="text-xs text-muted-foreground">
                       {formatTime(message.timestamp)}
                     </span>
@@ -154,7 +185,7 @@ export const CoachIAChat = ({ onClose }: CoachIAChatProps) => {
               <div className="max-w-[75%]">
                 <div className="flex items-center gap-2 mb-2">
                   <Sparkles className="w-4 h-4 text-champagne" />
-                  <span className="text-xs text-champagne">Coach IA</span>
+                  <span className="text-xs text-champagne">{t('chat.ai.name')}</span>
                 </div>
                 <div className="rounded-2xl p-4 bg-transparent border border-champagne/20">
                   <div className="flex gap-1">
@@ -188,7 +219,7 @@ export const CoachIAChat = ({ onClose }: CoachIAChatProps) => {
                   handleSend();
                 }
               }}
-              placeholder="Posez votre question au coach IA..."
+              placeholder={t('chat.placeholder')}
               className="flex-1 bg-muted border border-border/30 rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-champagne/50 resize-none min-h-[56px] max-h-[120px]"
               rows={1}
             />
@@ -201,8 +232,7 @@ export const CoachIAChat = ({ onClose }: CoachIAChatProps) => {
             </Button>
           </div>
           <p className="text-xs text-muted-foreground mt-2">
-            Appuyez sur Entrée pour envoyer, Shift+Entrée pour un retour à la
-            ligne
+            {t('chat.hint')}
           </p>
         </div>
       </div>

@@ -1,10 +1,10 @@
 Team: team_17_les_tigres
 Repository: https://github.com/kbouri/wealth-guardian-ai.git
-Aggregation Time: 2025-11-21T14:36:02+01:00
+Aggregation Time: 2025-11-21T14:43:31+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 17357e7e8ba9499050ab35a8d602dc5c6c53b2c2
-Date: 2025-11-21 13:34:04 +0000
+Hash: 61dc2025e0bf568613d09420e46e721c7f94c961
+Date: 2025-11-21 13:42:00 +0000
 Author: gpt-engineer-app[bot]
-Message: Enhance booking flow
+Message: Activer Richie en anglais

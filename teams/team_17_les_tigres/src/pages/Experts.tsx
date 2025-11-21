@@ -14,6 +14,9 @@ import {
   Building2,
 } from "lucide-react";
 import { useState } from "react";
+import { RichieAssistant } from "@/components/RichieAssistant";
+import { DynamicNotifications } from "@/components/DynamicNotifications";
+import { CoachIAChat } from "@/components/CoachIAChat";
 
 type ExpertType = "comptable" | "avocat" | "fiscaliste" | "conseil";
 
@@ -138,6 +141,7 @@ const Experts = () => {
   const { t } = useLanguage();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedType, setSelectedType] = useState<ExpertType | "all">("all");
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   const typeLabels: Record<ExpertType, string> = {
     comptable: t('experts.type.comptable'),
@@ -285,6 +289,10 @@ const Experts = () => {
           </div>
         )}
       </main>
+
+      <RichieAssistant onOpenChat={() => setIsChatOpen(true)} />
+      <DynamicNotifications />
+      {isChatOpen && <CoachIAChat onClose={() => setIsChatOpen(false)} />}
     </div>
   );
 };

@@ -19,10 +19,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { BookingDialog } from "@/components/BookingDialog";
+import { RichieAssistant } from "@/components/RichieAssistant";
+import { DynamicNotifications } from "@/components/DynamicNotifications";
+import { CoachIAChat } from "@/components/CoachIAChat";
 
 const Conseil = () => {
   const { t } = useLanguage();
   const [bookingOpen, setBookingOpen] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
   
   return (
     <div className="min-h-screen bg-background">
@@ -270,7 +274,10 @@ const Conseil = () => {
         </div>
       </main>
 
+      <RichieAssistant onOpenChat={() => setIsChatOpen(true)} />
+      <DynamicNotifications />
       <BookingDialog open={bookingOpen} onOpenChange={setBookingOpen} />
+      {isChatOpen && <CoachIAChat onClose={() => setIsChatOpen(false)} />}
     </div>
   );
 };
