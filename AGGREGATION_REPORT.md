@@ -1,7 +1,7 @@
 # 🏆 Hackathon Aggregation Report
 
-**Generated:** 2025-11-20T13:22:24+01:00
-**Deadline:** 2025-11-21 18:00:00
+**Generated:** 2025-11-21T10:20:16+01:00
+**Deadline:** 2025-11-21 15:00:00
 
 ## 📊 Summary
 
@@ -26,8 +26,8 @@
 ```
 Team: test-mat-1
 Repository: https://github.com/digital-stoic/simplificator-manager-page
-Aggregation Time: 2025-11-20T13:22:17+01:00
-Deadline: 2025-11-21 18:00:00
+Aggregation Time: 2025-11-21T10:20:09+01:00
+Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
 Hash: 981df2267a4f3070e9b26a89391179f1205d6300
@@ -46,8 +46,8 @@ Message: Capitalize heading word
 ```
 Team: test-mat-2
 Repository: https://github.com/digital-stoic/simplificator-manager-page
-Aggregation Time: 2025-11-20T13:22:22+01:00
-Deadline: 2025-11-21 18:00:00
+Aggregation Time: 2025-11-21T10:20:14+01:00
+Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
 Hash: 981df2267a4f3070e9b26a89391179f1205d6300
