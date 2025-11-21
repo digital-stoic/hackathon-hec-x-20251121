@@ -103,11 +103,21 @@ export const UnicornGameProvider = ({ children }: { children: ReactNode }) => {
   // Buy AutoClipper - makeClipper()
   const buyAutoClipper = () => {
     if (funds < clipperCost) return;
-    setFunds(prev => prev - clipperCost);
+    const currentCost = clipperCost;
+    const currentLevel = clipperLevel;
+    
+    setFunds(prev => prev - currentCost);
     setClipperLevel(prev => prev + 1);
     setClipmakerRate(prev => prev + 1);
-    setClipperCost(prev => Math.floor(prev * 1.15));
-    addLog(`AutoClipper #${clipperLevel + 1} online`);
+    
+    // Calculate new cost: floor(currentCost * 1.15), minimum increase of 1
+    const newCost = Math.max(
+      Math.floor(currentCost * 1.15),
+      currentCost + 1
+    );
+    setClipperCost(newCost);
+    
+    addLog(`AutoClipper #${currentLevel + 1} online`);
   };
 
   const restartGame = () => {
@@ -131,26 +141,34 @@ export const UnicornGameProvider = ({ children }: { children: ReactNode }) => {
     const TICKS_PER_SECOND = 20;
     const interval = setInterval(() => {
       const price = margin + 0.01;
+      const demandPerTick = demand / TICKS_PER_SECOND;
+      const productionPerTick = clipmakerRate / TICKS_PER_SECOND;
       
       // A. Production - AutoClippers produce clips
-      if (clipmakerRate > 0 && wire >= clipmakerRate / TICKS_PER_SECOND) {
-        const production = clipmakerRate / TICKS_PER_SECOND;
-        setWire(prev => prev - production);
-        setClips(prev => prev + production);
+      if (productionPerTick > 0) {
+        setWire(prevWire => {
+          if (prevWire >= productionPerTick) {
+            // Add to clips inventory
+            setClips(prevClips => prevClips + productionPerTick);
+            return prevWire - productionPerTick;
+          }
+          return prevWire;
+        });
       }
       
-      // B. Sales and Revenue
-      setClips(prev => {
-        if (prev > 0) {
+      // B. Sales and Revenue (separate update)
+      setClips(prevClips => {
+        if (prevClips > 0) {
           // Calculate how many clips can be sold this tick
-          const saleRate = Math.min(prev, demand / TICKS_PER_SECOND);
-          const revenue = saleRate * price;
+          const clipsSoldThisTick = Math.min(prevClips, demandPerTick);
           
-          setFunds(f => f + revenue);
-          
-          return prev - saleRate;
+          if (clipsSoldThisTick > 0) {
+            const revenue = clipsSoldThisTick * price;
+            setFunds(prevFunds => prevFunds + revenue);
+            return prevClips - clipsSoldThisTick;
+          }
         }
-        return prev;
+        return prevClips;
       });
       
       // C. Dynamic Wire Price - decay
@@ -173,7 +191,7 @@ export const UnicornGameProvider = ({ children }: { children: ReactNode }) => {
     }, 50);
 
     return () => clearInterval(interval);
-  }, [clips, margin, demand, clipmakerRate, wire, wireBasePrice]);
+  }, [margin, demand, clipmakerRate, wireBasePrice]);
 
   return (
     <GameContext.Provider value={{

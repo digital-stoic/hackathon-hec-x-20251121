@@ -1,10 +1,10 @@
 Team: team_06_les_banquupteurs
 Repository: https://github.com/solene-duv/my-app-creator.git
-Aggregation Time: 2025-11-21T13:59:23+01:00
+Aggregation Time: 2025-11-21T14:07:35+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: ceae05a29ac34997722152a35f8d25998733739e
-Date: 2025-11-21 12:59:06 +0000
+Hash: b65d495300870febdbca009c240e476a55efe3a2
+Date: 2025-11-21 13:05:04 +0000
 Author: gpt-engineer-app[bot]
-Message: Add leaderboard UI
+Message: Fix game loop state handling
