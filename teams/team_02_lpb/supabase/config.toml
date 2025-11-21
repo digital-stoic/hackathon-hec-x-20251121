@@ -1,0 +1,25 @@
+project_id = "olcoadxppkecxkbqbpxt"
+
+[functions.run-geo-test]
+verify_jwt = false
+
+[functions.fetch-page]
+verify_jwt = false
+
+[functions.crawl-site]
+verify_jwt = false
+
+[functions.crawl-refresh]
+verify_jwt = false
+
+[functions.rewrite-page]
+verify_jwt = false
+
+[functions.geo-engine]
+verify_jwt = false
+
+[functions.populate-playbook]
+verify_jwt = false
+
+[functions.persona-geo-test]
+verify_jwt = false
