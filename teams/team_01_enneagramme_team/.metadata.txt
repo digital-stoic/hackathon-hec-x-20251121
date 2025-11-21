@@ -1,10 +1,10 @@
 Team: team_01_enneagramme_team
 Repository: https://github.com/Matekto/geo-quality-score
-Aggregation Time: 2025-11-21T14:44:17+01:00
+Aggregation Time: 2025-11-21T14:47:43+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: c0773ec9578b368a27e87e7ead5845000124fe2f
-Date: 2025-11-21 14:42:38 +0100
-Author: Hbz
-Message: Update API key for MistralAIEmbeddings
+Hash: c7f75ada2f50a7a09707de4051802f93e24b46e2
+Date: 2025-11-21 14:47:24 +0100
+Author: Amélie Prudhomme
+Message: Add files via upload
