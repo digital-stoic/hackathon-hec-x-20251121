@@ -1,10 +1,10 @@
 Team: team_06_les_banquupteurs
 Repository: https://github.com/solene-duv/my-app-creator.git
-Aggregation Time: 2025-11-21T14:26:16+01:00
+Aggregation Time: 2025-11-21T14:31:13+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: f2d358918cec7a30c089054087874ba638f975eb
-Date: 2025-11-21 13:25:59 +0000
+Hash: 8ae0b5d81a29254f3abb1d24251222884de97d78
+Date: 2025-11-21 13:29:04 +0000
 Author: gpt-engineer-app[bot]
-Message: Adjust currency UI to K
+Message: Update terminology in UI
