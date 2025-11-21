@@ -1,10 +1,10 @@
 Team: team_16_profil_6
 Repository: https://github.com/Guillaumekite/private-banking-vision.git
-Aggregation Time: 2025-11-21T14:56:31+01:00
+Aggregation Time: 2025-11-21T15:03:45+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 801a3619885aa204e7912a0c9822564b199ea5fa
-Date: 2025-11-21 13:54:09 +0000
+Hash: a23f5c5f575efe617781bf22e1aa50663f82c843
+Date: 2025-11-21 14:02:25 +0000
 Author: gpt-engineer-app[bot]
-Message: Polish top bar and visuals
+Message: Add sign out dropdown
