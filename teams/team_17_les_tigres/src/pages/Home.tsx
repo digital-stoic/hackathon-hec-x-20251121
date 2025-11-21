@@ -31,7 +31,7 @@ const Home = () => {
       <main className="container mx-auto px-6 py-16">
         {/* Hero Section */}
         <div className="max-w-4xl mx-auto text-center mb-20">
-          <div className="flex justify-center mb-8 animate-scale-in">
+          <div className="flex flex-col items-center mb-8 animate-scale-in">
             <img
               src={richie3D}
               alt="Richie"
@@ -41,6 +41,7 @@ const Home = () => {
                 transform: 'perspective(1000px) rotateY(-5deg)',
               }}
             />
+            <div className="h-3 w-32 bg-champagne rounded-full mt-4"></div>
           </div>
           <h1 className="text-5xl md:text-6xl font-serif text-champagne mb-6 leading-tight">
             {t('home.hero.title.1')}

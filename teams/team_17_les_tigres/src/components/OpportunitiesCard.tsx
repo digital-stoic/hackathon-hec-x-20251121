@@ -8,6 +8,7 @@ import {
 import { ChevronDown, Lightbulb, CreditCard, Users, TrendingUp } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "react-router-dom";
 
 export const OpportunitiesCard = () => {
   const { t } = useLanguage();
@@ -96,8 +97,11 @@ export const OpportunitiesCard = () => {
           <Button
             variant="outline"
             className="w-full mt-4 border-champagne/50 text-champagne hover:bg-champagne/10"
+            asChild
           >
-            {t('patrimoine.opportunities.explore')} →
+            <Link to="/opportunities">
+              {t('patrimoine.opportunities.explore')} →
+            </Link>
           </Button>
         </CollapsibleContent>
       </Collapsible>
