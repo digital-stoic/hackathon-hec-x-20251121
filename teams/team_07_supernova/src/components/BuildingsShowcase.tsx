@@ -5,6 +5,7 @@ import buildingStocks from "@/assets/building-stocks.jpg";
 import buildingPrivateEquity from "@/assets/building-private-equity.jpeg";
 import buildingVentureCapital from "@/assets/building-venture-capital.jpeg";
 import buildingCrowdfunding from "@/assets/building-crowdfunding.jpeg";
+import buildingLibrary from "@/assets/building-library.jpeg";
 import { Building2, HelpCircle, Users, TrendingUp, Briefcase, Rocket, Users2, BookOpen } from "lucide-react";
 
 const BuildingsShowcase = () => {
@@ -53,6 +54,7 @@ const BuildingsShowcase = () => {
     },
     {
       name: "Documentation Library",
+      image: buildingLibrary,
       icon: BookOpen,
       description: "Access comprehensive financial guides. Research advanced strategies and deepen your understanding of markets."
     }
