@@ -1,10 +1,10 @@
 Team: team_06_les_banquupteurs
 Repository: https://github.com/solene-duv/my-app-creator.git
-Aggregation Time: 2025-11-21T14:34:34+01:00
+Aggregation Time: 2025-11-21T14:42:13+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 268b28165a27157429f69ec36e777b0126f6120a
-Date: 2025-11-21 13:34:27 +0000
+Hash: 90193693bf428f35c4127474514fe477e9cd56c3
+Date: 2025-11-21 13:41:41 +0000
 Author: gpt-engineer-app[bot]
-Message: Visual edit in Lovable
+Message: Make WealthSimulator standalone
