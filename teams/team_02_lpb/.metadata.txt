@@ -1,10 +1,10 @@
 Team: team_02_lpb
 Repository: https://github.com/pierre-alexx/geo-insights-hub
-Aggregation Time: 2025-11-21T14:15:24+01:00
+Aggregation Time: 2025-11-21T14:22:55+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 34dcabe08addfbc56a0914128802ff7d422a71ab
-Date: 2025-11-21 13:14:50 +0000
+Hash: fd98782edadc86b82d88ce7a5b17aec7ae915079
+Date: 2025-11-21 13:21:52 +0000
 Author: gpt-engineer-app[bot]
-Message: Fix rewrite error handling
+Message: Add indexability scoring
