@@ -9,8 +9,10 @@ import zone2 from "@/assets/zone2-desert.png";
 import zone3 from "@/assets/zone3-forest.png";
 
 const Index = () => {
-  // Date de début du challenge (à ajuster selon vos besoins)
-  const challengeStartDate = new Date("2025-01-01T00:00:00");
+  // Date de fin du challenge (5 jours et 3 heures à partir de maintenant)
+  const challengeEndDate = new Date();
+  challengeEndDate.setDate(challengeEndDate.getDate() + 5);
+  challengeEndDate.setHours(challengeEndDate.getHours() + 3);
   
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -22,7 +24,7 @@ const Index = () => {
   useEffect(() => {
     const calculateTimeLeft = () => {
       const now = new Date();
-      const difference = challengeStartDate.getTime() - now.getTime();
+      const difference = challengeEndDate.getTime() - now.getTime();
 
       if (difference > 0) {
         setTimeLeft({
@@ -63,26 +65,32 @@ const Index = () => {
       {/* Hero Section */}
       <section className="container mx-auto px-2 sm:px-4 py-8 sm:py-16 text-center relative z-10">
         <div className="max-w-4xl mx-auto space-y-4 sm:space-y-6 animate-fade-in">
+          {/* Title Flow */}
+          <div className="mb-4">
+            <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mb-2">
+              Flow
+            </h1>
+          </div>
+
           {/* Prize Banner */}
-          <div className="mb-6 sm:mb-8 p-4 sm:p-6 rounded-2xl bg-gradient-to-r from-accent via-yellow-500 to-accent border-4 border-yellow-400 shadow-2xl animate-pulse">
+          <div className="mb-6 sm:mb-8 p-6 sm:p-8 rounded-xl bg-card border-2 border-primary shadow-lg">
             <div className="flex items-center justify-center gap-3 mb-2">
-              <Trophy className="w-8 h-8 sm:w-12 sm:h-12 text-white" />
-              <h3 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white">
+              <Trophy className="w-6 h-6 sm:w-8 sm:h-8 text-accent" />
+              <h3 className="text-3xl sm:text-5xl font-bold text-foreground">
                 50.000€
               </h3>
-              <Trophy className="w-8 h-8 sm:w-12 sm:h-12 text-white" />
             </div>
-            <p className="text-sm sm:text-xl font-bold text-white">
-              À GAGNER DANS LE CHALLENGE !
+            <p className="text-sm sm:text-lg text-muted-foreground">
+              à gagner dans le challenge
             </p>
           </div>
 
           {/* Countdown Timer */}
-          <div className="mb-6 sm:mb-8 p-4 sm:p-6 rounded-xl bg-card border-2 border-primary shadow-xl">
+          <div className="mb-6 sm:mb-8 p-4 sm:p-6 rounded-xl bg-card border-2 border-border shadow-lg">
             <div className="flex items-center justify-center gap-2 mb-3">
               <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
               <h4 className="text-base sm:text-xl font-bold text-foreground">
-                Le challenge commence dans :
+                Le challenge se termine dans :
               </h4>
             </div>
             <div className="grid grid-cols-4 gap-2 sm:gap-4 max-w-2xl mx-auto">
@@ -104,22 +112,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-
-          <div className="mb-4">
-            <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mb-2">
-              Flow
-            </h1>
-            <p className="text-sm sm:text-base text-muted-foreground font-medium">L'éducation financière gamifiée</p>
-          </div>
           
-          <div className="mb-8">
-            <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold text-foreground leading-tight">
-              Transforme ton<br />
-              Apprentissage Financier<br />
-              en Aventure
-            </h2>
-          </div>
-
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center pt-4 sm:pt-6 px-4">
             <Link to="/map" className="w-full sm:w-auto">
               <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-premium text-base sm:text-xl px-6 sm:px-10 py-5 sm:py-7">
