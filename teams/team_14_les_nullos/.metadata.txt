@@ -1,10 +1,10 @@
 Team: team_14_les_nullos
 Repository: https://github.com/suzanne-tedeschi/bnp-private-space
-Aggregation Time: 2025-11-21T14:56:03+01:00
+Aggregation Time: 2025-11-21T15:03:25+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 1d1053699ef5880e51b2b1cbd278bc80012e3001
-Date: 2025-11-21 13:54:19 +0000
+Hash: f7218c1925ccb671a249b6a86b7b497a5a324071
+Date: 2025-11-21 14:01:48 +0000
 Author: gpt-engineer-app[bot]
-Message: Add video overlay and border
+Message: Add dashboard footer
