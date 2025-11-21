@@ -1,10 +1,10 @@
 Team: team_06_les_banquupteurs
 Repository: https://github.com/solene-duv/my-app-creator.git
-Aggregation Time: 2025-11-21T14:50:27+01:00
+Aggregation Time: 2025-11-21T14:54:48+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 0bd9cb6a013e488f69a07947a76e8f25b402caea
-Date: 2025-11-21 13:48:28 +0000
+Hash: 36d775b5640679976bc43ca5236fe94c1bc8e9fd
+Date: 2025-11-21 13:53:01 +0000
 Author: gpt-engineer-app[bot]
-Message: Show revenue in wealth sim
+Message: Enhance Explore Content progress
