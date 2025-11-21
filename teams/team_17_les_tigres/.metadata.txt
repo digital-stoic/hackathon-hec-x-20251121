@@ -1,10 +1,10 @@
 Team: team_17_les_tigres
 Repository: https://github.com/kbouri/wealth-guardian-ai.git
-Aggregation Time: 2025-11-21T14:22:10+01:00
+Aggregation Time: 2025-11-21T14:24:18+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 298f2744035dc4ce4b3fa341573ebe6b015c74ec
-Date: 2025-11-21 13:17:07 +0000
+Hash: 6e6e5ac0abe49b5579e6f93e584af550001c95c2
+Date: 2025-11-21 13:22:38 +0000
 Author: gpt-engineer-app[bot]
-Message: Intégrer langue anglais partout
+Message: Richer avatar & notifications

@@ -45,10 +45,11 @@ export const WeeklyTasksCard = () => {
       </div>
 
       <div className="space-y-4">
-        {tasks.map((task) => (
+        {tasks.map((task, index) => (
           <div
             key={task.id}
-            className="p-4 rounded-lg border border-border/50 bg-muted/30 hover:border-champagne/30 transition-colors"
+            className="p-4 rounded-lg border border-border/50 bg-muted/30 hover:border-champagne/30 transition-all hover:shadow-lg hover:scale-[1.02] animate-fade-in"
+            style={{ animationDelay: `${index * 100}ms` }}
           >
             <div className="flex items-start justify-between gap-4 mb-3">
               <div className="flex-1">

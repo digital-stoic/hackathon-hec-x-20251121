@@ -1,12 +1,17 @@
+import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BarChart3, Users, TrendingUp, Shield, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { userData } from "@/data/mockData";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { RichieAssistant } from "@/components/RichieAssistant";
+import { DynamicNotifications } from "@/components/DynamicNotifications";
+import { CoachIAChat } from "@/components/CoachIAChat";
 
 const Home = () => {
   const { language, t } = useLanguage();
+  const [isChatOpen, setIsChatOpen] = useState(false);
   
   const formatCurrency = (value: number) => {
     const locale = language === 'fr' ? 'fr-FR' : 'en-US';
@@ -94,7 +99,8 @@ const Home = () => {
             {/* Gestion Patrimoine */}
             <Link
               to="/patrimoine"
-              className="group bg-white backdrop-blur-sm border border-border/50 rounded-lg p-10 hover:border-champagne/50 transition-all hover:shadow-premium"
+              className="group bg-white backdrop-blur-sm border border-border/50 rounded-lg p-10 hover:border-champagne/50 transition-all hover:shadow-premium hover:scale-[1.03] animate-fade-in"
+              style={{ animationDelay: '100ms' }}
             >
               <BarChart3 className="w-16 h-16 text-champagne mb-6 group-hover:scale-110 transition-transform" />
               <h3 className="text-2xl font-serif text-champagne mb-4">
@@ -112,7 +118,8 @@ const Home = () => {
             {/* Annuaire Experts */}
             <Link
               to="/experts"
-              className="group bg-white backdrop-blur-sm border border-border/50 rounded-lg p-10 hover:border-champagne/50 transition-all hover:shadow-premium"
+              className="group bg-white backdrop-blur-sm border border-border/50 rounded-lg p-10 hover:border-champagne/50 transition-all hover:shadow-premium hover:scale-[1.03] animate-fade-in"
+              style={{ animationDelay: '200ms' }}
             >
               <Users className="w-16 h-16 text-champagne mb-6 group-hover:scale-110 transition-transform" />
               <h3 className="text-2xl font-serif text-champagne mb-4">
@@ -130,7 +137,8 @@ const Home = () => {
             {/* Conseil Croissance & Cession */}
             <Link
               to="/conseil"
-              className="group bg-white backdrop-blur-sm border border-border/50 rounded-lg p-10 hover:border-champagne/50 transition-all hover:shadow-premium"
+              className="group bg-white backdrop-blur-sm border border-border/50 rounded-lg p-10 hover:border-champagne/50 transition-all hover:shadow-premium hover:scale-[1.03] animate-fade-in"
+              style={{ animationDelay: '300ms' }}
             >
               <Building2 className="w-16 h-16 text-champagne mb-6 group-hover:scale-110 transition-transform" />
               <h3 className="text-2xl font-serif text-champagne mb-4">
@@ -147,6 +155,14 @@ const Home = () => {
           </div>
         </div>
       </main>
+      
+      {/* Richie Assistant Floating Avatar */}
+      <RichieAssistant onOpenChat={() => setIsChatOpen(true)} />
+      
+      {/* Dynamic Notifications */}
+      <DynamicNotifications />
+      
+      {isChatOpen && <CoachIAChat onClose={() => setIsChatOpen(false)} />}
     </div>
   );
 };

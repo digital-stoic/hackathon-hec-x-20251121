@@ -75,10 +75,11 @@ export const OpportunitiesCard = () => {
         </div>
 
         <CollapsibleContent className="space-y-3">
-          {opps.map((opp) => (
+          {opps.map((opp, index) => (
             <div
               key={opp.id}
-              className="flex items-start gap-3 p-3 rounded-lg hover:bg-muted/50 transition-colors"
+              className="flex items-start gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all hover:scale-[1.02] cursor-pointer animate-fade-in"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="mt-0.5">{getIcon(opp.type)}</div>
               <div className="flex-1">

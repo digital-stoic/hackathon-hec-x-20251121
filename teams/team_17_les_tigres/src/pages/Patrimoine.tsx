@@ -7,6 +7,8 @@ import { PatrimoineOverviewCard } from "@/components/PatrimoineOverviewCard";
 import { LignePatrimoineItem } from "@/components/LignePatrimoineItem";
 import { CoachPreviewSimple } from "@/components/CoachPreviewSimple";
 import { CoachIAChat } from "@/components/CoachIAChat";
+import { RichieAssistant } from "@/components/RichieAssistant";
+import { DynamicNotifications } from "@/components/DynamicNotifications";
 import { portefeuilleLignes } from "@/data/mockData";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -57,8 +59,14 @@ const Patrimoine = () => {
                 </p>
               </div>
               <div className="space-y-3">
-                {portefeuilleLignes.slice(0, 6).map((ligne) => (
-                  <LignePatrimoineItem key={ligne.id} ligne={ligne} />
+                {portefeuilleLignes.slice(0, 6).map((ligne, index) => (
+                  <div
+                    key={ligne.id}
+                    className="animate-fade-in"
+                    style={{ animationDelay: `${index * 80}ms` }}
+                  >
+                    <LignePatrimoineItem ligne={ligne} />
+                  </div>
                 ))}
               </div>
               <button className="w-full text-sm text-champagne hover:text-champagne-muted transition-colors flex items-center justify-center gap-2 group mt-4 py-3">
@@ -73,6 +81,12 @@ const Patrimoine = () => {
       </main>
 
       {isChatOpen && <CoachIAChat onClose={() => setIsChatOpen(false)} />}
+      
+      {/* Richie Assistant Floating Avatar */}
+      <RichieAssistant onOpenChat={() => setIsChatOpen(true)} />
+      
+      {/* Dynamic Notifications */}
+      <DynamicNotifications />
     </div>
   );
 };

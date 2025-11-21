@@ -39,7 +39,7 @@ export const LignePatrimoineItem = ({ ligne }: LignePatrimoineItemProps) => {
   const isPositive = ligne.performance >= 0;
 
   return (
-    <div className="glass-card p-4 hover-lift cursor-pointer group">
+    <div className="glass-card p-4 hover-lift cursor-pointer group transition-all hover:shadow-premium">
       <div className="flex items-start justify-between mb-3">
         <div className="flex-1">
           <h4 className="text-sm font-medium text-foreground mb-1 group-hover:text-champagne transition-colors">
