@@ -1,10 +1,10 @@
 Team: team_15_albacore
-Repository: https://github.com/aymericdbz-stack/albacore.git
-Aggregation Time: 2025-11-21T14:43:13+01:00
+Repository: https://github.com/clemdjez-byte/bnp-founders-hub.git
+Aggregation Time: 2025-11-21T14:56:21+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: HEAD
-Date: 
-Author: 
-Message: 
+Hash: 2ac58258a56c9f997259645d2d6c197bfc201142
+Date: 2025-11-21 13:38:17 +0000
+Author: gpt-engineer-app[bot]
+Message: Set BNP green as sidebar bg
