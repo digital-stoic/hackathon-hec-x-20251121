@@ -3,9 +3,9 @@ import BNPHero from "@/components/BNPHero";
 import ProfileSelector from "@/components/ProfileSelector";
 import GuidesCarousel from "@/components/GuidesCarousel";
 import GiveBackProgram from "@/components/GiveBackProgram";
+import CEOQuote from "@/components/CEOQuote";
 import PersonaCards from "@/components/PersonaCards";
 import Solutions from "@/components/Solutions";
-import DigitalPlatform from "@/components/DigitalPlatform";
 import WhyBNP from "@/components/WhyBNP";
 import TopRecommendations from "@/components/TopRecommendations";
 import GlobalPresence from "@/components/GlobalPresence";
@@ -22,9 +22,9 @@ const Index = () => {
         <ProfileSelector />
         <GuidesCarousel />
         <GiveBackProgram />
+        <CEOQuote />
         <PersonaCards />
         <Solutions />
-        <DigitalPlatform />
         <WhyBNP />
         <TopRecommendations />
         <GlobalPresence />

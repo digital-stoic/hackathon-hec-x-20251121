@@ -1,20 +1,10 @@
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const GiveBackProgram = () => {
   return (
     <section className="relative py-32 bg-gradient-to-b from-white to-[#fdfcfb]">
       <div className="max-w-5xl mx-auto px-6">
-        {/* Subtle Icon */}
-        <div className="flex justify-center mb-8">
-          <div className="relative group">
-            <div className="absolute inset-0 bg-[#003d2e]/5 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-            <div className="relative w-16 h-16 rounded-full border border-[#003d2e]/20 flex items-center justify-center bg-white shadow-sm">
-              <Sparkles className="h-7 w-7 text-[#003d2e] stroke-[1.5]" />
-            </div>
-          </div>
-        </div>
-
         {/* Premium Serif Heading */}
         <div className="text-center mb-6">
           <h2 className="text-5xl md:text-6xl font-serif font-light text-[#003d2e] tracking-tight leading-tight mb-4">
