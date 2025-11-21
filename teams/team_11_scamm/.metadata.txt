@@ -1,0 +1,10 @@
+Team: team_11_scamm
+Repository: https://github.com/amaurysup/BNP-HACKATHON.git
+Aggregation Time: 2025-11-21T15:08:35+01:00
+Deadline: 2025-11-21 15:00:00
+
+Last Commit Info:
+Hash: 6989c939b31b864a7a7ec09ee7d33e5761a17ccf
+Date: 2025-11-21 14:32:20 +0100
+Author: AmauryLmt
+Message: 2nc commit

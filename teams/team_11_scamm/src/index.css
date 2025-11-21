@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-bnp-dark-900 antialiased;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-bnp transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-bnp-green-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-bnp-green-600 transition-all duration-300 shadow-md hover:shadow-lg active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-bnp-green-500 px-6 py-3 rounded-lg font-medium border-2 border-bnp-green-500 hover:bg-bnp-green-50 transition-all duration-300 active:scale-95;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-bnp-green-500 focus:ring-2 focus:ring-bnp-green-100 outline-none transition-all duration-200;
+  }
+}
+
+/* Hide scrollbar for Learn page */
+.snap-y::-webkit-scrollbar {
+  display: none;
+}
+
+.snap-y {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
