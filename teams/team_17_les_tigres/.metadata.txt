@@ -1,10 +1,10 @@
 Team: team_17_les_tigres
 Repository: https://github.com/kbouri/wealth-guardian-ai.git
-Aggregation Time: 2025-11-21T14:24:18+01:00
+Aggregation Time: 2025-11-21T14:32:20+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 6e6e5ac0abe49b5579e6f93e584af550001c95c2
-Date: 2025-11-21 13:22:38 +0000
+Hash: 4b214e34a4506f61ee670ad851106dc2374b5c6a
+Date: 2025-11-21 13:31:31 +0000
 Author: gpt-engineer-app[bot]
-Message: Richer avatar & notifications
+Message: Add juridique Q&A in Conseil

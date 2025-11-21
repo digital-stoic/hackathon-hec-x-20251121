@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Header } from "@/components/Header";
 import { useLanguage } from "@/contexts/LanguageContext";
+import ProfileCompletionCard from "@/components/ProfileCompletionCard";
 import {
   Search,
   FolderOpen,
@@ -184,6 +185,8 @@ const Documents = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-1 space-y-4">
+            <ProfileCompletionCard />
+            
             <Card className="p-4">
               <div className="relative mb-4">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />

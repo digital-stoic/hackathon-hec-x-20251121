@@ -71,6 +71,18 @@ export default {
   'conseil.cta.desc': 'My expert advisors support you through all phases of your project',
   'conseil.cta.meeting': 'Book a meeting',
   'conseil.cta.brochure': 'Download brochure',
+  'conseil.legal.title': 'Legal structure of your wealth',
+  'conseil.legal.subtitle': 'Questions you often ask',
+  'conseil.legal.q1': 'Should I create a holding company for my business?',
+  'conseil.legal.a1': 'A holding company can be beneficial if you own multiple companies or want to optimize dividend taxation. It also facilitates succession and protects your assets. I can analyze your situation to see if it makes sense.',
+  'conseil.legal.q2': 'How can I optimally transfer my assets to my children?',
+  'conseil.legal.a2': 'Several options are available: simple donation, donation-sharing, property dismemberment, or creating a family holding structure. The choice depends on your age, wealth value, and objectives. I can connect you with an expert to develop a tailored strategy.',
+  'conseil.legal.q3': 'What\'s the best structure to prepare my succession?',
+  'conseil.legal.a3': 'Succession planning should start early. Between Dutreil pact, life insurance, family SCI, and gradual donations, there are many tools. The goal is to minimize inheritance taxes while preserving family harmony. A wealth audit helps identify the best strategy.',
+  'conseil.legal.q4': 'How can I protect my wealth in case of divorce or difficulties?',
+  'conseil.legal.a4': 'Wealth protection involves choosing the right matrimonial regime, creating asset holding companies, and sometimes trusts or foundations. Each situation is unique and requires thorough legal analysis to secure your assets.',
+  'conseil.legal.q5': 'What are the tax benefits of a holding company?',
+  'conseil.legal.a5': 'A holding company benefits from the parent-subsidiary regime allowing dividend receipt with only 5% taxation. It also offers optimization possibilities through tax consolidation and facilitates external growth through leverage effects.',
 
   // Experts Page
   'experts.title': 'Find an expert',
@@ -164,4 +176,17 @@ export default {
   // Hero Metrics
   'hero.metrics.balanced': 'Balanced',
   'hero.metrics.above-goals': 'Above your goals',
+  
+  // Profile Completion
+  'profileCompletion.title': 'Profile Completion',
+  'profileCompletion.progress': 'Progress',
+  'profileCompletion.completed': 'completed',
+  'profileCompletion.identity': 'Identity',
+  'profileCompletion.address': 'Address Proof',
+  'profileCompletion.tax': 'Tax',
+  'profileCompletion.financial': 'Financial',
+  'profileCompletion.complete': '🎉 Congratulations! Your profile is complete',
+  'profileCompletion.almostThere': 'Almost there! Just one more step',
+  'profileCompletion.halfway': 'Great start! Keep it up',
+  'profileCompletion.getStarted': 'Richie is here to guide you through this',
 };

@@ -9,7 +9,14 @@ import {
   Calendar,
   ArrowRight,
   CheckCircle2,
+  Scale,
 } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const Conseil = () => {
   const { t } = useLanguage();
@@ -111,6 +118,68 @@ const Conseil = () => {
               <Calendar className="w-4 h-4 mr-2" />
               {t('conseil.cta.meeting')}
             </Button>
+          </div>
+        </div>
+
+        {/* Legal Structure Section */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <Scale className="w-12 h-12 text-champagne mx-auto mb-4" />
+            <h2 className="text-3xl font-serif text-champagne mb-3">
+              {t('conseil.legal.title')}
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              {t('conseil.legal.subtitle')}
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="item-1" className="bg-white border border-border rounded-lg px-6">
+                <AccordionTrigger className="text-left font-serif text-foreground hover:text-champagne">
+                  {t('conseil.legal.q1')}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {t('conseil.legal.a1')}
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-2" className="bg-white border border-border rounded-lg px-6">
+                <AccordionTrigger className="text-left font-serif text-foreground hover:text-champagne">
+                  {t('conseil.legal.q2')}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {t('conseil.legal.a2')}
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-3" className="bg-white border border-border rounded-lg px-6">
+                <AccordionTrigger className="text-left font-serif text-foreground hover:text-champagne">
+                  {t('conseil.legal.q3')}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {t('conseil.legal.a3')}
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-4" className="bg-white border border-border rounded-lg px-6">
+                <AccordionTrigger className="text-left font-serif text-foreground hover:text-champagne">
+                  {t('conseil.legal.q4')}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {t('conseil.legal.a4')}
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-5" className="bg-white border border-border rounded-lg px-6">
+                <AccordionTrigger className="text-left font-serif text-foreground hover:text-champagne">
+                  {t('conseil.legal.q5')}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {t('conseil.legal.a5')}
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
 
