@@ -35,10 +35,10 @@ const Patrimoine = () => {
             <div>
               <div className="mb-4">
                 <h2 className="text-2xl font-serif text-foreground mb-1">
-                  Votre patrimoine
+                  Ton patrimoine
                 </h2>
                 <p className="text-sm text-muted-foreground">
-                  Répartition et performance
+                  Comment c'est réparti
                 </p>
               </div>
               <PatrimoineOverviewCard />
@@ -48,10 +48,10 @@ const Patrimoine = () => {
             <div>
               <div className="mb-4">
                 <h2 className="text-xl font-serif text-foreground mb-1">
-                  Lignes principales
+                  Tes principales lignes
                 </h2>
                 <p className="text-sm text-muted-foreground">
-                  Performance en temps réel
+                  Les perfs en direct
                 </p>
               </div>
               <div className="space-y-3">
@@ -60,7 +60,7 @@ const Patrimoine = () => {
                 ))}
               </div>
               <button className="w-full text-sm text-champagne hover:text-champagne-muted transition-colors flex items-center justify-center gap-2 group mt-4 py-3">
-                Voir toutes les lignes
+                Voir tout ton portefeuille
                 <span className="group-hover:translate-x-1 transition-transform">
                   →
                 </span>

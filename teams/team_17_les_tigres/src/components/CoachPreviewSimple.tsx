@@ -15,7 +15,7 @@ export const CoachPreviewSimple = ({ onOpenChat }: CoachPreviewSimpleProps) => {
           <Sparkles className="w-5 h-5 text-champagne" />
         </div>
         <div>
-          <h3 className="text-lg font-serif text-foreground">Votre coach</h3>
+          <h3 className="text-lg font-serif text-foreground">Richie</h3>
         </div>
       </div>
 

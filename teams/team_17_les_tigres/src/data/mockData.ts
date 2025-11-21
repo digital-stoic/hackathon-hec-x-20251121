@@ -149,10 +149,10 @@ export const coachMessages: CoachMessage[] = [
   {
     id: "1",
     role: "assistant",
-    content: "Bonjour Karim, votre patrimoine s'élève à 5,23M€ avec une performance de +2,3% ce mois-ci. Je remarque une forte exposition au secteur tech (42% de votre portefeuille actions). Souhaitez-vous que j'analyse les risques de corrélation ?",
+    content: "Salut Karim ! Ton patrimoine est à 5,23M€ avec +2,3% ce mois-ci. Pas mal ! Je remarque que tu es beaucoup exposé sur la tech (42% de tes actions). Tu veux qu'on regarde ensemble si c'est pas un peu risqué ?",
     timestamp: new Date(Date.now() - 7200000).toISOString(),
     actions: [
-      { label: "Analyser les corrélations", type: "primary" },
+      { label: "Oui, montre-moi", type: "primary" },
       { label: "Voir les alternatives", type: "secondary" },
     ],
   },
@@ -165,11 +165,11 @@ export const coachMessages: CoachMessage[] = [
   {
     id: "3",
     role: "assistant",
-    content: "Votre coefficient de corrélation actions tech est de 0,78 (élevé). Apple et Microsoft évoluent de concert dans 78% des cas. Je recommande de diversifier vers l'immobilier commercial ou les obligations d'État pour réduire la volatilité de -18% à -12% en cas de correction tech.\n\nScénario suggéré : Vendre 15% des actions tech (€145k) et réinvestir dans un SCPI rendement 5,2% ou obligations AAA rendement 3,8%.",
+    content: "J'ai regardé : tes actions tech bougent ensemble 78% du temps (Apple et Microsoft notamment). Si le secteur corrige, ça risque de faire mal.\n\nMon conseil : tu pourrais vendre 15% de tes actions tech (145k€) et les mettre sur de l'immobilier commercial (SCPI à 5,2%) ou des obligations sûres (3,8%). Ça réduirait ton risque de volatilité de -18% à -12%.",
     timestamp: new Date(Date.now() - 6800000).toISOString(),
     actions: [
-      { label: "Simuler le scénario", type: "primary" },
-      { label: "Comparer d'autres options", type: "secondary" },
+      { label: "Simuler ce scénario", type: "primary" },
+      { label: "Voir d'autres options", type: "secondary" },
     ],
   },
 ];
@@ -190,19 +190,19 @@ export const alertesCoach: AlerteCoach[] = [
   {
     id: "1",
     type: "warning",
-    titre: "Concentration Tech Élevée",
-    message: "Votre exposition aux valeurs technologiques atteint 42%. Risque de volatilité accru.",
+    titre: "Tu es très exposé sur la tech",
+    message: "42% de ton portefeuille est en tech. C'est peut-être un peu risqué si le secteur corrige.",
     actions: [
-      { label: "Diversifier maintenant", type: "primary" },
-      { label: "En savoir plus", type: "secondary" },
+      { label: "On diversifie ?", type: "primary" },
+      { label: "Dis-m'en plus", type: "secondary" },
     ],
     timestamp: new Date(Date.now() - 3600000).toISOString(),
   },
   {
     id: "2",
     type: "recommendation",
-    titre: "Opportunité Immobilier",
-    message: "Un bien d'investissement à Lyon 6e (rendement 4,8%) correspond à votre profil équilibré.",
+    titre: "Un bien qui pourrait t'intéresser",
+    message: "J'ai repéré un appart' à Lyon 6e avec 4,8% de rendement. Ça colle bien avec ton profil équilibré.",
     actions: [
       { label: "Voir le bien", type: "primary" },
       { label: "Calculer l'impact", type: "secondary" },
@@ -212,8 +212,8 @@ export const alertesCoach: AlerteCoach[] = [
   {
     id: "3",
     type: "info",
-    titre: "Taux de Crédit en Baisse",
-    message: "Les taux immobiliers sont passés à 3,2%. Votre capacité d'endettement actuelle : €1,2M.",
+    titre: "Les taux baissent",
+    message: "Les taux immobiliers sont à 3,2% maintenant. Tu peux emprunter jusqu'à 1,2M€ si besoin.",
     actions: [
       { label: "Simuler un crédit", type: "primary" },
     ],
@@ -222,11 +222,11 @@ export const alertesCoach: AlerteCoach[] = [
   {
     id: "4",
     type: "recommendation",
-    titre: "Fiscalité Crypto",
-    message: "Vos moins-values crypto (-€54k) peuvent être utilisées pour optimiser votre impôt 2024.",
+    titre: "Astuce fiscalité crypto",
+    message: "Tes moins-values crypto (-54k€) peuvent t'aider à payer moins d'impôts en 2024. On regarde ça ?",
     actions: [
-      { label: "Consulter un fiscaliste", type: "primary" },
-      { label: "Voir la stratégie", type: "secondary" },
+      { label: "Parler à un fiscaliste", type: "primary" },
+      { label: "Voir comment faire", type: "secondary" },
     ],
     timestamp: new Date(Date.now() - 14400000).toISOString(),
   },
@@ -310,12 +310,12 @@ export interface HeroStatus {
 
 export const heroStatus: HeroStatus = {
   status: "success",
-  title: "Tout est en ordre, Karim",
-  message: "Votre patrimoine est parfaitement géré. Quelques points à valider lorsque vous aurez 20 minutes cette semaine.",
+  title: "Tout roule, Karim ! 👍",
+  message: "Ton patrimoine est bien géré. J'ai juste deux-trois petites choses à te montrer quand tu auras 20 minutes cette semaine.",
   metrics: {
     portfolio: "Équilibré",
     liquidites: "850K€",
-    performance: "Au-dessus des objectifs",
+    performance: "Au-dessus de tes objectifs",
   },
 };
 
@@ -336,26 +336,26 @@ export interface WeeklyTask {
 export const weeklyTasks: WeeklyTask[] = [
   {
     id: "1",
-    titre: "Versement PER avant fin d'année",
-    description: "Vous pouvez encore placer 8K€ sur votre PER pour optimiser votre fiscalité 2024.",
+    titre: "Ton PER avant la fin d'année",
+    description: "Tu peux encore mettre 8K€ sur ton PER pour économiser des impôts en 2024. C'est le moment !",
     timeEstimate: "20 min",
-    impact: "Économie de 8K€ d'impôts",
+    impact: "8K€ d'impôts en moins",
     priority: "high",
     actions: [
-      { label: "Effectuer maintenant", type: "primary" },
-      { label: "Reporter", type: "secondary" },
+      { label: "Je le fais maintenant", type: "primary" },
+      { label: "Plus tard", type: "secondary" },
     ],
   },
   {
     id: "2",
-    titre: "Position Tesla en baisse",
-    description: "Vos actions Tesla ont baissé de 12%. Cette correction est normale dans le contexte actuel. Vous pouvez conserver (vision long terme) ou arbitrer pour sécuriser.",
+    titre: "Tesla baisse un peu",
+    description: "Tes actions Tesla ont perdu 12%. C'est normal dans le contexte actuel. Tu préfères garder (vision long terme) ou sécuriser maintenant ?",
     timeEstimate: "10 min",
-    impact: "Décision d'arbitrage",
+    impact: "Décision à prendre",
     priority: "medium",
     actions: [
-      { label: "Consulter l'analyse", type: "primary" },
-      { label: "Reporter la décision", type: "secondary" },
+      { label: "Voir ton analyse", type: "primary" },
+      { label: "J'y réfléchis", type: "secondary" },
     ],
   },
 ];
@@ -371,20 +371,20 @@ export interface Opportunity {
 export const opportunities: Opportunity[] = [
   {
     id: "1",
-    titre: "Capacité de crédit disponible",
-    description: "650K€ mobilisables pour votre prochain investissement immobilier",
+    titre: "Tu peux emprunter si tu veux",
+    description: "650K€ disponibles pour ton prochain projet immobilier",
     type: "credit",
   },
   {
     id: "2",
-    titre: "Fiscaliste crypto disponible",
-    description: "Marie Dubois peut vous accompagner dans l'optimisation de vos moins-values crypto",
+    titre: "Un fiscaliste dispo pour toi",
+    description: "Marie Dubois peut t'aider à optimiser tes moins-values crypto",
     type: "expert",
   },
   {
     id: "3",
-    titre: "SCPI rendement 5,2%",
-    description: "Opportunité en immobilier commercial avec rendement attractif",
+    titre: "SCPI sympa à 5,2%",
+    description: "Une opportunité en immobilier commercial avec un bon rendement",
     type: "investissement",
   },
 ];
@@ -392,6 +392,6 @@ export const opportunities: Opportunity[] = [
 // Message coach bienveillant
 export const coachWelcomeMessage = {
   role: "assistant" as const,
-  content: "Cette semaine, deux points à valider. Pour le reste, tout est parfaitement sous contrôle.",
+  content: "Cette semaine, j'ai deux petits trucs à te montrer. Pour le reste, c'est nickel, t'inquiète !",
   tone: "bienveillant",
 };

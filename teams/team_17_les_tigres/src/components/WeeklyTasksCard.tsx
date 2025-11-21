@@ -11,7 +11,7 @@ export const WeeklyTasksCard = () => {
           Cette semaine
         </h2>
         <p className="text-sm text-muted-foreground">
-          2 actions à valider à votre convenance
+          2 trucs à checker quand tu veux
         </p>
       </div>
 

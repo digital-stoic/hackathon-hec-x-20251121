@@ -50,10 +50,10 @@ export const PatrimoineOverviewCard = () => {
     <Card className="glass-card hover-lift p-8">
       <div className="mb-6">
         <h2 className="text-2xl font-serif text-foreground mb-1">
-          Répartition du Patrimoine
+          Comment c'est réparti
         </h2>
         <p className="text-sm text-muted-foreground">
-          Diversification par classe d'actifs
+          Tes différents types d'investissements
         </p>
       </div>
 
@@ -119,7 +119,7 @@ export const PatrimoineOverviewCard = () => {
       <div className="pt-4 border-t border-border/50">
         <div className="flex items-center justify-between mb-2">
           <span className="text-sm text-muted-foreground">
-            Corrélation portefeuille
+            Corrélation de ton portefeuille
           </span>
           <span className="text-sm font-mono text-foreground">0.42</span>
         </div>
@@ -127,7 +127,7 @@ export const PatrimoineOverviewCard = () => {
           onClick={() => setShowCorrelationDialog(true)}
           className="w-full mt-3 text-sm text-champagne hover:text-champagne-muted transition-colors flex items-center justify-center gap-2 group"
         >
-          Analyser les corrélations
+          On regarde ça ensemble ?
           <span className="group-hover:translate-x-1 transition-transform">
             →
           </span>

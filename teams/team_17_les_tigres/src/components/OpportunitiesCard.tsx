@@ -31,10 +31,10 @@ export const OpportunitiesCard = () => {
         <div className="flex items-center justify-between mb-4">
           <div>
             <h2 className="text-xl font-serif text-foreground mb-1">
-              Opportunités
+              Des opportunités pour toi
             </h2>
             <p className="text-sm text-muted-foreground">
-              Si vous le souhaitez
+              Si ça t'intéresse
             </p>
           </div>
           <CollapsibleTrigger asChild>
