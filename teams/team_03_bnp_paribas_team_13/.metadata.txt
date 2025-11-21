@@ -1,6 +1,6 @@
 Team: team_03_bnp_paribas_team_13
 Repository: https://github.com/Guillaumekite/private-banking-vision.git
-Aggregation Time: 2025-11-21T14:15:34+01:00
+Aggregation Time: 2025-11-21T14:23:05+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
