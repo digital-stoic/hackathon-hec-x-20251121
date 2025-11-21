@@ -1,28 +1,29 @@
 # 🏆 Hackathon Aggregation Report
 
-**Generated:** 2025-11-21T14:57:21+01:00
+**Generated:** 2025-11-21T15:04:39+01:00
 **Deadline:** 2025-11-21 15:00:00
 
 ## 📊 Summary
 
 | Team Name | Status | Last Commit Time | Repository |
 |-----------|--------|------------------|------------|
-| **team_01_enneagramme_team** | ✅ Success | `2025-11-21 14:50:42 +0100` | [https://github.com/Matekto/geo-quality-score](https://github.com/Matekto/geo-quality-score) |
+| **team_01_enneagramme_team** | ✅ Success | `2025-11-21 14:00:10 +0000` | [https://github.com/Matekto/geo-quality-score](https://github.com/Matekto/geo-quality-score) |
 | **team_02_lpb** | ✅ Success | `2025-11-21 13:45:43 +0000` | [https://github.com/pierre-alexx/geo-insights-hub](https://github.com/pierre-alexx/geo-insights-hub) |
-| **team_03_bnp_paribas_team_13** | ✅ Success | `2025-11-21 13:50:39 +0000` | [https://github.com/Guillaumekite/private-banking-vision.git](https://github.com/Guillaumekite/private-banking-vision.git) |
+| **team_03_bnp_paribas_team_13** | ✅ Success | `2025-11-21 14:00:38 +0000` | [https://github.com/Guillaumekite/private-banking-vision.git](https://github.com/Guillaumekite/private-banking-vision.git) |
 | **team_04_911** | ✅ Success | `2025-11-21 13:34:33 +0000` | [https://github.com/mathisbaala/bnp-design-hub](https://github.com/mathisbaala/bnp-design-hub) |
-| **team_05_los_chechos** | ✅ Success | `2025-11-21 13:54:10 +0000` | [https://github.com/nathalietogni-xhec/react-starter-kit.git](https://github.com/nathalietogni-xhec/react-starter-kit.git) |
-| **team_06_les_banquupteurs** | ✅ Success | `2025-11-21 13:53:01 +0000` | [https://github.com/solene-duv/my-app-creator.git](https://github.com/solene-duv/my-app-creator.git) |
+| **team_05_los_chechos** | ✅ Success | `2025-11-21 14:01:42 +0000` | [https://github.com/nathalietogni-xhec/react-starter-kit.git](https://github.com/nathalietogni-xhec/react-starter-kit.git) |
+| **team_06_les_banquupteurs** | ✅ Success | `2025-11-21 13:57:37 +0000` | [https://github.com/solene-duv/my-app-creator.git](https://github.com/solene-duv/my-app-creator.git) |
 | **team_07_supernova** | ✅ Success | `2025-11-21 13:43:26 +0000` | [https://github.com/vinnie777/pixel-perfect](https://github.com/vinnie777/pixel-perfect) |
 | **team_08_les_prototypeurs** | ✅ Success | `2025-11-21 13:34:44 +0000` | [https://github.com/Digicode23/finance-reels.git](https://github.com/Digicode23/finance-reels.git) |
 | **team_09_les_skyrocketeurs** | ✅ Success | `2025-11-21 13:39:34 +0000` | [https://github.com/vinnie777/coin-conqueror-path](https://github.com/vinnie777/coin-conqueror-path) |
+| **team_10_bnp_build_new_perspectives** | ✅ Success | `2025-11-21 14:02:21 +0000` | [https://github.com/Louisrdrz/primo-placer](https://github.com/Louisrdrz/primo-placer) |
 | **team_11_scamm** | ❌ Failed | N/A | [ https://github.com/amaurysup/BNP-HACKATHON.git]( https://github.com/amaurysup/BNP-HACKATHON.git) |
-| **team_12_teamrocket** | ✅ Success | `2025-11-21 13:55:06 +0000` | [https://github.com/fkXhec/gen-z-wealth-hub](https://github.com/fkXhec/gen-z-wealth-hub) |
-| **team_13_top_team** | ✅ Success | `2025-11-21 13:52:18 +0000` | [https://github.com/sacha-lellouche/private-path](https://github.com/sacha-lellouche/private-path) |
-| **team_14_les_nullos** | ✅ Success | `2025-11-21 13:54:19 +0000` | [https://github.com/suzanne-tedeschi/bnp-private-space](https://github.com/suzanne-tedeschi/bnp-private-space) |
+| **team_12_teamrocket** | ✅ Success | `2025-11-21 13:57:52 +0000` | [https://github.com/fkXhec/gen-z-wealth-hub](https://github.com/fkXhec/gen-z-wealth-hub) |
+| **team_13_top_team** | ✅ Success | `2025-11-21 13:56:09 +0000` | [https://github.com/sacha-lellouche/private-path](https://github.com/sacha-lellouche/private-path) |
+| **team_14_les_nullos** | ✅ Success | `2025-11-21 14:01:48 +0000` | [https://github.com/suzanne-tedeschi/bnp-private-space](https://github.com/suzanne-tedeschi/bnp-private-space) |
 | **team_15_albacore** | ✅ Success | `2025-11-21 13:38:17 +0000` | [https://github.com/clemdjez-byte/bnp-founders-hub.git](https://github.com/clemdjez-byte/bnp-founders-hub.git) |
-| **team_16_profil_6** | ✅ Success | `2025-11-21 13:54:09 +0000` | [https://github.com/Guillaumekite/private-banking-vision.git](https://github.com/Guillaumekite/private-banking-vision.git) |
-| **team_17_les_tigres** | ✅ Success | `2025-11-21 13:55:56 +0000` | [https://github.com/kbouri/wealth-guardian-ai.git](https://github.com/kbouri/wealth-guardian-ai.git) |
+| **team_16_profil_6** | ✅ Success | `2025-11-21 14:02:25 +0000` | [https://github.com/Guillaumekite/private-banking-vision.git](https://github.com/Guillaumekite/private-banking-vision.git) |
+| **team_17_les_tigres** | ✅ Success | `2025-11-21 14:02:57 +0000` | [https://github.com/kbouri/wealth-guardian-ai.git](https://github.com/kbouri/wealth-guardian-ai.git) |
 | **team_18_hackathletes** | ✅ Success | `2025-11-21 13:30:33 +0000` | [https://github.com/LMCrpt/opal-board](https://github.com/LMCrpt/opal-board) |
 | **team_19_choc** | ✅ Success | `2025-11-21 13:55:17 +0000` | [https://github.com/ludibaha-oss/bnp-wealth-navigator.git](https://github.com/ludibaha-oss/bnp-wealth-navigator.git) |
 | **team_20_cddfgt** | ✅ Success | `2025-11-21 13:34:17 +0000` | [https://github.com/Marcojohndeere/private-launchpad](https://github.com/Marcojohndeere/private-launchpad) |
@@ -31,8 +32,8 @@
 
 ## 📈 Statistics
 
-- **Total Teams:** 19
-- **Successful:** 18 ✅
+- **Total Teams:** 20
+- **Successful:** 19 ✅
 - **Failed:** 1 ❌
 
 ## 📋 Detailed Metadata
@@ -43,14 +44,14 @@
 ```
 Team: team_01_enneagramme_team
 Repository: https://github.com/Matekto/geo-quality-score
-Aggregation Time: 2025-11-21T14:52:59+01:00
+Aggregation Time: 2025-11-21T15:01:06+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 942a0fc76831034decab2dbecc51312297efcbec
-Date: 2025-11-21 14:50:42 +0100
-Author: Amélie Prudhomme
-Message: Create test
+Hash: 383d5ee282753964c7ca90d71f0abe6f42bc58cc
+Date: 2025-11-21 14:00:10 +0000
+Author: gpt-engineer-app[bot]
+Message: Reverted to commit 7b55ea91c3027ce3fdeb5cd37f62c66144c95748
 ```
 
 **Files:** 166
@@ -63,7 +64,7 @@ Message: Create test
 ```
 Team: team_02_lpb
 Repository: https://github.com/pierre-alexx/geo-insights-hub
-Aggregation Time: 2025-11-21T14:53:15+01:00
+Aggregation Time: 2025-11-21T15:01:17+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
@@ -83,17 +84,17 @@ Message: Fix persona-geo-test parsing
 ```
 Team: team_03_bnp_paribas_team_13
 Repository: https://github.com/Guillaumekite/private-banking-vision.git
-Aggregation Time: 2025-11-21T14:53:35+01:00
+Aggregation Time: 2025-11-21T15:01:30+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 74dc8b98be553caba36f1fc163d7f7719fd62090
-Date: 2025-11-21 13:50:39 +0000
+Hash: 15bbbddc566d1309459ce422f54de39960048cc4
+Date: 2025-11-21 14:00:38 +0000
 Author: gpt-engineer-app[bot]
-Message: Add community events sections
+Message: Connect to Lovable Cloud
 ```
 
-**Files:** 107
+**Files:** 112
 
 </details>
 
@@ -103,7 +104,7 @@ Message: Add community events sections
 ```
 Team: team_04_911
 Repository: https://github.com/mathisbaala/bnp-design-hub
-Aggregation Time: 2025-11-21T14:54:29+01:00
+Aggregation Time: 2025-11-21T15:01:38+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
@@ -123,17 +124,17 @@ Message: Redesign IA-first BNP PB pages
 ```
 Team: team_05_los_chechos
 Repository: https://github.com/nathalietogni-xhec/react-starter-kit.git
-Aggregation Time: 2025-11-21T14:54:39+01:00
+Aggregation Time: 2025-11-21T15:01:50+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 8125785f1d82f8ba155df119a64315ae71e967ef
-Date: 2025-11-21 13:54:10 +0000
+Hash: 752f3fda08a28fc3adc54403e12cdddb5320b378
+Date: 2025-11-21 14:01:42 +0000
 Author: gpt-engineer-app[bot]
-Message: Add Top Recommendations section
+Message: Delete Digital Platform section
 ```
 
-**Files:** 123
+**Files:** 125
 
 </details>
 
@@ -143,17 +144,17 @@ Message: Add Top Recommendations section
 ```
 Team: team_06_les_banquupteurs
 Repository: https://github.com/solene-duv/my-app-creator.git
-Aggregation Time: 2025-11-21T14:54:48+01:00
+Aggregation Time: 2025-11-21T15:02:03+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 36d775b5640679976bc43ca5236fe94c1bc8e9fd
-Date: 2025-11-21 13:53:01 +0000
+Hash: ed8ac40af0359bd2397432256a12100b186109b8
+Date: 2025-11-21 13:57:37 +0000
 Author: gpt-engineer-app[bot]
-Message: Enhance Explore Content progress
+Message: Add 5k and 10k milestones
 ```
 
-**Files:** 112
+**Files:** 113
 
 </details>
 
@@ -163,7 +164,7 @@ Message: Enhance Explore Content progress
 ```
 Team: team_07_supernova
 Repository: https://github.com/vinnie777/pixel-perfect
-Aggregation Time: 2025-11-21T14:55:00+01:00
+Aggregation Time: 2025-11-21T15:02:13+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
@@ -183,7 +184,7 @@ Message: Update header links to English
 ```
 Team: team_08_les_prototypeurs
 Repository: https://github.com/Digicode23/finance-reels.git
-Aggregation Time: 2025-11-21T14:55:08+01:00
+Aggregation Time: 2025-11-21T15:02:23+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
@@ -203,7 +204,7 @@ Message: Mets révision avec 5 questions
 ```
 Team: team_09_les_skyrocketeurs
 Repository: https://github.com/vinnie777/coin-conqueror-path
-Aggregation Time: 2025-11-21T14:55:22+01:00
+Aggregation Time: 2025-11-21T15:02:35+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
@@ -218,19 +219,39 @@ Message: Reorder home header
 </details>
 
 <details>
+<summary><strong>team_10_bnp_build_new_perspectives</strong> - Click to expand</summary>
+
+```
+Team: team_10_bnp_build_new_perspectives
+Repository: https://github.com/Louisrdrz/primo-placer
+Aggregation Time: 2025-11-21T15:02:45+01:00
+Deadline: 2025-11-21 15:00:00
+
+Last Commit Info:
+Hash: 3e4d64917a6e6cedd26cb53b8717f106a81c2771
+Date: 2025-11-21 14:02:21 +0000
+Author: gpt-engineer-app[bot]
+Message: Reverted to commit adc5d4906f6b0d961638e32e5304bf8b460a3245
+```
+
+**Files:** 109
+
+</details>
+
+<details>
 <summary><strong>team_12_teamrocket</strong> - Click to expand</summary>
 
 ```
 Team: team_12_teamrocket
 Repository: https://github.com/fkXhec/gen-z-wealth-hub
-Aggregation Time: 2025-11-21T14:55:33+01:00
+Aggregation Time: 2025-11-21T15:02:59+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 49a8c6abcb15f47e7aa3b41541ac7c9aee1ddedf
-Date: 2025-11-21 13:55:06 +0000
+Hash: 477d9e9105c49d7ed2dcf380af58b6abb2ddde59
+Date: 2025-11-21 13:57:52 +0000
 Author: gpt-engineer-app[bot]
-Message: Diff risk profile images
+Message: Reverted to commit 35e272e989478bd94e6039e2fadcc06daa7fc5e5
 ```
 
 **Files:** 102
@@ -243,14 +264,14 @@ Message: Diff risk profile images
 ```
 Team: team_13_top_team
 Repository: https://github.com/sacha-lellouche/private-path
-Aggregation Time: 2025-11-21T14:55:42+01:00
+Aggregation Time: 2025-11-21T15:03:08+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 9c6fd6279d55fb9c502b566691a02458e7b9c5e2
-Date: 2025-11-21 13:52:18 +0000
+Hash: 7a79790895e66279f5982b497401cb043b8b60a0
+Date: 2025-11-21 13:56:09 +0000
 Author: gpt-engineer-app[bot]
-Message: Remplace tortue par PNG
+Message: Réintégrer onboarding étape 5
 ```
 
 **Files:** 121
@@ -263,17 +284,17 @@ Message: Remplace tortue par PNG
 ```
 Team: team_14_les_nullos
 Repository: https://github.com/suzanne-tedeschi/bnp-private-space
-Aggregation Time: 2025-11-21T14:56:03+01:00
+Aggregation Time: 2025-11-21T15:03:25+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 1d1053699ef5880e51b2b1cbd278bc80012e3001
-Date: 2025-11-21 13:54:19 +0000
+Hash: f7218c1925ccb671a249b6a86b7b497a5a324071
+Date: 2025-11-21 14:01:48 +0000
 Author: gpt-engineer-app[bot]
-Message: Add video overlay and border
+Message: Add dashboard footer
 ```
 
-**Files:** 134
+**Files:** 135
 
 </details>
 
@@ -283,7 +304,7 @@ Message: Add video overlay and border
 ```
 Team: team_15_albacore
 Repository: https://github.com/clemdjez-byte/bnp-founders-hub.git
-Aggregation Time: 2025-11-21T14:56:21+01:00
+Aggregation Time: 2025-11-21T15:03:36+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
@@ -303,17 +324,17 @@ Message: Set BNP green as sidebar bg
 ```
 Team: team_16_profil_6
 Repository: https://github.com/Guillaumekite/private-banking-vision.git
-Aggregation Time: 2025-11-21T14:56:31+01:00
+Aggregation Time: 2025-11-21T15:03:45+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 801a3619885aa204e7912a0c9822564b199ea5fa
-Date: 2025-11-21 13:54:09 +0000
+Hash: a23f5c5f575efe617781bf22e1aa50663f82c843
+Date: 2025-11-21 14:02:25 +0000
 Author: gpt-engineer-app[bot]
-Message: Polish top bar and visuals
+Message: Add sign out dropdown
 ```
 
-**Files:** 107
+**Files:** 113
 
 </details>
 
@@ -323,17 +344,17 @@ Message: Polish top bar and visuals
 ```
 Team: team_17_les_tigres
 Repository: https://github.com/kbouri/wealth-guardian-ai.git
-Aggregation Time: 2025-11-21T14:56:40+01:00
+Aggregation Time: 2025-11-21T15:03:59+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 726b24ecf2ef0081ba246402ebc894a5dd6971dc
-Date: 2025-11-21 13:55:56 +0000
+Hash: 01e027c74f5b2a4626fc3dab75d10190dbcaffbb
+Date: 2025-11-21 14:02:57 +0000
 Author: gpt-engineer-app[bot]
-Message: Remove wealth label from header
+Message: Enhance Opportunities view
 ```
 
-**Files:** 107
+**Files:** 108
 
 </details>
 
@@ -343,7 +364,7 @@ Message: Remove wealth label from header
 ```
 Team: team_18_hackathletes
 Repository: https://github.com/LMCrpt/opal-board
-Aggregation Time: 2025-11-21T14:56:51+01:00
+Aggregation Time: 2025-11-21T15:04:10+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
@@ -363,7 +384,7 @@ Message: Add jade image asset
 ```
 Team: team_19_choc
 Repository: https://github.com/ludibaha-oss/bnp-wealth-navigator.git
-Aggregation Time: 2025-11-21T14:57:04+01:00
+Aggregation Time: 2025-11-21T15:04:21+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
@@ -383,7 +404,7 @@ Message: Increase hero background opacity
 ```
 Team: team_20_cddfgt
 Repository: https://github.com/Marcojohndeere/private-launchpad
-Aggregation Time: 2025-11-21T14:57:16+01:00
+Aggregation Time: 2025-11-21T15:04:34+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
