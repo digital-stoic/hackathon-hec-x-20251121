@@ -17,7 +17,7 @@ const GiveBackProgram = () => {
 
         {/* Premium Serif Heading */}
         <div className="text-center mb-6">
-          <h2 className="text-5xl md:text-6xl font-serif font-light text-[#1a1a1a] tracking-tight leading-tight mb-4">
+          <h2 className="text-5xl md:text-6xl font-serif font-light text-[#003d2e] tracking-tight leading-tight mb-4">
             Discover our<br />
             <span className="italic">"Give Back Program"</span>
           </h2>

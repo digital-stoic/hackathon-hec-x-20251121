@@ -7,6 +7,7 @@ import PersonaCards from "@/components/PersonaCards";
 import Solutions from "@/components/Solutions";
 import DigitalPlatform from "@/components/DigitalPlatform";
 import WhyBNP from "@/components/WhyBNP";
+import TopRecommendations from "@/components/TopRecommendations";
 import GlobalPresence from "@/components/GlobalPresence";
 import Insights from "@/components/Insights";
 import CTABanner from "@/components/CTABanner";
@@ -25,6 +26,7 @@ const Index = () => {
         <Solutions />
         <DigitalPlatform />
         <WhyBNP />
+        <TopRecommendations />
         <GlobalPresence />
         <Insights />
         <CTABanner />
