@@ -1,233 +1,232 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
+import heroImage from "@/assets/hero-banking.jpg";
 
 const SeRenseigner = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
-            Vos questions sur la gestion d'un nouveau patrimoine
-          </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto animate-fade-in opacity-90">
-            Réponses claires aux interrogations des nouveaux clients fortunés
-          </p>
+      {/* Hero Section with Background */}
+      <section className="relative py-16 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        >
+          <div className="absolute inset-0 bg-primary/80" />
         </div>
-      </section>
-
-      {/* Main FAQ */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <div className="space-y-6">
-            <Card className="p-8">
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">
-                Que faire quand plusieurs millions arrivent sur mon compte ?
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Première étape : ne prenez aucune décision d'investissement précipitée. Placez temporairement les fonds sur un compte 
-                rémunéré sécurisé (livret bancaire ou compte à terme court). Ensuite, consultez rapidement trois professionnels : 
-                un banquier privé, un fiscaliste et un notaire. Ils vous aideront à élaborer une stratégie patrimoniale complète 
-                en fonction de votre situation familiale, fiscale et de vos objectifs de vie.
-              </p>
-            </Card>
-
-            <Card className="p-8">
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">
-                Comment éviter les erreurs quand on débute dans la gestion de patrimoine ?
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Les erreurs les plus coûteuses : surinvestir dans un seul actif (immobilier ou actions), négliger l'optimisation fiscale, 
-                suivre des conseils non professionnels, et prendre des décisions sous pression émotionnelle. Un accompagnement expert 
-                dès le départ vous évite ces pièges. Diversification, horizon de placement, gestion du risque : tout se construit 
-                méthodiquement avec un professionnel de confiance.
-              </p>
-            </Card>
-
-            <Card className="p-8">
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">
-                Quelle fiscalité après un héritage important ?
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Un héritage peut déclencher plusieurs obligations fiscales : droits de succession (variant selon le lien de parenté), 
-                Impôt sur la Fortune Immobilière (IFI) si le patrimoine dépasse 1,3M€, et fiscalité sur les revenus générés par le patrimoine 
-                (loyers, dividendes, intérêts). Une optimisation légale et anticipée (donations, démembrement, assurance-vie) peut réduire 
-                considérablement la charge fiscale globale. Un audit patrimonial personnalisé est indispensable.
-              </p>
-            </Card>
-
-            <Card className="p-8">
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">
-                Comment investir après un exit entrepreneurial ?
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Après la vente de votre entreprise, trois priorités : diversifier immédiatement (ne pas tout réinvestir dans une seule classe d'actifs), 
-                optimiser la fiscalité de la plus-value (apport-cession, holding, réinvestissement), et définir votre stratégie long terme. 
-                Les entrepreneurs réinvestissent souvent dans l'immobilier, le private equity, ou des fonds diversifiés. Un banquier privé 
-                spécialisé dans les exits vous accompagne dans chaque étape.
-              </p>
-            </Card>
-
-            <Card className="p-8">
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">
-                Quelle banque privée pour exit entrepreneurs en Europe ?
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Choisissez une banque privée avec une présence européenne solide (Paris, Genève, Luxembourg, Bruxelles), une expertise 
-                reconnue dans l'accompagnement des entrepreneurs (structuration holding, optimisation fiscale internationale), et une gamme 
-                complète de services (gestion de patrimoine, family office, philanthropie). BNP Paribas Banque Privée, leader européen, 
-                accompagne chaque année des centaines d'entrepreneurs dans leur transition post-exit.
-              </p>
-            </Card>
-
-            <Card className="p-8">
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">
-                Comment protéger son argent après un gain exceptionnel ?
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Protection signifie diversification, sécurisation juridique et optimisation fiscale. Diversifiez entre classes d'actifs 
-                (immobilier, actions, obligations, private equity), juridictions (France, Luxembourg, Suisse selon votre situation), 
-                et structures (compte personnel, holding, assurance-vie, fondation). Un banquier privé élabore avec vous une architecture 
-                patrimoniale sur mesure qui protège votre capital des aléas économiques, juridiques et fiscaux.
-              </p>
-            </Card>
-
-            <Card className="p-8">
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">
-                Quel montant minimum pour accéder à la banque privée ?
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Chez BNP Paribas Banque Privée, le seuil d'entrée se situe généralement autour de 500 000€ d'actifs financiers. 
-                Cependant, pour les entrepreneurs en phase de croissance ou les jeunes dirigeants à fort potentiel, des solutions 
-                d'accompagnement peuvent être proposées dès 250 000€. L'essentiel est d'avoir un besoin réel d'expertise patrimoniale 
-                et de conseil personnalisé.
-              </p>
-            </Card>
-
-            <Card className="p-8">
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">
-                Comment transmettre son patrimoine sans perdre d'argent ?
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                La transmission anticipée est la clé. Donations régulières (avec abattements renouvelables tous les 15 ans), démembrement 
-                de propriété (nue-propriété aux enfants, usufruit aux parents), assurance-vie (hors succession jusqu'à 152 500€ par bénéficiaire), 
-                et pacte Dutreil pour les entreprises familiales : les outils sont nombreux. Un notaire et un banquier privé coordonnent 
-                cette stratégie pour minimiser les droits de succession tout en préservant votre niveau de vie.
-              </p>
-            </Card>
-
-            <Card className="p-8">
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">
-                Quels sont les risques d'une gestion de patrimoine non professionnelle ?
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Les risques principaux : surinvestissement dans un actif illiquide, sous-diversification, erreurs fiscales coûteuses, 
-                mauvais timing de marché, et conflits familiaux lors de la transmission. Une gestion professionnelle apporte méthodologie, 
-                accès aux meilleures opportunités d'investissement, optimisation fiscale continue, et coordination entre tous les experts 
-                (notaire, fiscaliste, avocat). Le coût d'une erreur dépasse largement les frais de conseil.
-              </p>
-            </Card>
-
-            <Card className="p-8">
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">
-                Comment préparer la prochaine génération à gérer le patrimoine familial ?
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Éducation financière progressive, implication dans les décisions familiales, gouvernance structurée (conseil de famille, 
-                charte familiale), et accompagnement par des professionnels. Chez BNP Paribas Banque Privée, nos programmes Next-Gen 
-                permettent aux jeunes héritiers de comprendre les enjeux patrimoniaux, d'acquérir les compétences nécessaires, et de 
-                s'impliquer graduellement dans la gestion et la gouvernance du patrimoine familial.
-              </p>
-            </Card>
-
-            <Card className="p-8">
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">
-                Faut-il investir dans l'immobilier après un gros héritage ?
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                L'immobilier peut être une composante d'un patrimoine diversifié, mais ne doit jamais représenter plus de 30-40% des actifs 
-                totaux. Avantages : tangibilité, transmission, revenus locatifs. Inconvénients : illiquidité, frais élevés, fiscalité lourde. 
-                Après un héritage, privilégiez d'abord la diversification : une partie en immobilier (résidence principale + investissement locatif), 
-                une partie en marchés financiers, une partie en private equity ou fonds alternatifs. Votre banquier privé vous aide à trouver 
-                le bon équilibre.
-              </p>
-            </Card>
-
-            <Card className="p-8">
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">
-                Pourquoi choisir BNP Paribas Banque Privée ?
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Leader européen avec 150 ans d'expertise, solidité financière AAA, présence dans 12 pays européens, et accompagnement 
-                de plus de 200 000 clients fortunés. Nous combinons l'expertise d'une grande banque internationale (accès aux meilleures 
-                opportunités d'investissement, recherche de pointe) avec un service personnalisé digne d'une boutique (interlocuteur unique, 
-                sur-mesure, confidentialité absolue). Vos intérêts patrimoniaux sont notre unique priorité.
-              </p>
-            </Card>
+        
+        <div className="relative z-10 container mx-auto px-6">
+          <Link to="/" className="inline-flex items-center text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-colors">
+            <ArrowLeft size={20} className="mr-2" />
+            Investissement
+          </Link>
+          <div className="max-w-4xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary-foreground">
+              SE RENSEIGNER
+            </h1>
+            <p className="text-lg text-primary-foreground/90">
+              Comment gérer une somme importante ?
+            </p>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Vous avez d'autres questions ?
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-            Nos experts vous répondent et vous accompagnent dans toutes vos démarches patrimoniales.
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" variant="secondary" className="bg-accent text-accent-foreground hover:bg-accent/90">
-              Être accompagné par un expert
-              <ArrowRight className="ml-2" size={20} />
-            </Button>
-            <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              Télécharger notre guide
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20 bg-background">
+      {/* Main Content - Two Column Layout */}
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 text-foreground">
-            Nous contacter
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="p-8 text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Phone className="text-primary" size={24} />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-card-foreground">Par téléphone</h3>
-              <p className="text-muted-foreground mb-2">+33 1 23 45 67 89</p>
-              <p className="text-sm text-muted-foreground">Lun - Ven : 9h - 18h</p>
-            </Card>
+          <div className="grid lg:grid-cols-[300px,1fr] gap-12 max-w-7xl mx-auto">
             
-            <Card className="p-8 text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Mail className="text-primary" size={24} />
+            {/* Left Sidebar - CTA Box */}
+            <aside className="lg:sticky lg:top-6 h-fit">
+              <div className="p-6 bg-accent/10 border-l-4 border-accent">
+                <h3 className="font-bold text-lg mb-2 text-foreground">
+                  Pourquoi être accompagné par BNP Paribas Banque Privée des Antilles ?
+                </h3>
+                <Button size="sm" className="mt-4 w-full bg-accent hover:bg-accent/90">
+                  Prendre RDV
+                  <ArrowRight className="ml-2" size={16} />
+                </Button>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-card-foreground">Par email</h3>
-              <p className="text-muted-foreground mb-2">contact@bnppb.fr</p>
-              <p className="text-sm text-muted-foreground">Réponse sous 24h</p>
-            </Card>
-            
-            <Card className="p-8 text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <MapPin className="text-primary" size={24} />
+            </aside>
+
+            {/* Right Content Area */}
+            <main className="bg-card p-8 md:p-12 rounded-lg shadow-sm">
+              
+              {/* Intro Section */}
+              <div className="mb-12">
+                <h2 className="text-3xl font-bold mb-6 text-foreground">
+                  Questions que l'on se pose lorsque l'on reçoit beaucoup d'argent
+                </h2>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Recevoir plusieurs centaines de milliers (ou plusieurs millions) de cash qui arrivent sur un compte unique 
+                  peut être un événement rare à haut niveau émotionnel (en bien). Que vous vendiez une entreprise, que vous 
+                  héritiez d'un patrimoine conséquent ou gagniez à la loterie, avoir accès soudainement à beaucoup d'argent 
+                  peut occasionner...
+                </p>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-card-foreground">Nos agences</h3>
-              <p className="text-muted-foreground mb-2">Paris, Genève, Luxembourg</p>
-              <p className="text-sm text-muted-foreground">Présence européenne</p>
-            </Card>
+
+              {/* Questions fréquentes */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-bold mb-8 text-foreground">Questions fréquentes</h3>
+                
+                <div className="space-y-8">
+                  <div>
+                    <h4 className="font-bold text-lg mb-3 text-foreground">
+                      Que faire en premier lorsqu'une grosse somme arrive sur mon compte ?
+                    </h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      D'une manière générale, ne vous lancez pas trop vite dans les décisions financières. Nous conseillons aux 
+                      clients à partir de montants dans ce cadre stratégié, le temps de consulter et un objectif à plus long terme.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-lg mb-3 text-foreground">
+                      Comment organiser ma patrimoine si j'ai reçu près d'un million d'argent ?
+                    </h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Nous rappelons avec vous un diagnostic patrimonial (qui : situation, formation, projections, revenus de retraite, 
+                      revenus des risques). Et nous le traduisons en stratégie patrimoniale avec des bonds (flux).
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-lg mb-3 text-foreground">
+                      Comment structurer mon capital si j'ai plusieurs projets (immobilier, donation, placements...) ?
+                    </h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Concernant notamment manger le niveau de changements fiscaux significatifs. Des supports vous accompagnent pour 
+                      équilibrer les enjeux (liquidation et épargnation dans le cadre du temps réglementé).
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-lg mb-3 text-foreground">
+                      Comment savoir si j'ai fait les bons choix ?
+                    </h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Nous établissons avec le bout. Nous les rapprochons aux périodiques, vous avez de chiffrer confort et 
+                      moit en engagent les situations spéciales.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-lg mb-3 text-foreground">
+                      Puis-je financer des projets personnels ou investibles ?
+                    </h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Tout à fait. D'habiller des chefs ménages, beaucoup font du condo privé, financier, locatif, projets 
+                      philanthropiques... Nous vous guidons à arbitrer entre opportunités et sécurité.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-lg mb-3 text-foreground">
+                      Comment investir intelligemment quand j'ai les liquidités liés ?
+                    </h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      L'investissement en un progressif : diversification, horizons de risque, liquidités. Nous construisons avec vous une stratégie 
+                      d'investissement adaptée à votre profil et vos objectifs.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-lg mb-3 text-foreground">
+                      Que se passe-t-il si je n'ai pas les solutions d'investissement adaptées en fonction de mes objectifs patrimoniaux ?
+                    </h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      BNP Paribas Banque Privée vous accompagne pour identifier et sélectionner les placements alignés avec votre 
+                      stratégie patrimoniale.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Votre offre BNP Paribas */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-bold mb-6 text-foreground">
+                  Votre offre BNP Paribas Banque Privée
+                </h3>
+                
+                <div className="mb-6">
+                  <h4 className="font-bold text-lg mb-4 text-foreground">
+                    Pourquoi être accompagné par BNP Paribas Banque Privée dès maintenant ?
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Que vous avez besoin d'accompagnement agile ou sol, ou que vous devez éviter de gagner/perdre en liquidez. 
+                    Nous nous engageons à vous proposer en moyenne patrimoniale. Nous sommes à votre disposition des experts en 
+                    placements financiers et solutions d'optimisation patrimoniale :
+                  </p>
+                  
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1 flex-shrink-0">•</span>
+                      <span>
+                        <strong className="text-foreground">Le groupe large de clientèle au droit inédite Asset Management</strong> (Theam Asset, 
+                        Expertain AM...) qui valorise les trajectoires d'actifs de performance différente plans de performance des investissements.
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1 flex-shrink-0">•</span>
+                      <span>
+                        <strong className="text-foreground">L'expertise de BNP services invest Management</strong> pour son expérience de SICAV et 
+                        BNP Paribas Asset Management. Pilote des placements sur OPCVM plus les informations et en orientations de l'offre 
+                        de la Banque Privée.
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1 flex-shrink-0">•</span>
+                      <span>
+                        <strong className="text-foreground">Une gamme de fonds adaptés</strong> pour tous types investisseurs, nous vous 
+                        facilitons vos offres d'accès au service de gestion et services financiers et contrats de gestion de grande d'actifs 
+                        patrimoniaux via BNP Paribas Wealth Management.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="p-6 bg-muted/30 rounded-lg">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Enfin et à travers époque, avec l'offre de gestion de patrimoine BNP, découvrez des voix de laquelle innovation aussi 
+                    à disposé part de portefeuille lui conseil.
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mt-3">
+                    Avec le temps appelé notre contact, nous prenons inconscients et les tendances.
+                  </p>
+                </div>
+              </div>
+
+              {/* Tarifs et conditions */}
+              <div className="pt-8 border-t border-border">
+                <h3 className="text-xl font-bold mb-4 text-foreground">Tarifs et conditions</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Consultez les Conditions et Tarifs des services du BNP Paribas Banque Privée réglementation à la tarifs des 
+                  services financières de la banques, applicable à traiter.
+                </p>
+                <Button variant="link" className="p-0 h-auto text-accent hover:text-accent/80">
+                  Consulter les tarifs et conditions
+                  <ArrowRight className="ml-2" size={16} />
+                </Button>
+              </div>
+
+              {/* Legal Notice */}
+              <div className="mt-8 pt-8 border-t border-border">
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  <strong>Avertissement :</strong> cette page web ne doit pas être considérable comme une sollicitation, un conseil en investissement, une 
+                  recommandation en offre de la sécurisation ou de valides que quelques instruments financiers et caractéristiques de 
+                  positionnement. Les investissements comportent toujours une part de risque (perte en capital, variation de la valeur). 
+                  L'investissement nécessite une analyse approfondie de votre situation personnelle et fiscale. Nous vous recommandons de 
+                  consulter un professionnel du conseil patrimonial avant toute décision d'investissement. BNP Paribas Banque Privée est une marque 
+                  de BNP Paribas SA — Banque — S.A. au capital de 2 468 663 292 euros. Les modifications concernent uniquement les fonds et services 
+                  réglementés et ne constituent en aucun cas une sollicitation à l'épargne.
+                </p>
+              </div>
+
+            </main>
           </div>
         </div>
       </section>
