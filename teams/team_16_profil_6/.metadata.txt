@@ -1,0 +1,10 @@
+Team: team_16_profil_6
+Repository: https://github.com/Guillaumekite/private-banking-vision.git
+Aggregation Time: 2025-11-21T14:08:07+01:00
+Deadline: 2025-11-21 15:00:00
+
+Last Commit Info:
+Hash: 22c92da030dde5b0d8dfb78088301e8f2121080e
+Date: 2025-11-21 13:04:08 +0000
+Author: gpt-engineer-app[bot]
+Message: Intégrer Patrimoine premium
