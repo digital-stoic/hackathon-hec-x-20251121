@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroVillage from "@/assets/hero-village.jpg";
+import heroVillage from "@/assets/beginner-village.png";
 import { ArrowRight, PlayCircle } from "lucide-react";
 
 const Hero = () => {
