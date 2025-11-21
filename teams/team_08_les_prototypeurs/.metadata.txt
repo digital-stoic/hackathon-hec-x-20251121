@@ -1,6 +1,6 @@
 Team: team_08_les_prototypeurs
 Repository: https://github.com/Digicode23/finance-reels.git
-Aggregation Time: 2025-11-21T14:34:58+01:00
+Aggregation Time: 2025-11-21T14:42:36+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
