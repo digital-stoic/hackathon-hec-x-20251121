@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPin, Trophy, Coins, TrendingUp } from "lucide-react";
+import { ArrowRight, MapPin, Trophy, Coins, TrendingUp, Clock } from "lucide-react";
+import { useState, useEffect } from "react";
 import logo from "@/assets/logo.png";
 import bnpLogo from "@/assets/bnp-logo.png";
 import zone1 from "@/assets/zone1-bay.png";
@@ -8,6 +9,38 @@ import zone2 from "@/assets/zone2-desert.png";
 import zone3 from "@/assets/zone3-forest.png";
 
 const Index = () => {
+  // Date de début du challenge (à ajuster selon vos besoins)
+  const challengeStartDate = new Date("2025-01-01T00:00:00");
+  
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const difference = challengeStartDate.getTime() - now.getTime();
+
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60)
+        });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
+    };
+
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
       {/* Navigation */}
@@ -30,6 +63,48 @@ const Index = () => {
       {/* Hero Section */}
       <section className="container mx-auto px-2 sm:px-4 py-8 sm:py-16 text-center relative z-10">
         <div className="max-w-4xl mx-auto space-y-4 sm:space-y-6 animate-fade-in">
+          {/* Prize Banner */}
+          <div className="mb-6 sm:mb-8 p-4 sm:p-6 rounded-2xl bg-gradient-to-r from-accent via-yellow-500 to-accent border-4 border-yellow-400 shadow-2xl animate-pulse">
+            <div className="flex items-center justify-center gap-3 mb-2">
+              <Trophy className="w-8 h-8 sm:w-12 sm:h-12 text-white" />
+              <h3 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white">
+                50.000€
+              </h3>
+              <Trophy className="w-8 h-8 sm:w-12 sm:h-12 text-white" />
+            </div>
+            <p className="text-sm sm:text-xl font-bold text-white">
+              À GAGNER DANS LE CHALLENGE !
+            </p>
+          </div>
+
+          {/* Countdown Timer */}
+          <div className="mb-6 sm:mb-8 p-4 sm:p-6 rounded-xl bg-card border-2 border-primary shadow-xl">
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+              <h4 className="text-base sm:text-xl font-bold text-foreground">
+                Le challenge commence dans :
+              </h4>
+            </div>
+            <div className="grid grid-cols-4 gap-2 sm:gap-4 max-w-2xl mx-auto">
+              <div className="bg-gradient-to-br from-primary to-secondary p-3 sm:p-4 rounded-lg">
+                <div className="text-2xl sm:text-4xl font-bold text-white">{timeLeft.days}</div>
+                <div className="text-xs sm:text-sm text-white/80 font-medium">Jours</div>
+              </div>
+              <div className="bg-gradient-to-br from-primary to-secondary p-3 sm:p-4 rounded-lg">
+                <div className="text-2xl sm:text-4xl font-bold text-white">{timeLeft.hours}</div>
+                <div className="text-xs sm:text-sm text-white/80 font-medium">Heures</div>
+              </div>
+              <div className="bg-gradient-to-br from-primary to-secondary p-3 sm:p-4 rounded-lg">
+                <div className="text-2xl sm:text-4xl font-bold text-white">{timeLeft.minutes}</div>
+                <div className="text-xs sm:text-sm text-white/80 font-medium">Minutes</div>
+              </div>
+              <div className="bg-gradient-to-br from-primary to-secondary p-3 sm:p-4 rounded-lg">
+                <div className="text-2xl sm:text-4xl font-bold text-white">{timeLeft.seconds}</div>
+                <div className="text-xs sm:text-sm text-white/80 font-medium">Secondes</div>
+              </div>
+            </div>
+          </div>
+
           <div className="mb-4">
             <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mb-2">
               Flow
