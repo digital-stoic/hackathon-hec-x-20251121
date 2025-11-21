@@ -1,10 +1,10 @@
 Team: team_08_les_prototypeurs
 Repository: https://github.com/Digicode23/finance-reels.git
-Aggregation Time: 2025-11-21T14:26:35+01:00
+Aggregation Time: 2025-11-21T14:31:31+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: cc2e87b34c3b3de77fe406e8625a2dde0717acb3
-Date: 2025-11-21 13:24:11 +0000
+Hash: e8a10eecb9ed8f5dafa9a5d053a37f75906ffd3a
+Date: 2025-11-21 13:30:17 +0000
 Author: gpt-engineer-app[bot]
-Message: Refaire profil UX et avatar Yoda
+Message: Débloque révision unité 1
