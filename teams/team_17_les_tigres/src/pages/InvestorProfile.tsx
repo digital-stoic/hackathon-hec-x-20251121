@@ -10,8 +10,10 @@ import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
 import { investorQuestions, calculateProfile } from "@/data/investorQuestions";
 import { Answer } from "@/types/investorProfile";
 import { InvestorProfileResults } from "@/components/InvestorProfileResults";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const InvestorProfile = () => {
+  const { t } = useLanguage();
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<Answer[]>([]);
@@ -84,13 +86,13 @@ const InvestorProfile = () => {
     }} />;
   }
 
-  const categoryLabels = {
-    situation: 'Situation personnelle',
-    knowledge: 'Connaissance des marchés',
-    risk: 'Tolérance au risque',
-    objectives: 'Objectifs d\'investissement',
-    capacity: 'Capacité financière',
-    esg: 'Préférences ESG'
+  const categoryLabels: Record<string, string> = {
+    situation: t('profile.category.situation'),
+    knowledge: t('profile.category.knowledge'),
+    risk: t('profile.category.risk'),
+    objectives: t('profile.category.objectives'),
+    capacity: t('profile.category.capacity'),
+    esg: t('profile.category.esg')
   };
 
   return (
@@ -103,7 +105,7 @@ const InvestorProfile = () => {
           <div className="flex items-center justify-between mb-4">
             <div>
               <span className="text-sm text-muted-foreground">
-                Étape {currentStep + 1} sur {investorQuestions.length}
+                {t('profile.step')} {currentStep + 1} {t('profile.of')} {investorQuestions.length}
               </span>
               <p className="text-sm font-medium text-champagne">
                 {categoryLabels[currentQuestion.category]}
@@ -114,7 +116,7 @@ const InvestorProfile = () => {
               onClick={() => navigate('/patrimoine')}
               className="text-muted-foreground hover:text-foreground"
             >
-              Quitter
+              {t('profile.quit')}
             </Button>
           </div>
           <Progress value={progress} className="h-2" />
@@ -199,7 +201,7 @@ const InvestorProfile = () => {
             className="border-border hover:bg-accent"
           >
             <ArrowLeft className="mr-2 w-4 h-4" />
-            Retour
+            {t('profile.back')}
           </Button>
 
           <Button
@@ -207,7 +209,7 @@ const InvestorProfile = () => {
             disabled={!isAnswerValid()}
             className="bg-champagne text-white hover:bg-champagne-muted"
           >
-            {currentStep === investorQuestions.length - 1 ? 'Voir mes résultats' : 'Suivant'}
+            {currentStep === investorQuestions.length - 1 ? t('profile.results') : t('profile.next')}
             <ArrowRight className="ml-2 w-4 h-4" />
           </Button>
         </div>
@@ -215,9 +217,9 @@ const InvestorProfile = () => {
         {/* Indicateur de questions */}
         <div className="mt-6 text-center text-sm text-muted-foreground">
           {currentQuestion.required ? (
-            <span>Cette question est obligatoire</span>
+            <span>{t('profile.required')}</span>
           ) : (
-            <span>Cette question est optionnelle</span>
+            <span>{t('profile.optional')}</span>
           )}
         </div>
       </main>

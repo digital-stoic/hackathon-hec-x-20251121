@@ -6,11 +6,33 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { ChevronDown, Lightbulb, CreditCard, Users, TrendingUp } from "lucide-react";
-import { opportunities } from "@/data/mockData";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const OpportunitiesCard = () => {
+  const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
+
+  const opps = [
+    {
+      id: "1",
+      titre: t('opp.credit.title'),
+      description: t('opp.credit.desc'),
+      type: "credit" as const,
+    },
+    {
+      id: "2",
+      titre: t('opp.expert.title'),
+      description: t('opp.expert.desc'),
+      type: "expert" as const,
+    },
+    {
+      id: "3",
+      titre: t('opp.scpi.title'),
+      description: t('opp.scpi.desc'),
+      type: "investissement" as const,
+    },
+  ];
 
   const getIcon = (type: string) => {
     switch (type) {
@@ -31,10 +53,10 @@ export const OpportunitiesCard = () => {
         <div className="flex items-center justify-between mb-4">
           <div>
             <h2 className="text-xl font-serif text-foreground mb-1">
-              Des opportunités pour toi
+              {t('patrimoine.opportunities.title')}
             </h2>
             <p className="text-sm text-muted-foreground">
-              Si ça t'intéresse
+              {t('patrimoine.opportunities.subtitle')}
             </p>
           </div>
           <CollapsibleTrigger asChild>
@@ -53,7 +75,7 @@ export const OpportunitiesCard = () => {
         </div>
 
         <CollapsibleContent className="space-y-3">
-          {opportunities.map((opp) => (
+          {opps.map((opp) => (
             <div
               key={opp.id}
               className="flex items-start gap-3 p-3 rounded-lg hover:bg-muted/50 transition-colors"
@@ -74,7 +96,7 @@ export const OpportunitiesCard = () => {
             variant="outline"
             className="w-full mt-4 border-champagne/50 text-champagne hover:bg-champagne/10"
           >
-            Explorer →
+            {t('patrimoine.opportunities.explore')} →
           </Button>
         </CollapsibleContent>
       </Collapsible>

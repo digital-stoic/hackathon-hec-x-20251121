@@ -8,8 +8,10 @@ import { LignePatrimoineItem } from "@/components/LignePatrimoineItem";
 import { CoachPreviewSimple } from "@/components/CoachPreviewSimple";
 import { CoachIAChat } from "@/components/CoachIAChat";
 import { portefeuilleLignes } from "@/data/mockData";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Patrimoine = () => {
+  const { t } = useLanguage();
   const [isChatOpen, setIsChatOpen] = useState(false);
 
   return (
@@ -35,10 +37,10 @@ const Patrimoine = () => {
             <div>
               <div className="mb-4">
                 <h2 className="text-2xl font-serif text-foreground mb-1">
-                  Ton patrimoine
+                  {t('patrimoine.title')}
                 </h2>
                 <p className="text-sm text-muted-foreground">
-                  Comment c'est réparti
+                  {t('patrimoine.subtitle')}
                 </p>
               </div>
               <PatrimoineOverviewCard />
@@ -48,10 +50,10 @@ const Patrimoine = () => {
             <div>
               <div className="mb-4">
                 <h2 className="text-xl font-serif text-foreground mb-1">
-                  Tes principales lignes
+                  {t('patrimoine.lines.title')}
                 </h2>
                 <p className="text-sm text-muted-foreground">
-                  Les perfs en direct
+                  {t('patrimoine.lines.subtitle')}
                 </p>
               </div>
               <div className="space-y-3">
@@ -60,7 +62,7 @@ const Patrimoine = () => {
                 ))}
               </div>
               <button className="w-full text-sm text-champagne hover:text-champagne-muted transition-colors flex items-center justify-center gap-2 group mt-4 py-3">
-                Voir tout ton portefeuille
+                {t('patrimoine.view-all')}
                 <span className="group-hover:translate-x-1 transition-transform">
                   →
                 </span>

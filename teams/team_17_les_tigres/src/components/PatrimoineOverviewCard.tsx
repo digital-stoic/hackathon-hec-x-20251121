@@ -3,8 +3,10 @@ import { Cell, Pie, PieChart, ResponsiveContainer } from "recharts";
 import { Card } from "@/components/ui/card";
 import { portefeuilleLignes } from "@/data/mockData";
 import { CorrelationAnalysisDialog } from "./CorrelationAnalysisDialog";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const PatrimoineOverviewCard = () => {
+  const { t, language } = useLanguage();
   const [showCorrelationDialog, setShowCorrelationDialog] = useState(false);
   const chartData = portefeuilleLignes.map((ligne) => ({
     name: ligne.nom,
@@ -15,7 +17,8 @@ export const PatrimoineOverviewCard = () => {
   const totalValue = portefeuilleLignes.reduce((sum, l) => sum + l.valeur, 0);
 
   const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat("fr-FR", {
+    const locale = language === 'fr' ? 'fr-FR' : 'en-US';
+    return new Intl.NumberFormat(locale, {
       style: "currency",
       currency: "EUR",
       minimumFractionDigits: 0,
@@ -39,21 +42,21 @@ export const PatrimoineOverviewCard = () => {
   }, [] as Array<{ type: string; valeur: number; allocation: number }>);
 
   const typeLabels: Record<string, string> = {
-    immobilier: "Immobilier",
-    action: "Actions",
-    crypto: "Crypto",
-    liquidite: "Liquidités",
-    equity: "Equity",
+    immobilier: t('patrimoine.type.immobilier'),
+    action: t('patrimoine.type.action'),
+    crypto: t('patrimoine.type.crypto'),
+    liquidite: t('patrimoine.type.liquidite'),
+    equity: t('patrimoine.type.equity'),
   };
 
   return (
     <Card className="glass-card hover-lift p-8">
       <div className="mb-6">
         <h2 className="text-2xl font-serif text-foreground mb-1">
-          Comment c'est réparti
+          {t('patrimoine.overview.title')}
         </h2>
         <p className="text-sm text-muted-foreground">
-          Tes différents types d'investissements
+          {t('patrimoine.overview.subtitle')}
         </p>
       </div>
 
@@ -76,7 +79,7 @@ export const PatrimoineOverviewCard = () => {
           </PieChart>
         </ResponsiveContainer>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <p className="text-xs text-muted-foreground mb-1">Total</p>
+          <p className="text-xs text-muted-foreground mb-1">{t('patrimoine.overview.total')}</p>
           <p className="text-2xl font-mono font-bold text-champagne">
             {formatCurrency(totalValue)}
           </p>
@@ -119,7 +122,7 @@ export const PatrimoineOverviewCard = () => {
       <div className="pt-4 border-t border-border/50">
         <div className="flex items-center justify-between mb-2">
           <span className="text-sm text-muted-foreground">
-            Corrélation de ton portefeuille
+            {t('patrimoine.overview.correlation')}
           </span>
           <span className="text-sm font-mono text-foreground">0.42</span>
         </div>
@@ -127,7 +130,7 @@ export const PatrimoineOverviewCard = () => {
           onClick={() => setShowCorrelationDialog(true)}
           className="w-full mt-3 text-sm text-champagne hover:text-champagne-muted transition-colors flex items-center justify-center gap-2 group"
         >
-          On regarde ça ensemble ?
+          {t('patrimoine.overview.analyze')}
           <span className="group-hover:translate-x-1 transition-transform">
             →
           </span>

@@ -1,19 +1,34 @@
 import { Line, LineChart, ResponsiveContainer } from "recharts";
 import { LignePatrimoine } from "@/data/mockData";
 import { TrendingUp, TrendingDown } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface LignePatrimoineItemProps {
   ligne: LignePatrimoine;
 }
 
 export const LignePatrimoineItem = ({ ligne }: LignePatrimoineItemProps) => {
+  const { t, language } = useLanguage();
+  
   const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat("fr-FR", {
+    const locale = language === 'fr' ? 'fr-FR' : 'en-US';
+    return new Intl.NumberFormat(locale, {
       style: "currency",
       currency: "EUR",
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     }).format(value);
+  };
+
+  const translateType = (type: string) => {
+    const typeMap: Record<string, string> = {
+      immobilier: t('patrimoine.type.immobilier'),
+      action: t('patrimoine.type.action'),
+      crypto: t('patrimoine.type.crypto'),
+      liquidite: t('patrimoine.type.liquidite'),
+      equity: t('patrimoine.type.equity'),
+    };
+    return typeMap[type] || type;
   };
 
   const chartData = ligne.sparkline.map((value, index) => ({
@@ -31,7 +46,7 @@ export const LignePatrimoineItem = ({ ligne }: LignePatrimoineItemProps) => {
             {ligne.nom}
           </h4>
           <p className="text-xs text-muted-foreground capitalize">
-            {ligne.type}
+            {translateType(ligne.type)}
           </p>
         </div>
         <div className="w-20 h-10">
@@ -55,7 +70,7 @@ export const LignePatrimoineItem = ({ ligne }: LignePatrimoineItemProps) => {
             {formatCurrency(ligne.valeur)}
           </p>
           <p className="text-xs text-muted-foreground mt-0.5">
-            {ligne.allocation.toFixed(1)}% du total
+            {ligne.allocation.toFixed(1)}% {t('patrimoine.item.of-total')}
           </p>
         </div>
         <div className="text-right">

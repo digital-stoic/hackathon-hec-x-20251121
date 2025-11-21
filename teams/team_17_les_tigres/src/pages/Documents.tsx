@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Header } from "@/components/Header";
+import { useLanguage } from "@/contexts/LanguageContext";
 import {
   Search,
   FolderOpen,
@@ -146,6 +147,7 @@ const mockDossiers: Dossier[] = [
 ];
 
 const Documents = () => {
+  const { t } = useLanguage();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedDossier, setSelectedDossier] = useState<Dossier | null>(null);
 
@@ -158,11 +160,11 @@ const Documents = () => {
   const getStatutBadge = (statut: Document["statut"]) => {
     switch (statut) {
       case "nouveau":
-        return <Badge className="bg-red-500/10 text-red-700 dark:text-red-400">Nouveau</Badge>;
+        return <Badge className="bg-red-500/10 text-red-700 dark:text-red-400">{t('documents.new')}</Badge>;
       case "lu":
-        return <Badge variant="secondary">Lu</Badge>;
+        return <Badge variant="secondary">{t('documents.read')}</Badge>;
       case "archive":
-        return <Badge variant="outline">Archivé</Badge>;
+        return <Badge variant="outline">{t('documents.archived')}</Badge>;
     }
   };
 
@@ -173,10 +175,10 @@ const Documents = () => {
       <main className="container mx-auto px-4 py-8 max-w-7xl">
         <div className="mb-8">
           <h1 className="text-4xl font-serif text-foreground mb-2">
-            Vos documents
+            {t('documents.title')}
           </h1>
           <p className="text-muted-foreground">
-            Partagez et consultez vos documents avec vos conseillers
+            {t('documents.subtitle')}
           </p>
         </div>
 
@@ -186,7 +188,7 @@ const Documents = () => {
               <div className="relative mb-4">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
                 <Input
-                  placeholder="Rechercher un dossier..."
+                  placeholder={t('documents.search')}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-9"
@@ -195,7 +197,7 @@ const Documents = () => {
 
               <Button className="w-full mb-4" variant="default">
                 <Upload className="w-4 h-4 mr-2" />
-                Téléverser un document
+                {t('documents.upload')}
               </Button>
 
               <div className="space-y-2">
@@ -222,7 +224,7 @@ const Documents = () => {
                         </p>
                         <div className="flex items-center gap-2 text-xs text-muted-foreground">
                           <FileText className="w-3 h-3" />
-                          <span>{dossier.nbDocuments} documents</span>
+                          <span>{dossier.nbDocuments} {t('documents.documents')}</span>
                         </div>
                       </div>
                     </div>
@@ -246,7 +248,7 @@ const Documents = () => {
                       </p>
                     </div>
                     <Badge variant="secondary">
-                      {selectedDossier.nbDocuments} documents
+                      {selectedDossier.nbDocuments} {t('documents.documents')}
                     </Badge>
                   </div>
                 </div>
@@ -308,10 +310,10 @@ const Documents = () => {
                     <FolderOpen className="w-8 h-8 text-muted-foreground" />
                   </div>
                   <h3 className="text-xl font-serif text-foreground mb-2">
-                    Sélectionnez un dossier
+                    {t('documents.select')}
                   </h3>
                   <p className="text-muted-foreground">
-                    Choisissez un dossier dans la liste pour consulter les documents partagés
+                    {t('documents.select.desc')}
                   </p>
                 </div>
               </Card>

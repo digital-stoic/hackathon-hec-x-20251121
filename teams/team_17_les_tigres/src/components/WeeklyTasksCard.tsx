@@ -1,22 +1,51 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Clock } from "lucide-react";
-import { weeklyTasks } from "@/data/mockData";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const WeeklyTasksCard = () => {
+  const { t } = useLanguage();
+  
+  const tasks = [
+    {
+      id: "1",
+      titre: t('task.per.title'),
+      description: t('task.per.desc'),
+      timeEstimate: t('task.per.time'),
+      impact: t('task.per.impact'),
+      priority: "high" as const,
+      actions: [
+        { label: t('task.per.action1'), type: "primary" as const },
+        { label: t('task.per.action2'), type: "secondary" as const },
+      ],
+    },
+    {
+      id: "2",
+      titre: t('task.tesla.title'),
+      description: t('task.tesla.desc'),
+      timeEstimate: t('task.tesla.time'),
+      impact: t('task.tesla.impact'),
+      priority: "medium" as const,
+      actions: [
+        { label: t('task.tesla.action1'), type: "primary" as const },
+        { label: t('task.tesla.action2'), type: "secondary" as const },
+      ],
+    },
+  ];
+  
   return (
     <Card className="bg-white border-border p-6">
       <div className="mb-5">
         <h2 className="text-xl font-serif text-foreground mb-1">
-          Cette semaine
+          {t('patrimoine.weekly.title')}
         </h2>
         <p className="text-sm text-muted-foreground">
-          2 trucs à checker quand tu veux
+          {t('patrimoine.weekly.subtitle')}
         </p>
       </div>
 
       <div className="space-y-4">
-        {weeklyTasks.map((task) => (
+        {tasks.map((task) => (
           <div
             key={task.id}
             className="p-4 rounded-lg border border-border/50 bg-muted/30 hover:border-champagne/30 transition-colors"

@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { useLanguage } from "@/contexts/LanguageContext";
 import {
   Search,
   Star,
@@ -133,16 +134,17 @@ const typeIcons: Record<ExpertType, any> = {
   conseil: Building2,
 };
 
-const typeLabels: Record<ExpertType, string> = {
-  comptable: "Comptable",
-  avocat: "Avocat",
-  fiscaliste: "Fiscaliste",
-  conseil: "Conseil",
-};
-
 const Experts = () => {
+  const { t } = useLanguage();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedType, setSelectedType] = useState<ExpertType | "all">("all");
+
+  const typeLabels: Record<ExpertType, string> = {
+    comptable: t('experts.type.comptable'),
+    avocat: t('experts.type.avocat'),
+    fiscaliste: t('experts.type.fiscaliste'),
+    conseil: t('experts.type.conseil'),
+  };
 
   const filteredExperts = experts.filter((expert) => {
     const matchesSearch =
@@ -160,10 +162,10 @@ const Experts = () => {
         {/* Page Header */}
         <div className="mb-8">
           <h1 className="text-4xl font-serif text-champagne mb-3">
-            Annuaire d'Experts
+            {t('experts.title')}
           </h1>
           <p className="text-muted-foreground text-lg">
-            Accédez à notre réseau de professionnels partenaires BNP Paribas
+            {t('experts.subtitle')}
           </p>
         </div>
 
@@ -173,7 +175,7 @@ const Experts = () => {
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
             <Input
               type="text"
-              placeholder="Rechercher un expert par nom ou spécialité..."
+              placeholder={t('experts.search')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-12 h-14 bg-white/60 border-border/50 text-foreground"
@@ -190,7 +192,7 @@ const Experts = () => {
                   : "border-champagne/50 text-champagne hover:bg-champagne/10"
               }
             >
-              Tous les experts
+              {t('experts.all')}
             </Button>
             {(Object.keys(typeLabels) as ExpertType[]).map((type) => (
               <Button
@@ -230,7 +232,7 @@ const Experts = () => {
                         : "bg-muted/50 text-muted-foreground border-muted"
                     }
                   >
-                    {expert.available ? "Disponible" : "Complet"}
+                    {expert.available ? t('experts.available') : t('experts.full')}
                   </Badge>
                 </div>
 
@@ -268,7 +270,7 @@ const Experts = () => {
                   disabled={!expert.available}
                 >
                   <Calendar className="w-4 h-4 mr-2" />
-                  Prendre rendez-vous
+                  {t('experts.meeting')}
                 </Button>
               </div>
             );
@@ -278,7 +280,7 @@ const Experts = () => {
         {filteredExperts.length === 0 && (
           <div className="text-center py-16">
             <p className="text-muted-foreground text-lg">
-              Aucun expert ne correspond à votre recherche
+              {t('experts.no-results')}
             </p>
           </div>
         )}
