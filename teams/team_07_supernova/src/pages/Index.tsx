@@ -4,6 +4,7 @@ import About from "@/components/About";
 import VillageProgression from "@/components/VillageProgression";
 import GameplaySteps from "@/components/GameplaySteps";
 import BuildingsShowcase from "@/components/BuildingsShowcase";
+import FinancialProducts from "@/components/FinancialProducts";
 import PlayAnywhere from "@/components/PlayAnywhere";
 import Footer from "@/components/Footer";
 
@@ -16,6 +17,7 @@ const Index = () => {
       <VillageProgression />
       <GameplaySteps />
       <BuildingsShowcase />
+      <FinancialProducts />
       <PlayAnywhere />
       <Footer />
     </main>
