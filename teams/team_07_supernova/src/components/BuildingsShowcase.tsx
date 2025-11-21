@@ -2,6 +2,8 @@ import buildingBank from "@/assets/building-bank.jpg";
 import buildingQuiz from "@/assets/building-quiz.jpg";
 import buildingAdvisor from "@/assets/building-advisor.jpg";
 import buildingStocks from "@/assets/building-stocks.jpg";
+import buildingPrivateEquity from "@/assets/building-private-equity.jpeg";
+import buildingVentureCapital from "@/assets/building-venture-capital.jpeg";
 import { Building2, HelpCircle, Users, TrendingUp, Briefcase, Rocket, Users2, BookOpen } from "lucide-react";
 
 const BuildingsShowcase = () => {
@@ -32,11 +34,13 @@ const BuildingsShowcase = () => {
     },
     {
       name: "Private Equity",
+      image: buildingPrivateEquity,
       icon: Briefcase,
       description: "Invest in private companies before they go public. High risk, high reward opportunities for experienced players."
     },
     {
       name: "Venture Capital",
+      image: buildingVentureCapital,
       icon: Rocket,
       description: "Fund innovative startups at early stages. Support emerging businesses and watch your investments grow exponentially."
     },
