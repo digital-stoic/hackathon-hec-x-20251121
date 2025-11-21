@@ -219,7 +219,7 @@ export default {
   'chat.ai.action2': 'Autre question',
   
   // Initial chat messages
-  'chat.initial.msg1': 'Salut Karim ! Ton patrimoine est à 5,23M€ avec +2,3% ce mois-ci. Pas mal ! Je remarque que tu es beaucoup exposé sur la tech (42% de tes actions). Tu veux qu\'on regarde ensemble si c\'est pas un peu risqué ?',
+  'chat.initial.msg1': 'Salut Florian ! Ton patrimoine est à 5,23M€ avec +2,3% ce mois-ci. Pas mal ! Je remarque que tu es beaucoup exposé sur la tech (42% de tes actions). Tu veux qu\'on regarde ensemble si c\'est pas un peu risqué ?',
   'chat.initial.msg1.action1': 'Oui, montre-moi',
   'chat.initial.msg1.action2': 'Voir les alternatives',
   'chat.initial.msg2': 'Oui, analyse les corrélations et propose des optimisations',

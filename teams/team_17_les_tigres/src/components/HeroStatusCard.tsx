@@ -9,7 +9,7 @@ export const HeroStatusCard = () => {
       <div className="space-y-4">
         <div>
           <h1 className="text-2xl font-serif text-jade mb-2">
-            {t('hero.title').replace('{name}', 'Karim')}
+            {t('hero.title').replace('{name}', 'Florian')}
           </h1>
           <p className="text-foreground text-base leading-relaxed">
             {t('hero.message')}

@@ -219,7 +219,7 @@ export default {
   'chat.ai.action2': 'Another question',
   
   // Initial chat messages
-  'chat.initial.msg1': 'Hey Karim! Your wealth is at 5.23M€ with +2.3% this month. Not bad! I notice you\'re heavily exposed to tech (42% of your stocks). Want to check if that\'s not a bit risky?',
+  'chat.initial.msg1': 'Hey Florian! Your wealth is at 5.23M€ with +2.3% this month. Not bad! I notice you\'re heavily exposed to tech (42% of your stocks). Want to check if that\'s not a bit risky?',
   'chat.initial.msg1.action1': 'Yes, show me',
   'chat.initial.msg1.action2': 'See alternatives',
   'chat.initial.msg2': 'Yes, analyze correlations and suggest optimizations',

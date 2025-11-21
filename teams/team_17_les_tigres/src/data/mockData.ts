@@ -1,7 +1,7 @@
 // Mock data for Persona 3: Post-exit entrepreneur with €5.2M patrimoine
 
 export const userData = {
-  name: "Karim Mansouri",
+  name: "Florian Germond",
   patrimoine: 5234847,
   performance: 2.3,
   performanceAbsolute: 117452,
@@ -149,7 +149,7 @@ export const coachMessages: CoachMessage[] = [
   {
     id: "1",
     role: "assistant",
-    content: "Salut Karim ! Ton patrimoine est à 5,23M€ avec +2,3% ce mois-ci. Pas mal ! Je remarque que tu es beaucoup exposé sur la tech (42% de tes actions). Tu veux qu'on regarde ensemble si c'est pas un peu risqué ?",
+    content: "Salut Florian ! Ton patrimoine est à 5,23M€ avec +2,3% ce mois-ci. Pas mal ! Je remarque que tu es beaucoup exposé sur la tech (42% de tes actions). Tu veux qu'on regarde ensemble si c'est pas un peu risqué ?",
     timestamp: new Date(Date.now() - 7200000).toISOString(),
     actions: [
       { label: "Oui, montre-moi", type: "primary" },
@@ -310,7 +310,7 @@ export interface HeroStatus {
 
 export const heroStatus: HeroStatus = {
   status: "success",
-  title: "Tout roule, Karim ! 👍",
+  title: "Tout roule, Florian ! 👍",
   message: "Ton patrimoine est bien géré. J'ai juste deux-trois petites choses à te montrer quand tu auras 20 minutes cette semaine.",
   metrics: {
     portfolio: "Équilibré",

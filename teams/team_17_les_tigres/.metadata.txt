@@ -1,10 +1,10 @@
 Team: team_17_les_tigres
 Repository: https://github.com/kbouri/wealth-guardian-ai.git
-Aggregation Time: 2025-11-21T15:03:59+01:00
+Aggregation Time: 2025-11-21T15:10:02+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 01e027c74f5b2a4626fc3dab75d10190dbcaffbb
-Date: 2025-11-21 14:02:57 +0000
+Hash: 6e650250016603e51a3396798ba5de4f4cc841e0
+Date: 2025-11-21 14:05:52 +0000
 Author: gpt-engineer-app[bot]
-Message: Enhance Opportunities view
+Message: Sync header CTA color to landing page

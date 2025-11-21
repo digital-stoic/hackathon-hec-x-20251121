@@ -73,7 +73,7 @@ export const Header = () => {
             </div>
 
             <Link to="/profil-investisseur" className="hidden md:block">
-              <Button className="bg-champagne text-white hover:bg-champagne-muted h-11 px-6 gap-2">
+              <Button className="bg-jade text-white hover:bg-jade-light h-11 px-6 gap-2">
                 <Sparkles className="w-4 h-4" />
                 {t('home.hero.btn.profile')}
               </Button>
