@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import philanthropyImage from "@/assets/philanthropy.jpg";
-import { Heart, Globe, GraduationCap, Leaf } from "lucide-react";
+import { Heart, Globe, GraduationCap, Leaf, ArrowRight } from "lucide-react";
 
 const Philanthropie = () => {
   return (
@@ -20,10 +20,10 @@ const Philanthropie = () => {
         
         <div className="relative z-10 container mx-auto px-6 text-center text-primary-foreground">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
-            Philanthropie
+            Investir avec sens. Transmettre avec impact.
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto animate-fade-in opacity-90">
-            Ensemble pour un monde meilleur
+            Un accompagnement dédié pour aligner patrimoine et valeurs
           </p>
         </div>
       </section>
@@ -33,26 +33,32 @@ const Philanthropie = () => {
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="prose prose-lg max-w-none">
             <h2 className="text-3xl font-bold mb-6 text-foreground">
-              Notre engagement philanthropique
+              ESG vs Impact : comprendre la différence
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Chez BNP, nous croyons fermement que la réussite financière s'accompagne d'une 
-              responsabilité envers la société. Notre démarche philanthropique s'articule autour 
-              de quatre piliers fondamentaux qui guident nos actions au quotidien.
+              L'investissement ESG (Environnement, Social, Gouvernance) exclut les secteurs controversés et sélectionne 
+              les entreprises les mieux notées. L'investissement à impact va plus loin : il vise un bénéfice mesurable 
+              et intentionnel sur la société ou l'environnement, tout en générant un rendement financier.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Chez BNP Paribas Banque Privée, nous vous aidons à construire un portefeuille qui reflète vos valeurs, 
+              tout en préservant la performance. Finance responsable, économie sociale, énergies renouvelables, 
+              éducation : vos investissements peuvent transformer le monde.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Chaque année, nous investissons dans des projets qui font une réelle différence 
-              dans la vie des communautés que nous servons, en France et à l'international.
+              La philanthropie structurée (fondation, fonds de dotation, donations) complète cette démarche en vous 
+              permettant d'agir directement sur les causes qui vous tiennent à cœur, avec un accompagnement expert 
+              en gouvernance et fiscalité.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Pillars */}
+      {/* Structuration Section */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 text-foreground">
-            Nos domaines d'action
+            Structuration philanthropique et gouvernance familiale
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
@@ -60,11 +66,10 @@ const Philanthropie = () => {
               <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                 <Heart className="text-primary" size={28} />
               </div>
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">Solidarité sociale</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">Fondation familiale</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Soutien aux associations caritatives et aux initiatives de lutte contre la pauvreté 
-                et l'exclusion sociale. Nous finançons des programmes d'aide alimentaire, de logement 
-                et d'insertion professionnelle.
+                Créez une structure pérenne pour porter vos valeurs sur plusieurs générations. Nous vous accompagnons 
+                dans la création, la gouvernance et l'animation de votre fondation, en France ou à l'étranger.
               </p>
             </div>
             
@@ -72,10 +77,10 @@ const Philanthropie = () => {
               <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                 <GraduationCap className="text-primary" size={28} />
               </div>
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">Éducation et culture</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">Donations et legs stratégiques</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Programmes de bourses d'études, soutien aux établissements d'enseignement et promotion 
-                de l'accès à la culture pour tous. L'éducation est la clé de l'émancipation sociale.
+                Optimisez l'impact de vos dons avec un accompagnement fiscal et juridique. Réduction d'impôts, 
+                structuration de legs, mécénat d'entreprise : chaque euro donné peut être maximisé.
               </p>
             </div>
             
@@ -83,10 +88,10 @@ const Philanthropie = () => {
               <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                 <Leaf className="text-primary" size={28} />
               </div>
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">Environnement</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">Next-Gen Wealth</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Financement de projets de reforestation, de préservation de la biodiversité et 
-                de transition énergétique. Notre planète mérite notre engagement le plus total.
+                Impliquez vos enfants dans la gestion de votre patrimoine et de vos engagements philanthropiques. 
+                Éducation financière, gouvernance familiale, transmission de valeurs : préparez la relève.
               </p>
             </div>
             
@@ -94,41 +99,76 @@ const Philanthropie = () => {
               <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                 <Globe className="text-primary" size={28} />
               </div>
-              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">Développement international</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">Impact investing</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Soutien aux projets de microfinance et d'entrepreneuriat dans les pays en développement. 
-                Nous croyons au pouvoir transformateur de l'inclusion financière.
+                Investissez dans des fonds à impact mesurable : microfinance, énergies renouvelables, accès à l'éducation, 
+                santé. Conciliez rendement financier et transformation sociale ou environnementale.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Impact */}
+      {/* Use Cases Section */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-8 text-foreground">
-              Notre impact en chiffres
-            </h2>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="p-6">
-                <div className="text-5xl font-bold text-primary mb-2">50M€</div>
-                <p className="text-muted-foreground">Investis en 2023</p>
-              </div>
-              <div className="p-6">
-                <div className="text-5xl font-bold text-primary mb-2">200+</div>
-                <p className="text-muted-foreground">Projets soutenus</p>
-              </div>
-              <div className="p-6">
-                <div className="text-5xl font-bold text-primary mb-2">15 000</div>
-                <p className="text-muted-foreground">Bénéficiaires directs</p>
-              </div>
+        <div className="container mx-auto px-6 max-w-4xl">
+          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">
+            Témoignages et cas d'usage
+          </h2>
+          
+          <div className="space-y-8">
+            <div className="p-8 rounded-lg bg-card border border-border">
+              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">Cas n°1 : Entrepreneur tech, 42 ans</h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Après la vente de sa startup, ce dirigeant souhaitait investir 20% de son patrimoine dans des projets à impact. 
+                Nous l'avons accompagné dans la création d'un fonds familial dédié à l'éducation des jeunes en zones rurales, 
+                tout en optimisant sa fiscalité et en impliquant ses enfants dans la gouvernance.
+              </p>
+              <p className="text-sm text-muted-foreground italic">
+                Résultat : 5 écoles financées, 1 200 élèves accompagnés, réduction d'IFI de 75%.
+              </p>
             </div>
-            
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Découvrir nos projets
+
+            <div className="p-8 rounded-lg bg-card border border-border">
+              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">Cas n°2 : Famille fortunée, transmission multi-générationnelle</h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Cette famille souhaitait structurer son engagement philanthropique sur trois générations. Nous avons créé 
+                une fondation familiale dédiée à la préservation des océans, avec une gouvernance partagée entre parents, 
+                enfants et petits-enfants.
+              </p>
+              <p className="text-sm text-muted-foreground italic">
+                Résultat : 12 projets de recherche marine financés, implication de la 3ème génération dans les décisions stratégiques.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-lg bg-card border border-border">
+              <h3 className="text-2xl font-semibold mb-4 text-card-foreground">Cas n°3 : Héritier, 35 ans</h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Après un héritage conséquent, ce client souhaitait donner du sens à son patrimoine. Nous avons construit 
+                un portefeuille 100% impact (énergies renouvelables, santé, éducation) tout en maintenant une performance 
+                financière compétitive.
+              </p>
+              <p className="text-sm text-muted-foreground italic">
+                Résultat : Rendement annuel de 6,2%, impact mesurable sur 8 ODD des Nations Unies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Construisons ensemble votre stratégie d'impact
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+            Échangez avec nos experts en investissement responsable et philanthropie structurée.
+          </p>
+          <div className="flex gap-4 justify-center">
+            <Button size="lg" variant="secondary" className="bg-accent text-accent-foreground hover:bg-accent/90">
+              Je veux donner du sens à mon patrimoine
+              <ArrowRight className="ml-2" size={20} />
             </Button>
           </div>
         </div>
