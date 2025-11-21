@@ -1,6 +1,6 @@
 Team: team_06_les_banquupteurs
 Repository: https://github.com/solene-duv/my-app-creator.git
-Aggregation Time: 2025-11-21T14:42:13+01:00
+Aggregation Time: 2025-11-21T14:45:10+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
