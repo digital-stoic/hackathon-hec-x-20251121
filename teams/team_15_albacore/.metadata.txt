@@ -1,6 +1,6 @@
 Team: team_15_albacore
 Repository: https://github.com/aymericdbz-stack/albacore.git
-Aggregation Time: 2025-11-21T13:40:54+01:00
+Aggregation Time: 2025-11-21T14:00:33+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
