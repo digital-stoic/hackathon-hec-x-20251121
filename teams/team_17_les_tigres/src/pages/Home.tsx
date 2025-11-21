@@ -8,6 +8,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { RichieAssistant } from "@/components/RichieAssistant";
 import { DynamicNotifications } from "@/components/DynamicNotifications";
 import { CoachIAChat } from "@/components/CoachIAChat";
+import richie3D from "@/assets/richie-3d.png";
 
 const Home = () => {
   const { language, t } = useLanguage();
@@ -30,6 +31,17 @@ const Home = () => {
       <main className="container mx-auto px-6 py-16">
         {/* Hero Section */}
         <div className="max-w-4xl mx-auto text-center mb-20">
+          <div className="flex justify-center mb-8 animate-scale-in">
+            <img
+              src={richie3D}
+              alt="Richie"
+              className="h-64 w-auto object-contain animate-fade-in"
+              style={{
+                filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.25)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15))',
+                transform: 'perspective(1000px) rotateY(-5deg)',
+              }}
+            />
+          </div>
           <h1 className="text-5xl md:text-6xl font-serif text-champagne mb-6 leading-tight">
             {t('home.hero.title.1')}
             <br />
@@ -52,12 +64,12 @@ const Home = () => {
             </Link>
           </div>
           <div className="mt-4 flex justify-center">
-            <Link to="/experts">
+            <Link to="/conseil">
               <Button
                 variant="outline"
                 className="border-champagne text-champagne hover:bg-champagne/10 h-12 px-6 text-base"
               >
-                {t('home.hero.btn.experts')}
+                {t('home.hero.btn.conseil')}
               </Button>
             </Link>
           </div>
@@ -115,21 +127,21 @@ const Home = () => {
               </div>
             </Link>
 
-            {/* Annuaire Experts */}
+            {/* Documents */}
             <Link
-              to="/experts"
+              to="/documents"
               className="group bg-white backdrop-blur-sm border border-border/50 rounded-lg p-10 hover:border-champagne/50 transition-all hover:shadow-premium hover:scale-[1.03] animate-fade-in"
               style={{ animationDelay: '200ms' }}
             >
               <Users className="w-16 h-16 text-champagne mb-6 group-hover:scale-110 transition-transform" />
               <h3 className="text-2xl font-serif text-champagne mb-4">
-                {t('home.services.experts.title')}
+                {t('documents.title')}
               </h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                {t('home.services.experts.desc')}
+                {t('documents.subtitle')}
               </p>
               <div className="flex items-center text-champagne group-hover:gap-2 transition-all">
-                <span className="text-sm font-medium">{t('home.services.experts.cta')}</span>
+                <span className="text-sm font-medium">{language === 'fr' ? 'Explorer' : 'Explore'}</span>
                 <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>

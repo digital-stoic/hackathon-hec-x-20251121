@@ -11,6 +11,7 @@ import { RichieAssistant } from "@/components/RichieAssistant";
 import { DynamicNotifications } from "@/components/DynamicNotifications";
 import { portefeuilleLignes } from "@/data/mockData";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "react-router-dom";
 
 const Patrimoine = () => {
   const { t } = useLanguage();
@@ -69,12 +70,14 @@ const Patrimoine = () => {
                   </div>
                 ))}
               </div>
-              <button className="w-full text-sm text-champagne hover:text-champagne-muted transition-colors flex items-center justify-center gap-2 group mt-4 py-3">
-                {t('patrimoine.view-all')}
-                <span className="group-hover:translate-x-1 transition-transform">
-                  →
-                </span>
-              </button>
+              <Link to="/patrimoine/details">
+                <button className="w-full text-sm text-champagne hover:text-champagne-muted transition-colors flex items-center justify-center gap-2 group mt-4 py-3">
+                  {t('patrimoine.view-all')}
+                  <span className="group-hover:translate-x-1 transition-transform">
+                    →
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

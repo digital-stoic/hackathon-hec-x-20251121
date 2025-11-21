@@ -15,6 +15,7 @@ export default {
   'home.hero.subtitle': "I'm here to guide you every day to grow and protect your wealth. Together, we'll make the best choices for your investments.",
   'home.hero.btn.patrimoine': 'View my investments',
   'home.hero.btn.profile': 'Take my diagnostic',
+  'home.hero.btn.conseil': 'Help me grow',
   'home.hero.btn.experts': 'Find an expert',
   'home.stats.patrimoine': 'Your wealth',
   'home.stats.performance': 'Performance this month',

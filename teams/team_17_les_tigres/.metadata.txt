@@ -1,10 +1,10 @@
 Team: team_17_les_tigres
 Repository: https://github.com/kbouri/wealth-guardian-ai.git
-Aggregation Time: 2025-11-21T14:43:31+01:00
+Aggregation Time: 2025-11-21T14:56:40+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 61dc2025e0bf568613d09420e46e721c7f94c961
-Date: 2025-11-21 13:42:00 +0000
+Hash: 726b24ecf2ef0081ba246402ebc894a5dd6971dc
+Date: 2025-11-21 13:55:56 +0000
 Author: gpt-engineer-app[bot]
-Message: Activer Richie en anglais
+Message: Remove wealth label from header

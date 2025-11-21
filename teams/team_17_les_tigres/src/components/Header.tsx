@@ -1,11 +1,11 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { userData } from "@/data/mockData";
-import { Bell, Settings, TrendingUp, Languages } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Header = () => {
-  const { language, setLanguage, t } = useLanguage();
+  const { language, t } = useLanguage();
   
   const formatCurrency = (value: number) => {
     const locale = language === 'fr' ? 'fr-FR' : 'en-US';
@@ -17,29 +17,25 @@ export const Header = () => {
     }).format(value);
   };
 
-  const toggleLanguage = () => {
-    setLanguage(language === 'fr' ? 'en' : 'fr');
-  };
-
   return (
     <header className="border-b border-border/50 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-12">
+          <div className="flex items-center gap-16">
             <NavLink to="/" className="block">
-              <h1 className="text-xl font-serif text-champagne">
+              <h1 className="text-2xl font-serif text-champagne">
                 {t('header.title')}
               </h1>
-              <p className="text-xs text-muted-foreground mt-0.5">
+              <p className="text-sm text-muted-foreground mt-0.5">
                 {t('header.subtitle')}
               </p>
             </NavLink>
 
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden md:flex items-center gap-10">
               <NavLink
                 to="/patrimoine"
                 className={({ isActive }) =>
-                  `text-sm font-medium transition-colors hover:text-champagne ${
+                  `text-base font-medium transition-colors hover:text-champagne whitespace-nowrap ${
                     isActive ? "text-champagne" : "text-muted-foreground"
                   }`
                 }
@@ -49,7 +45,7 @@ export const Header = () => {
               <NavLink
                 to="/documents"
                 className={({ isActive }) =>
-                  `text-sm font-medium transition-colors hover:text-champagne ${
+                  `text-base font-medium transition-colors hover:text-champagne whitespace-nowrap ${
                     isActive ? "text-champagne" : "text-muted-foreground"
                   }`
                 }
@@ -59,7 +55,7 @@ export const Header = () => {
               <NavLink
                 to="/conseil"
                 className={({ isActive }) =>
-                  `text-sm font-medium transition-colors hover:text-champagne ${
+                  `text-base font-medium transition-colors hover:text-champagne whitespace-nowrap ${
                     isActive ? "text-champagne" : "text-muted-foreground"
                   }`
                 }
@@ -71,46 +67,20 @@ export const Header = () => {
 
           <div className="flex items-center gap-8">
             <div className="hidden lg:block text-right">
-              <p className="text-xs text-muted-foreground mb-1">
-                {t('header.patrimoine.total')}
-              </p>
-              <p className="text-2xl font-mono text-champagne font-bold">
+              <p className="text-3xl font-mono text-champagne font-bold">
                 {formatCurrency(userData.patrimoine)}
               </p>
-              <div className="flex items-center justify-end gap-1 text-jade text-sm mt-1">
-                <TrendingUp className="w-3.5 h-3.5" />
-                <span className="font-mono">+{userData.performance}%</span>
-                <span className="text-xs text-muted-foreground ml-1">
-                  {t('header.performance.month')}
-                </span>
-              </div>
             </div>
 
-            <div className="flex items-center gap-2 ml-4">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={toggleLanguage}
-                className="text-muted-foreground hover:text-champagne"
-                title={language === 'fr' ? 'Switch to English' : 'Passer en français'}
-              >
-                <Languages className="w-5 h-5" />
+            <Link to="/profil-investisseur" className="hidden md:block">
+              <Button className="bg-champagne text-white hover:bg-champagne-muted h-11 px-6 gap-2">
+                <Sparkles className="w-4 h-4" />
+                {t('home.hero.btn.profile')}
               </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-muted-foreground hover:text-champagne"
-              >
-                <Bell className="w-5 h-5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-muted-foreground hover:text-champagne"
-              >
-                <Settings className="w-5 h-5" />
-              </Button>
-              <div className="flex items-center gap-3 ml-2 pl-4 border-l border-border/50">
+            </Link>
+
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 pl-4 border-l border-border/50">
                 <div className="hidden sm:block text-right">
                   <p className="text-sm font-medium text-foreground">
                     {userData.name}

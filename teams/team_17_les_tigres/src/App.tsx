@@ -6,8 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Home from "./pages/Home";
 import Patrimoine from "./pages/Patrimoine";
+import PortfolioDetails from "./pages/PortfolioDetails";
 import Documents from "./pages/Documents";
 import Conseil from "./pages/Conseil";
+import Experts from "./pages/Experts";
 import InvestorProfile from "./pages/InvestorProfile";
 import NotFound from "./pages/NotFound";
 
@@ -23,8 +25,10 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/patrimoine" element={<Patrimoine />} />
+            <Route path="/patrimoine/details" element={<PortfolioDetails />} />
             <Route path="/documents" element={<Documents />} />
             <Route path="/conseil" element={<Conseil />} />
+            <Route path="/experts" element={<Experts />} />
             <Route path="/profil-investisseur" element={<InvestorProfile />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

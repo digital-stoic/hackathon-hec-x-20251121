@@ -15,6 +15,7 @@ export default {
   'home.hero.subtitle': 'Je t\'accompagne au quotidien pour faire grandir et protéger ton patrimoine. Ensemble, on va faire les meilleurs choix pour tes investissements.',
   'home.hero.btn.patrimoine': 'Voir mes investissements',
   'home.hero.btn.profile': 'Faire mon diagnostic',
+  'home.hero.btn.conseil': 'M\'aider à croître',
   'home.hero.btn.experts': 'Trouver un expert',
   'home.stats.patrimoine': 'Ton patrimoine',
   'home.stats.performance': 'Performance ce mois-ci',
