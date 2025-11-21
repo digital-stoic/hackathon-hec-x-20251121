@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef, ReactNode } from 'react';
 
 interface GameState {
   // Business Section
@@ -52,6 +52,22 @@ export const UnicornGameProvider = ({ children }: { children: ReactNode }) => {
   const [clipperCost, setClipperCost] = useState(5);
   
   const [logs, setLogs] = useState<string[]>(['> System initialized.']);
+  
+  // Refs to track current values for game loop
+  const clipsRef = useRef(0);
+  const wireRef = useRef(1000);
+  const marginRef = useRef(0.25);
+  const demandRef = useRef(100);
+  const clipmakerRateRef = useRef(0);
+  const wireBasePriceRef = useRef(17.50);
+  
+  // Update refs when state changes
+  useEffect(() => { clipsRef.current = clips; }, [clips]);
+  useEffect(() => { wireRef.current = wire; }, [wire]);
+  useEffect(() => { marginRef.current = margin; }, [margin]);
+  useEffect(() => { demandRef.current = demand; }, [demand]);
+  useEffect(() => { clipmakerRateRef.current = clipmakerRate; }, [clipmakerRate]);
+  useEffect(() => { wireBasePriceRef.current = wireBasePrice; }, [wireBasePrice]);
 
   const addLog = (message: string) => {
     setLogs(prev => [...prev.slice(-9), `> ${message}`]);
@@ -103,18 +119,14 @@ export const UnicornGameProvider = ({ children }: { children: ReactNode }) => {
   // Buy AutoClipper - makeClipper()
   const buyAutoClipper = () => {
     if (funds < clipperCost) return;
-    const currentCost = clipperCost;
     const currentLevel = clipperLevel;
     
-    setFunds(prev => prev - currentCost);
+    setFunds(prev => prev - clipperCost);
     setClipperLevel(prev => prev + 1);
     setClipmakerRate(prev => prev + 1);
     
-    // Calculate new cost: floor(currentCost * 1.15), minimum increase of 1
-    const newCost = Math.max(
-      Math.floor(currentCost * 1.15),
-      currentCost + 1
-    );
+    // Universal Paperclips formula: cost = pow(1.1, level) + 5
+    const newCost = Math.pow(1.1, currentLevel + 1) + 5;
     setClipperCost(newCost);
     
     addLog(`AutoClipper #${currentLevel + 1} online`);
@@ -140,50 +152,59 @@ export const UnicornGameProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const TICKS_PER_SECOND = 20;
     const interval = setInterval(() => {
-      const price = margin + 0.01;
-      const demandPerTick = demand / TICKS_PER_SECOND;
-      const productionPerTick = clipmakerRate / TICKS_PER_SECOND;
+      const currentClips = clipsRef.current;
+      const currentWire = wireRef.current;
+      const currentMargin = marginRef.current;
+      const currentDemand = demandRef.current;
+      const currentClipmakerRate = clipmakerRateRef.current;
+      const currentWireBasePrice = wireBasePriceRef.current;
+      
+      const price = currentMargin + 0.01;
       
       // A. Production - AutoClippers produce clips
-      if (productionPerTick > 0) {
-        setWire(prevWire => {
-          if (prevWire >= productionPerTick) {
-            // Add to clips inventory
-            setClips(prevClips => prevClips + productionPerTick);
-            return prevWire - productionPerTick;
-          }
-          return prevWire;
-        });
+      // Production Rate = clipmakerRate (clips/second)
+      let clipsProduced = 0;
+      let wireUsed = 0;
+      
+      if (currentClipmakerRate > 0 && currentWire >= currentClipmakerRate / TICKS_PER_SECOND) {
+        clipsProduced = currentClipmakerRate / TICKS_PER_SECOND;
+        wireUsed = currentClipmakerRate / TICKS_PER_SECOND;
       }
       
-      // B. Sales and Revenue (separate update)
-      setClips(prevClips => {
-        if (prevClips > 0) {
-          // Calculate how many clips can be sold this tick
-          const clipsSoldThisTick = Math.min(prevClips, demandPerTick);
-          
-          if (clipsSoldThisTick > 0) {
-            const revenue = clipsSoldThisTick * price;
-            setFunds(prevFunds => prevFunds + revenue);
-            return prevClips - clipsSoldThisTick;
-          }
-        }
-        return prevClips;
-      });
+      // B. Calculate total clips after production
+      const totalClips = currentClips + clipsProduced;
       
-      // C. Dynamic Wire Price - decay
-      setWireBasePrice(prev => {
-        if (prev > 15) {
-          return prev - (prev / 1000) / TICKS_PER_SECOND;
-        }
-        return prev;
-      });
+      // C. Sales Rate = min(clips, demand) per second
+      // For this tick (1/20 second): divide by TICKS_PER_SECOND
+      const clipsSoldThisTick = Math.min(totalClips, currentDemand) / TICKS_PER_SECOND;
+      const revenue = clipsSoldThisTick * price;
       
-      // C. Dynamic Wire Price - fluctuation (random check)
+      // D. Unsold Inventory Update
+      // New clips = clips + clipmakerRate - min(clips, demand)
+      const newClips = totalClips - clipsSoldThisTick;
+      
+      // Apply all updates separately (no nesting)
+      if (wireUsed > 0) {
+        setWire(currentWire - wireUsed);
+      }
+      
+      setClips(newClips);
+      
+      if (revenue > 0) {
+        setFunds(prevFunds => prevFunds + revenue);
+      }
+      
+      // E. Dynamic Wire Price - decay
+      if (currentWireBasePrice > 15) {
+        setWireBasePrice(currentWireBasePrice - (currentWireBasePrice / 1000) / TICKS_PER_SECOND);
+      }
+      
+      // F. Dynamic Wire Price - fluctuation (random check)
       if (Math.random() < 0.015) {
         setWirePriceCounter(prev => {
           const newCounter = prev + 1;
-          const newCost = Math.ceil(wireBasePrice + 6 * Math.sin(newCounter));
+          const wireAdjust = 6 * Math.sin(newCounter);
+          const newCost = Math.ceil(currentWireBasePrice + wireAdjust);
           setWireCost(newCost);
           return newCounter;
         });
@@ -191,7 +212,7 @@ export const UnicornGameProvider = ({ children }: { children: ReactNode }) => {
     }, 50);
 
     return () => clearInterval(interval);
-  }, [margin, demand, clipmakerRate, wireBasePrice]);
+  }, []); // Empty deps - using refs instead
 
   return (
     <GameContext.Provider value={{

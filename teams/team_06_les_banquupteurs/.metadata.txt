@@ -1,10 +1,10 @@
 Team: team_06_les_banquupteurs
 Repository: https://github.com/solene-duv/my-app-creator.git
-Aggregation Time: 2025-11-21T14:07:35+01:00
+Aggregation Time: 2025-11-21T14:20:13+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: b65d495300870febdbca009c240e476a55efe3a2
-Date: 2025-11-21 13:05:04 +0000
+Hash: bba1004b99e2019a247030dcb372c69f6a734b68
+Date: 2025-11-21 13:17:54 +0000
 Author: gpt-engineer-app[bot]
-Message: Fix game loop state handling
+Message: Adjust unsold inventory formulas
