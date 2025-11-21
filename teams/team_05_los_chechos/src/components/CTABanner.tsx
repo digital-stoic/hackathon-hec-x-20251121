@@ -10,8 +10,7 @@ const CTABanner = () => {
         
         <Button 
           size="lg" 
-          variant="outline" 
-          className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+          className="bg-background text-foreground hover:bg-background/90"
         >
           Talk to a Private Banker
         </Button>
