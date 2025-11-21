@@ -25,6 +25,26 @@ export interface GeoResult {
   timestamp: string;
 }
 
+export interface RewriteRequest {
+  pageId: string;
+  personaId?: string | null;
+  recommendations?: string[];
+  weak_points?: string[];
+  opportunities?: string[];
+  persona_results?: any[];
+  mode: 'general' | 'persona';
+}
+
+export interface RewriteResult {
+  new_page_html: string;
+  new_page_outline: string;
+  geo_rationale: string;
+  persona_rationale: string | null;
+  original_page_html: string;
+  page_url: string;
+  page_title: string;
+}
+
 export async function geoEngine(payload: {
   task: 'score' | 'rewrite' | 'gap-analysis' | 'answer';
   pageHtml?: string;
@@ -404,149 +424,6 @@ export async function fetchPageStats() {
   }
 }
 
-export interface CrawlResult {
-  pagesDiscovered: number;
-  pagesUpdated: number;
-  pagesSkipped: number;
-  tree: TreeNode[];
-}
-
-export interface TreeNode {
-  url: string;
-  title: string;
-  depth: number;
-  children: TreeNode[];
-}
-
-export async function crawlSite(startUrl: string, maxDepth: number): Promise<CrawlResult> {
-  const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-  
-  const response = await fetch(`${SUPABASE_URL}/functions/v1/crawl-site`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ startUrl, maxDepth })
-  });
-
-  if (!response.ok) {
-    const error = await response.json();
-    throw new Error(error.error || 'Failed to crawl site');
-  }
-
-  return await response.json();
-}
-
-export async function refreshOldPages(): Promise<{ pagesRefreshed: number; pagesFailed: number }> {
-  const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-  
-  const response = await fetch(`${SUPABASE_URL}/functions/v1/crawl-refresh`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    }
-  });
-
-  if (!response.ok) {
-    const error = await response.json();
-    throw new Error(error.error || 'Failed to refresh pages');
-  }
-
-  return await response.json();
-}
-
-export async function autoGeoTestAllPages(): Promise<void> {
-  const pages = await fetchPages();
-  
-  const defaultPrompt = "Que propose cette page ? Résume et explique son intérêt pour un client BNP PB.";
-  
-  for (const page of pages) {
-    try {
-      await runPageGeoTest(page.id, "general", defaultPrompt);
-    } catch (error) {
-      console.error(`Failed to test page ${page.url}:`, error);
-    }
-  }
-}
-
-export async function fetchCoverageStats() {
-  try {
-    const { data: pages, error } = await supabase
-      .from('pages')
-      .select('id, crawl_status, depth, fetch_timestamp');
-
-    if (error) throw error;
-
-    const totalPages = pages?.length || 0;
-    const twoDaysAgo = new Date(Date.now() - 48 * 60 * 60 * 1000);
-    const recentPages = pages?.filter(p => new Date(p.fetch_timestamp) > twoDaysAgo).length || 0;
-
-    const depthCounts: Record<number, number> = {};
-    pages?.forEach((p: any) => {
-      const depth = p.depth || 0;
-      depthCounts[depth] = (depthCounts[depth] || 0) + 1;
-    });
-
-    const stats = await fetchPageStats();
-
-    return {
-      totalPages,
-      recentPagesPercent: totalPages > 0 ? (recentPages / totalPages) * 100 : 0,
-      depthCounts,
-      avgGeoScore: stats.avgGlobalGeoScore
-    };
-  } catch (error) {
-    console.error('Error fetching coverage stats:', error);
-    return {
-      totalPages: 0,
-      recentPagesPercent: 0,
-      depthCounts: {},
-      avgGeoScore: 0
-    };
-  }
-}
-
-export async function fetchSiteTree(): Promise<TreeNode[]> {
-  try {
-    const { data: pages, error } = await supabase
-      .from('pages')
-      .select('id, url, title, depth, parent_url');
-
-    if (error) throw error;
-
-    const pageMap = new Map<string, TreeNode>();
-    const rootNodes: TreeNode[] = [];
-
-    // Build tree structure
-    pages?.forEach((page: any) => {
-      const node: TreeNode = {
-        url: page.url,
-        title: page.title || 'Untitled',
-        depth: page.depth || 0,
-        children: []
-      };
-      pageMap.set(page.url, node);
-    });
-
-    // Connect parent-child relationships
-    pages?.forEach((page: any) => {
-      const node = pageMap.get(page.url);
-      if (!node) return;
-
-      if (!page.parent_url || page.depth === 0) {
-        rootNodes.push(node);
-      } else if (pageMap.has(page.parent_url)) {
-        pageMap.get(page.parent_url)!.children.push(node);
-      }
-    });
-
-    return rootNodes;
-  } catch (error) {
-    console.error('Error fetching site tree:', error);
-    return [];
-  }
-}
-
 export interface Rewrite {
   id: string;
   pageId: string;
@@ -754,8 +631,11 @@ export async function fetchPersonaResults(personaId: string, pageId?: string): P
   let query = supabase
     .from('persona_results')
     .select('*')
-    .eq('persona_id', personaId)
     .order('timestamp', { ascending: false });
+
+  if (personaId) {
+    query = query.eq('persona_id', personaId);
+  }
 
   if (pageId) {
     query = query.eq('page_id', pageId);
@@ -766,3 +646,76 @@ export async function fetchPersonaResults(personaId: string, pageId?: string): P
   if (error) throw error;
   return data || [];
 }
+
+export async function rewritePageWithContext(request: RewriteRequest): Promise<RewriteResult> {
+  const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+  
+  const response = await fetch(`${SUPABASE_URL}/functions/v1/rewrite-with-context`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(request)
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.error || 'Failed to rewrite page');
+  }
+
+  return await response.json();
+}
+
+export async function fetchLatestRecommendations(pageId: string): Promise<string[]> {
+  const { data, error } = await supabase
+    .from('results')
+    .select('recommendations')
+    .eq('page_id', pageId)
+    .order('timestamp', { ascending: false })
+    .limit(1)
+    .single();
+
+  if (error || !data) {
+    return [];
+  }
+
+  const recommendations = data.recommendations as any;
+  return recommendations?.recommendations || recommendations || [];
+}
+
+export async function fetchPersonaAggregatedResults(personaId: string, pageId: string) {
+  const { data, error } = await supabase
+    .from('persona_results')
+    .select('*')
+    .eq('persona_id', personaId)
+    .eq('page_id', pageId);
+
+  if (error) throw error;
+
+  if (!data || data.length === 0) {
+    return null;
+  }
+
+  const avgScores = {
+    relevance: data.reduce((sum, r) => sum + r.relevance_score, 0) / data.length,
+    comprehension: data.reduce((sum, r) => sum + r.comprehension_score, 0) / data.length,
+    visibility: data.reduce((sum, r) => sum + r.visibility_score, 0) / data.length,
+    recommendation: data.reduce((sum, r) => sum + r.recommendation_score, 0) / data.length,
+    global: data.reduce((sum, r) => sum + r.global_geo_score, 0) / data.length,
+  };
+
+  const allRecommendations = data
+    .flatMap(r => {
+      const recs = r.recommendations as any;
+      return recs?.recommendations || recs || [];
+    })
+    .filter((v: string, i: number, a: string[]) => a.indexOf(v) === i);
+
+  return {
+    avgScores,
+    allRecommendations,
+    totalTests: data.length,
+    results: data,
+  };
+}
+
