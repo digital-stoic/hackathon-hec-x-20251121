@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { fetchPageStats, fetchPages, fetchRewriteStats, fetchIndexabilityStats } from "@/services/geoService";
 import { ScoreCard } from "@/components/ScoreCard";
 import { Loader } from "@/components/Loader";
-import { Activity, TrendingUp, Eye, ThumbsUp, Award, Globe, Wand2, FileSearch, ShieldCheck } from "lucide-react";
+import { Activity, TrendingUp, Eye, ThumbsUp, Award, Globe, Wand2, FileSearch } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -16,7 +16,6 @@ export default function Dashboard() {
   const [pages, setPages] = useState<any[]>([]);
   const [rewriteStats, setRewriteStats] = useState<any>(null);
   const [indexabilityStats, setIndexabilityStats] = useState<any>(null);
-  const [qualityScore, setQualityScore] = useState<number>(0.85);
 
   useEffect(() => {
     async function loadData() {
@@ -48,30 +47,30 @@ export default function Dashboard() {
   }));
 
   return (
-    <div className="space-y-6">
+    <div className="w-full space-y-6">
       <div>
-        <h1 className="text-3xl font-bold text-foreground">Page GEO Dashboard</h1>
-        <p className="text-muted-foreground mt-1">
-          Monitor BNP Paribas page performance in LLM responses
+        <h1 className="text-2xl sm:text-3xl font-bold text-foreground">BNP GEO</h1>
+        <p className="text-sm sm:text-base text-muted-foreground mt-1">
+          Monitor page performance in LLM responses
         </p>
       </div>
 
       <Card className="bg-gradient-to-br from-primary to-accent text-primary-foreground border-0">
-        <CardContent className="pt-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm opacity-90 mb-1">Average Global GEO Score</p>
-              <div className="text-5xl font-bold">{formatScore(stats.avgGlobalGeoScore)}</div>
-              <p className="text-sm opacity-75 mt-2">
+        <CardContent className="pt-5 sm:pt-6">
+          <div className="flex items-center justify-between gap-4">
+            <div className="min-w-0 flex-1">
+              <p className="text-xs sm:text-sm opacity-90 mb-1">Average Global GEO Score</p>
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold">{formatScore(stats.avgGlobalGeoScore)}</div>
+              <p className="text-xs sm:text-sm opacity-75 mt-2">
                 Across {pages.length} pages
               </p>
             </div>
-            <Award className="h-20 w-20 opacity-20" />
+            <Award className="h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20 opacity-20 shrink-0" />
           </div>
         </CardContent>
       </Card>
 
-      <div className="grid gap-6 md:grid-cols-6">
+      <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         <ScoreCard
           title="Relevance"
           value={formatScore(stats.avgRelevance)}
@@ -101,12 +100,6 @@ export default function Dashboard() {
           value={indexabilityStats ? formatScore(indexabilityStats.avgIndexability) : 'N/A'}
           icon={FileSearch}
           description="How LLM-friendly is the HTML?"
-        />
-        <ScoreCard
-          title="Quality"
-          value={formatScore(qualityScore)}
-          icon={ShieldCheck}
-          description="GEO Master Quality compliance"
         />
       </div>
 
