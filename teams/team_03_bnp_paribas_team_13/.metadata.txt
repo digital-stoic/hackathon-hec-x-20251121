@@ -1,6 +1,6 @@
 Team: team_03_bnp_paribas_team_13
 Repository: https://github.com/sixtlrz/Team13-HackathonBNP.git
-Aggregation Time: 2025-11-21T13:40:45+01:00
+Aggregation Time: 2025-11-21T13:59:18+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
