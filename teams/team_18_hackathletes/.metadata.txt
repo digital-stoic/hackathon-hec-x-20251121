@@ -1,0 +1,10 @@
+Team: team_18_hackathletes
+Repository: https://github.com/LMCrpt/opal-board
+Aggregation Time: 2025-11-21T14:56:51+01:00
+Deadline: 2025-11-21 15:00:00
+
+Last Commit Info:
+Hash: 292eb4e235c9d4b9f32d07306409e81efb07fd9c
+Date: 2025-11-21 13:30:33 +0000
+Author: gpt-engineer-app[bot]
+Message: Add jade image asset
