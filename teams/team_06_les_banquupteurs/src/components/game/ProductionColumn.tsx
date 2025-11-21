@@ -3,10 +3,15 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
 const formatCurrency = (value: number) => {
-  if (value >= 1000) {
-    return `€${(value / 1000).toFixed(1)}K`;
-  }
-  return `€${value.toFixed(2)}`;
+  return `€${Math.floor(value)}K`;
+};
+
+const formatFunds = (value: number) => {
+  return `€${value.toFixed(1)}K`;
+};
+
+const formatPrice = (value: number) => {
+  return `€${value.toFixed(2)}K`;
 };
 
 export const ProductionColumn = () => {
@@ -36,7 +41,7 @@ export const ProductionColumn = () => {
       <div className="mb-4">
         <div className="text-sm text-muted-foreground">Available Funds:</div>
         <div className="text-3xl font-mono font-bold text-primary">
-          {formatCurrency(funds)}
+          {formatFunds(funds)}
         </div>
       </div>
 
@@ -70,7 +75,7 @@ export const ProductionColumn = () => {
           <div className="flex-1">
             <div className="text-xs text-muted-foreground">Price per Clip:</div>
             <div className="text-xl font-mono font-bold text-accent">
-              {formatCurrency(price)}
+              {formatPrice(price)}
             </div>
           </div>
         </div>

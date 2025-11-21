@@ -2,11 +2,8 @@ import { useUnicornGame } from "@/contexts/UnicornGameContext";
 import { Card } from "@/components/ui/card";
 import { TerminalLog } from "./TerminalLog";
 
-const formatCurrency = (value: number) => {
-  if (value >= 1000) {
-    return `€${(value / 1000).toFixed(1)}K`;
-  }
-  return `€${value.toFixed(2)}`;
+const formatFunds = (value: number) => {
+  return `€${value.toFixed(1)}K`;
 };
 
 export const CapTableColumn = () => {
@@ -27,7 +24,7 @@ export const CapTableColumn = () => {
         <div className="flex justify-between text-sm">
           <span className="text-muted-foreground">Total Funds:</span>
           <span className="font-mono text-primary font-bold">
-            {formatCurrency(funds)}
+            {formatFunds(funds)}
           </span>
         </div>
         <div className="flex justify-between text-sm">
