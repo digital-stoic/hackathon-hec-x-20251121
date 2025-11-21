@@ -28,7 +28,7 @@ const BNPHero = () => {
           </p>
           
           <div className="flex flex-wrap gap-4">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button size="lg" className="bg-white text-foreground hover:bg-white/90">
               Explore Your Profile
             </Button>
             <Button size="lg" className="bg-white text-foreground hover:bg-white/90">
