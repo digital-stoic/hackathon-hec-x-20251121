@@ -1,0 +1,33 @@
+export default {
+  // Header
+  'header.title': 'BNP Paribas Patrimoine',
+  'header.subtitle': 'Gestion Privée',
+  'header.nav.patrimoine': 'Gestion Patrimoine',
+  'header.nav.documents': 'Vos Documents',
+  'header.nav.conseil': 'Conseil Croissance & Cession',
+  'header.patrimoine.total': 'Patrimoine Total',
+  'header.performance.month': 'ce mois',
+  'header.profile.type': 'Profil',
+
+  // Home Page
+  'home.hero.title.1': 'Votre patrimoine,',
+  'home.hero.title.2': 'géré intelligemment',
+  'home.hero.subtitle': 'Une plateforme complète pour gérer votre patrimoine et accéder à un réseau d\'experts sélectionnés par BNP Paribas',
+  'home.hero.btn.patrimoine': 'Accéder à mon patrimoine',
+  'home.hero.btn.profile': 'Définir mon profil investisseur',
+  'home.hero.btn.experts': 'Consulter les experts',
+  'home.stats.patrimoine': 'Patrimoine Total',
+  'home.stats.performance': 'Performance ce mois',
+  'home.stats.protected': 'Protégé',
+  'home.stats.by': 'Par BNP Paribas',
+  'home.services.title': 'Nos Services',
+  'home.services.patrimoine.title': 'Gestion de Patrimoine',
+  'home.services.patrimoine.desc': 'Visualisez et gérez votre patrimoine en temps réel : actions, immobilier, liquidités. Bénéficiez des recommandations de notre coach IA pour optimiser vos investissements.',
+  'home.services.patrimoine.cta': 'Accéder',
+  'home.services.experts.title': 'Annuaire d\'Experts',
+  'home.services.experts.desc': 'Accédez à notre réseau d\'experts partenaires BNP : comptables, avocats, fiscalistes. Trouvez le professionnel adapté à vos besoins et prenez rendez-vous directement.',
+  'home.services.experts.cta': 'Découvrir',
+  'home.services.conseil.title': 'Conseil Croissance & Cession',
+  'home.services.conseil.desc': 'Accompagnement stratégique pour vos projets d\'acquisition et de cession d\'entreprise. Expertise M&A et transmission patrimoniale.',
+  'home.services.conseil.cta': 'En savoir plus',
+};

@@ -1,0 +1,10 @@
+Team: team_17_les_tigres
+Repository: https://github.com/kbouri/wealth-guardian-ai.git
+Aggregation Time: 2025-11-21T14:00:37+01:00
+Deadline: 2025-11-21 15:00:00
+
+Last Commit Info:
+Hash: f82df410f198267aaf4f6f99540f37df7d3f009d
+Date: 2025-11-21 12:54:55 +0000
+Author: gpt-engineer-app[bot]
+Message: Add language toggle in header

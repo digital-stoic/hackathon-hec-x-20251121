@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Premium Light Palette - Institutional Banking */
+    --anthracite: 222 13% 15%;
+    --slate-light: 210 15% 95%;
+    --slate-medium: 210 12% 88%;
+    --champagne-gold: 38 44% 50%;
+    --champagne-gold-muted: 38 35% 60%;
+    --jade-green: 177 34% 35%;
+    --jade-light: 177 30% 45%;
+    --bordeaux-red: 0 42% 45%;
+    --off-white: 0 0% 100%;
+    --soft-white: 210 15% 98%;
+    
+    /* Base tokens */
+    --background: var(--soft-white);
+    --foreground: var(--anthracite);
+    
+    --card: var(--off-white);
+    --card-foreground: var(--anthracite);
+    
+    --popover: var(--off-white);
+    --popover-foreground: var(--anthracite);
+    
+    --primary: var(--champagne-gold);
+    --primary-foreground: var(--off-white);
+    
+    --secondary: var(--slate-medium);
+    --secondary-foreground: var(--anthracite);
+    
+    --muted: var(--slate-medium);
+    --muted-foreground: 222 10% 45%;
+    
+    --accent: var(--champagne-gold);
+    --accent-foreground: var(--off-white);
+    
+    --destructive: var(--bordeaux-red);
+    --destructive-foreground: var(--off-white);
+    
+    --success: var(--jade-green);
+    --success-foreground: var(--off-white);
+    
+    --border: 210 15% 85%;
+    --input: 210 15% 85%;
+    --ring: var(--champagne-gold);
+    
+    --radius: 0.75rem;
+    
+    /* Sidebar tokens */
+    --sidebar-background: var(--off-white);
+    --sidebar-foreground: var(--anthracite);
+    --sidebar-primary: var(--champagne-gold);
+    --sidebar-primary-foreground: var(--off-white);
+    --sidebar-accent: var(--slate-medium);
+    --sidebar-accent-foreground: var(--anthracite);
+    --sidebar-border: 210 15% 85%;
+    --sidebar-ring: var(--champagne-gold);
+    
+    /* Shadows & Effects */
+    --shadow-premium: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-elevated: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --glow-gold: 0 0 20px rgba(201, 179, 130, 0.2);
+    
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(0, 0, 0, 0.08);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  
+  /* Premium Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  
+  /* Financial figures monospace */
+  .financial-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+  }
+  
+  /* Glassmorphism effect */
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-premium);
+  }
+  
+  /* Premium animations */
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: var(--shadow-elevated);
+    }
+    to {
+      box-shadow: var(--glow-gold);
+    }
+  }
+  
+  /* Smooth transitions */
+  .transition-premium {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Hover lift effect */
+  .hover-lift {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow-gold);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

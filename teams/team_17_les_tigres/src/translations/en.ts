@@ -1,0 +1,33 @@
+export default {
+  // Header
+  'header.title': 'BNP Paribas Wealth',
+  'header.subtitle': 'Private Banking',
+  'header.nav.patrimoine': 'Wealth Management',
+  'header.nav.documents': 'Your Documents',
+  'header.nav.conseil': 'Growth & Exit Advisory',
+  'header.patrimoine.total': 'Total Wealth',
+  'header.performance.month': 'this month',
+  'header.profile.type': 'Profile',
+
+  // Home Page
+  'home.hero.title.1': 'Your wealth,',
+  'home.hero.title.2': 'intelligently managed',
+  'home.hero.subtitle': 'A comprehensive platform to manage your wealth and access a network of experts selected by BNP Paribas',
+  'home.hero.btn.patrimoine': 'Access my wealth',
+  'home.hero.btn.profile': 'Define my investor profile',
+  'home.hero.btn.experts': 'Consult experts',
+  'home.stats.patrimoine': 'Total Wealth',
+  'home.stats.performance': 'Performance this month',
+  'home.stats.protected': 'Protected',
+  'home.stats.by': 'By BNP Paribas',
+  'home.services.title': 'Our Services',
+  'home.services.patrimoine.title': 'Wealth Management',
+  'home.services.patrimoine.desc': 'View and manage your wealth in real time: stocks, real estate, liquidity. Benefit from our AI coach recommendations to optimize your investments.',
+  'home.services.patrimoine.cta': 'Access',
+  'home.services.experts.title': 'Expert Directory',
+  'home.services.experts.desc': 'Access our network of BNP partner experts: accountants, lawyers, tax specialists. Find the right professional for your needs and book an appointment directly.',
+  'home.services.experts.cta': 'Discover',
+  'home.services.conseil.title': 'Growth & Exit Advisory',
+  'home.services.conseil.desc': 'Strategic support for your business acquisition and exit projects. M&A expertise and wealth transfer.',
+  'home.services.conseil.cta': 'Learn more',
+};
