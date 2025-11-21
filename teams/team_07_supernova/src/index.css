@@ -115,7 +115,7 @@ All colors MUST be HSL.
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent;
   }
   
   .hero-gradient {
