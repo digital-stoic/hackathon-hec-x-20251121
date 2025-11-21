@@ -1,10 +1,10 @@
 Team: team_08_les_prototypeurs
 Repository: https://github.com/Digicode23/finance-reels.git
-Aggregation Time: 2025-11-21T14:20:40+01:00
+Aggregation Time: 2025-11-21T14:23:46+01:00
 Deadline: 2025-11-21 15:00:00
 
 Last Commit Info:
-Hash: 8643a83c663a2ba358fd469df2469c6b9e052900
-Date: 2025-11-21 13:16:45 +0000
+Hash: ea0f69f2e2cca98859541b2638099cb5fdbf17bf
+Date: 2025-11-21 13:22:09 +0000
 Author: gpt-engineer-app[bot]
-Message: Reroute boss to simulation
+Message: Intègre leaderboard trophées
