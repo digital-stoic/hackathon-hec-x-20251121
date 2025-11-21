@@ -189,4 +189,21 @@ export default {
   'profileCompletion.almostThere': 'Almost there! Just one more step',
   'profileCompletion.halfway': 'Great start! Keep it up',
   'profileCompletion.getStarted': 'Richie is here to guide you through this',
+  
+  // Booking
+  'booking.title': 'Book a meeting',
+  'booking.subtitle': 'Choose the time slot that works best for you',
+  'booking.select.date': 'Select a date',
+  'booking.select.time': 'Choose time',
+  'booking.select.date.first': 'Select a date first',
+  'booking.with': 'With',
+  'booking.date': 'Date',
+  'booking.time': 'Time',
+  'booking.at': 'at',
+  'booking.summary': 'Your appointment summary',
+  'booking.confirm': 'Confirm appointment',
+  'booking.confirmed': 'Appointment confirmed!',
+  'booking.confirmed.desc': 'You will receive a confirmation email with all the details.',
+  'booking.verified': 'Verified expert',
+  'booking.success': 'Appointment confirmed',
 };

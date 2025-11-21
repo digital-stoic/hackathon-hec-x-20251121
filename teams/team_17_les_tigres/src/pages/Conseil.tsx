@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -17,9 +18,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { BookingDialog } from "@/components/BookingDialog";
 
 const Conseil = () => {
   const { t } = useLanguage();
+  const [bookingOpen, setBookingOpen] = useState(false);
   
   return (
     <div className="min-h-screen bg-background">
@@ -73,7 +76,10 @@ const Conseil = () => {
                 </span>
               </li>
             </ul>
-            <Button className="w-full bg-champagne text-white hover:bg-champagne-muted">
+            <Button 
+              className="w-full bg-champagne text-white hover:bg-champagne-muted"
+              onClick={() => setBookingOpen(true)}
+            >
               <Calendar className="w-4 h-4 mr-2" />
               {t('conseil.cta.meeting')}
             </Button>
@@ -114,7 +120,10 @@ const Conseil = () => {
                 </span>
               </li>
             </ul>
-            <Button className="w-full bg-champagne text-white hover:bg-champagne-muted">
+            <Button 
+              className="w-full bg-champagne text-white hover:bg-champagne-muted"
+              onClick={() => setBookingOpen(true)}
+            >
               <Calendar className="w-4 h-4 mr-2" />
               {t('conseil.cta.meeting')}
             </Button>
@@ -243,7 +252,10 @@ const Conseil = () => {
             {t('conseil.cta.desc')}
           </p>
           <div className="flex items-center justify-center gap-4">
-            <Button className="bg-champagne text-white hover:bg-champagne-muted h-12 px-8">
+            <Button 
+              className="bg-champagne text-white hover:bg-champagne-muted h-12 px-8"
+              onClick={() => setBookingOpen(true)}
+            >
               <Calendar className="w-5 h-5 mr-2" />
               {t('conseil.cta.meeting')}
             </Button>
@@ -257,6 +269,8 @@ const Conseil = () => {
           </div>
         </div>
       </main>
+
+      <BookingDialog open={bookingOpen} onOpenChange={setBookingOpen} />
     </div>
   );
 };

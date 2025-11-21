@@ -189,4 +189,21 @@ export default {
   'profileCompletion.almostThere': 'Plus qu\'un effort, vous y êtes presque !',
   'profileCompletion.halfway': 'Bon départ ! Continuez comme ça',
   'profileCompletion.getStarted': 'Richie vous accompagne dans cette démarche',
+  
+  // Booking
+  'booking.title': 'Prendre rendez-vous',
+  'booking.subtitle': 'Choisissez le créneau qui vous convient le mieux',
+  'booking.select.date': 'Sélectionner une date',
+  'booking.select.time': 'Choisir l\'heure',
+  'booking.select.date.first': 'Sélectionnez d\'abord une date',
+  'booking.with': 'Avec',
+  'booking.date': 'Date',
+  'booking.time': 'Heure',
+  'booking.at': 'à',
+  'booking.summary': 'Récapitulatif de votre rendez-vous',
+  'booking.confirm': 'Confirmer le rendez-vous',
+  'booking.confirmed': 'Rendez-vous confirmé !',
+  'booking.confirmed.desc': 'Vous recevrez un email de confirmation avec tous les détails.',
+  'booking.verified': 'Expert vérifié',
+  'booking.success': 'Rendez-vous confirmé',
 };
